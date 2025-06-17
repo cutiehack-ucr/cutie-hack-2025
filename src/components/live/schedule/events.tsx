@@ -1,20 +1,36 @@
 "use client";
 import { GoogleEvent } from "@/types/calendar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface props {
   events: GoogleEvent[];
   totalDays: string[];
 }
 
-const Events = ({ events, totalDays }: props) => {
-  const [selectedDay, setSelectedDay] = useState(
-    new Date() > new Date(events[0].start.dateTime)
-      ? new Date().toLocaleString("en-US", {
-          timeZone: "America/Los_Angeles",
-          weekday: "long",
-        })
-      : "Monday",
+const Events = ({ events = [], totalDays = [] }: props) => {
+  const [selectedDay, setSelectedDay] = useState<string>("Monday");
+
+  useEffect(() => {
+    if (events && events.length > 0) {
+      const firstEventDate = new Date(events[0].start.dateTime);
+      const now = new Date();
+      const nowDay = now.toLocaleString("en-US", {
+        timeZone: "America/Los_Angeles",
+        weekday: "long",
+      });
+
+      if (now > firstEventDate) {
+        setSelectedDay(nowDay);
+      }
+    }
+  }, [events]);
+
+  const filteredEvents = events.filter(
+    ({ start }) =>
+      new Date(start.dateTime).toLocaleString("en-US", {
+        timeZone: "America/Los_Angeles",
+        weekday: "long",
+      }) === selectedDay,
   );
 
   return (
@@ -32,49 +48,33 @@ const Events = ({ events, totalDays }: props) => {
           </button>
         ))}
       </div>
+
       <div className="mt-6 h-full w-10/12">
-        {events.filter(
-          ({ start }) =>
-            new Date(start.dateTime).toLocaleString("en-US", {
-              timeZone: "America/Los_Angeles",
-              weekday: "long",
-            }) === selectedDay,
-        ).length == 0 ? (
+        {filteredEvents.length === 0 ? (
           <div className="flex flex-row justify-center text-lg font-semibold">
             No events Available
           </div>
         ) : (
           <>
-            {events
-              .filter(
-                ({ start }) =>
-                  new Date(start.dateTime).toLocaleString("en-US", {
+            {filteredEvents.map(({ start, summary, description, location }, index) => (
+              <div
+                key={index}
+                className="font-workSans grid w-full grid-cols-4 items-center justify-center px-4 py-3 text-lg font-semibold"
+              >
+                <p>
+                  {new Date(start.dateTime).toLocaleTimeString("en-US", {
+                    hour: "2-digit",
+                    minute: "2-digit",
                     timeZone: "America/Los_Angeles",
-                    weekday: "long",
-                  }) === selectedDay,
-              )
-              .map(({ start, summary, description, location }, index) => (
-                <div
-                  key={index}
-                  className="font-workSans grid w-full grid-cols-4 items-center justify-center px-4 py-3 text-lg font-semibold"
-                >
-                  <p>
-                    {new Date(new Date(start.dateTime)).toLocaleTimeString(
-                      "en-US",
-                      {
-                        hour: "2-digit",
-                        minute: "2-digit",
-                        timeZone: "America/Los_Angeles",
-                      },
-                    )}
-                  </p>
-                  <p className="flex w-full justify-center">{summary}</p>
-                  <p className="flex justify-center">
-                    {description.split("\n")[0].slice(1)}
-                  </p>
-                  <p className="flex justify-center">{location}</p>
-                </div>
-              ))}
+                  })}
+                </p>
+                <p className="flex w-full justify-center">{summary}</p>
+                <p className="flex justify-center">
+                  {description?.split("\n")[0].slice(1) ?? ""}
+                </p>
+                <p className="flex justify-center">{location}</p>
+              </div>
+            ))}
           </>
         )}
       </div>
