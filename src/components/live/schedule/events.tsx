@@ -56,25 +56,27 @@ const Events = ({ events = [], totalDays = [] }: props) => {
           </div>
         ) : (
           <>
-            {filteredEvents.map(({ start, summary, description, location }, index) => (
-              <div
-                key={index}
-                className="font-workSans grid w-full grid-cols-4 items-center justify-center px-4 py-3 text-lg font-semibold"
-              >
-                <p>
-                  {new Date(start.dateTime).toLocaleTimeString("en-US", {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                    timeZone: "America/Los_Angeles",
-                  })}
-                </p>
-                <p className="flex w-full justify-center">{summary}</p>
-                <p className="flex justify-center">
-                  {description?.split("\n")[0].slice(1) ?? ""}
-                </p>
-                <p className="flex justify-center">{location}</p>
-              </div>
-            ))}
+            {filteredEvents.map(
+              ({ start, summary, description, location }, index) => (
+                <div
+                  key={index}
+                  className="font-workSans grid w-full grid-cols-4 items-center justify-center px-4 py-3 text-lg font-semibold"
+                >
+                  <p>
+                    {new Date(start.dateTime).toLocaleTimeString("en-US", {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                      timeZone: "America/Los_Angeles",
+                    })}
+                  </p>
+                  <p className="flex w-full justify-center">{summary}</p>
+                  <p className="flex justify-center">
+                    {description?.split("\n")[0].slice(1) ?? ""}
+                  </p>
+                  <p className="flex justify-center">{location}</p>
+                </div>
+              ),
+            )}
           </>
         )}
       </div>
