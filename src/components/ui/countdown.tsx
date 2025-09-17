@@ -10,26 +10,27 @@ interface digitProps {
     digit: string;
     background: string;
   };
+  backgroundImage?: string;
 }
 
-const Digits = ({ value, unit, classNames }: digitProps) => {
+const Digits = ({ value, unit, classNames, backgroundImage }: digitProps) => {
   return (
     <div className="flex flex-col items-center gap-4 last:hidden sm:last:flex">
       <div className="m-3 mb-0 flex gap-1 lg:!gap-1">
-        {value
-          .toString()
-          .padStart(2, "0")
-          .split("")
-          .map((digit, index) => (
-            <div
-              className={`flex items-center justify-center rounded ${classNames.background} bg-opacity-40 p-3 text-lg font-bold ${classNames.digit} lg:min-w-11 lg:p-3 lg:text-3xl`}
-              key={index}
-            >
-              {digit}
-            </div>
-          ))}
+        <div
+          className={`flex items-center justify-center rounded ${classNames.background} bg-opacity-40 p-3 text-lg font-bold ${classNames.digit} lg:min-w-11 lg:p-3 lg:text-3xl font-inknut`}
+          style={{
+            backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            aspectRatio: 121.22 / 100.76,
+            width: '91px',
+          }}
+        >
+          {value.toString().padStart(2, "0")}
+        </div>
       </div>
-      <div className={`m-2 mt-0 text-xs ${classNames.unit}`}>{unit}</div>
+      <div className={`m-2 mt-0 text-xs ${classNames.unit} font-inknut`}>{unit}</div>
     </div>
   );
 };
@@ -40,9 +41,10 @@ interface countdownProps {
     digit: string;
     background: string;
   };
+  backgroundImage?: string;
 }
 
-const Countdown = ({ classNames }: countdownProps) => {
+const Countdown = ({ classNames, backgroundImage }: countdownProps) => {
   const [countdown, setCountdown] = useState({
     days: 0,
     hours: 0,
@@ -72,7 +74,7 @@ const Countdown = ({ classNames }: countdownProps) => {
   return (
     <div className="flex items-center justify-center font-bold">
       {Object.entries(countdown).map(([unit, value], index) => (
-        <Digits key={index} unit={unit} value={value} classNames={classNames} />
+        <Digits key={index} unit={unit} value={value} classNames={classNames} backgroundImage={backgroundImage}/>
       ))}
     </div>
   );

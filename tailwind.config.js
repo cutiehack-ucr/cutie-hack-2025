@@ -14,8 +14,10 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ["var(--font-poppins)"],
+        inknut: ["var(--font-inknut)"],
       },
       colors: {
+        "off-white-100": "#FEFFED", 
         hackathon: {
           primary: "#22577A",
           "blue-100": "#38A3A5",
