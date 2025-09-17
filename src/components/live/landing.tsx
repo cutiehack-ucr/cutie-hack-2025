@@ -1,14 +1,25 @@
 import Countdown from "../ui/countdown";
+import LandingNav from "../ui/landing-nav";
+
 const Landing = () => {
   return (
     <div className="flex flex-col items-center justify-center">
-      <Countdown
-        classNames={{
-          unit: "text-black",
-          background: "bg-hackathon-blue-100",
-          digit: "text-white",
-        }}
-      />
+      <LandingNav />
+      <div className="flex flex-col items-center justify-center rounded-[12px] bg-off-white-100 px-4 py-[10px]">
+        <div className="flex flex-col items-center gap-1 sm:flex-row sm:gap-2">
+          <p className="font-inknut">November 15, 2025</p>
+          <span className="hidden sm:inline">•</span>
+          <p className="font-inknut">UC Riverside</p>
+        </div>
+        <Countdown
+          classNames={{
+            unit: "text-black",
+            background: "bg-hackathon-blue-100",
+            digit: "text-black",
+          }}
+          backgroundImage="/landing/countdownDigitsBg.webp"
+        />
+      </div>
     </div>
   );
 };
