@@ -3,8 +3,7 @@ import Countdown from "../ui/countdown";
 const Landing = () => {
   return (
     <div className="flex flex-col items-center justify-center">
-
-      <div className="flex flex-col items-center justify-center bg-off-white-100 rounded-[12px] py-[10px] px-4">
+      <div className="flex flex-col items-center justify-center rounded-[12px] bg-off-white-100 px-4 py-[10px]">
         <div className="flex flex-col items-center gap-1 sm:flex-row sm:gap-2">
           <p className="font-inknut">November 15, 2025</p>
           <span className="hidden sm:inline">•</span>
@@ -19,7 +18,6 @@ const Landing = () => {
           backgroundImage="/landing/countdownDigitsBg.webp"
         />
       </div>
-
     </div>
   );
 };

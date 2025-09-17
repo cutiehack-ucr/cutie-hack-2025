@@ -17,7 +17,7 @@ module.exports = {
         inknut: ["var(--font-inknut)"],
       },
       colors: {
-        "off-white-100": "#FEFFED", 
+        "off-white-100": "#FEFFED",
         hackathon: {
           primary: "#22577A",
           "blue-100": "#38A3A5",

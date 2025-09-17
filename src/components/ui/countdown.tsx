@@ -18,19 +18,23 @@ const Digits = ({ value, unit, classNames, backgroundImage }: digitProps) => {
     <div className="flex flex-col items-center gap-4 last:hidden sm:last:flex">
       <div className="m-3 mb-0 flex gap-1 lg:!gap-1">
         <div
-          className={`flex items-center justify-center rounded ${classNames.background} bg-opacity-40 p-3 text-lg font-bold ${classNames.digit} lg:min-w-11 lg:p-3 lg:text-3xl font-inknut`}
+          className={`flex items-center justify-center rounded ${classNames.background} bg-opacity-40 p-3 text-lg font-bold ${classNames.digit} font-inknut lg:min-w-11 lg:p-3 lg:text-3xl`}
           style={{
-            backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundImage: backgroundImage
+              ? `url(${backgroundImage})`
+              : undefined,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
             aspectRatio: 121.22 / 100.76,
-            width: '91px',
+            width: "91px",
           }}
         >
           {value.toString().padStart(2, "0")}
         </div>
       </div>
-      <div className={`m-2 mt-0 text-xs ${classNames.unit} font-inknut`}>{unit}</div>
+      <div className={`m-2 mt-0 text-xs ${classNames.unit} font-inknut`}>
+        {unit}
+      </div>
     </div>
   );
 };
@@ -74,7 +78,13 @@ const Countdown = ({ classNames, backgroundImage }: countdownProps) => {
   return (
     <div className="flex items-center justify-center font-bold">
       {Object.entries(countdown).map(([unit, value], index) => (
-        <Digits key={index} unit={unit} value={value} classNames={classNames} backgroundImage={backgroundImage}/>
+        <Digits
+          key={index}
+          unit={unit}
+          value={value}
+          classNames={classNames}
+          backgroundImage={backgroundImage}
+        />
       ))}
     </div>
   );
