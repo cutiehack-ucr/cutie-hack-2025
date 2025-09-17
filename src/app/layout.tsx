@@ -1,6 +1,7 @@
 /* eslint-disable new-cap */
 import "./globals.css";
-import { Poppins, Inknut_Antiqua } from "next/font/google";
+import { Poppins } from "next/font/google";
+import { Inknut_Antiqua as inknutAntiqua } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -9,7 +10,7 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-const inknut = Inknut_Antiqua({
+const inknut = inknutAntiqua({
   subsets: ["latin"],
   display: "swap",
   weight: ["300", "400", "500", "600", "700", "800", "900"],
