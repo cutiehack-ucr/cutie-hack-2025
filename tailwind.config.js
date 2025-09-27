@@ -17,8 +17,6 @@ module.exports = {
         inknut: ["var(--font-inknut)"],
       },
       colors: {
-        "off-white-100": "#FEFFED",
-        "teal-300": "#6ACFD1",
         hackathon: {
           primary: "#22577A",
           "blue-100": "#38A3A5",
@@ -27,6 +25,8 @@ module.exports = {
           "gray-100": "#E7E7E7",
           "gray-200": "#9ea4af",
           "gray-300": "#525252",
+          "teal-300": "#6ACFD1",
+          "off-white-100": "#FEFFED",
           page: "#F5F5F5",
           status: {
             pending: "#FFCF55",
