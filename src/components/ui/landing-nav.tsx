@@ -22,7 +22,7 @@ const LandingNav = () => {
         {!hamburgerNav ? (
           <div
             onClick={toggleNav}
-            className="flex flex-col gap-[6px] hover:cursor-pointer mt-3"
+            className="mt-3 flex flex-col gap-[6px] hover:cursor-pointer"
           >
             <div className="h-1 w-8 rounded-xl bg-black"></div>
             <div className="h-1 w-8 rounded-xl bg-black"></div>
@@ -30,15 +30,23 @@ const LandingNav = () => {
           </div>
         ) : (
           <div className="bg-hackathon-off-white-100">
-            <ul className="flex flex-col text-right px-4 py-2 font-inknut font-normal">
-                <Link href="" onClick={toggleNav} className="text-xl font-bold hover:cursor-pointer">x</Link>
-                <Link href="" className="mt-1">Register</Link>
-                <Link href="">About</Link>
-                <Link href="">Schedule</Link>
-                <Link href="">Partners</Link>
-                <Link href="">FAQ</Link>
-                <Link href="">Archive</Link>
-                <Link href="">Log In</Link>
+            <ul className="flex flex-col px-4 py-2 text-right font-inknut font-normal">
+              <Link
+                href=""
+                onClick={toggleNav}
+                className="text-xl font-bold hover:cursor-pointer"
+              >
+                x
+              </Link>
+              <Link href="" className="mt-1">
+                Register
+              </Link>
+              <Link href="">About</Link>
+              <Link href="">Schedule</Link>
+              <Link href="">Partners</Link>
+              <Link href="">FAQ</Link>
+              <Link href="">Archive</Link>
+              <Link href="">Log In</Link>
             </ul>
           </div>
         )}
@@ -67,7 +75,12 @@ const LandingNav = () => {
             <Link href="">Partners</Link>
             <Link href="">FAQ</Link>
             <Link href="">Archive</Link>
-            <Link href="" className="-mt-2 rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1">Log In</Link>
+            <Link
+              href=""
+              className="-mt-2 rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1"
+            >
+              Log In
+            </Link>
           </ul>
         </div>
       </div>
