@@ -26,6 +26,7 @@ module.exports = {
           "gray-200": "#9ea4af",
           "gray-300": "#525252",
           "teal-300": "#6ACFD1",
+          "teal-800": "#0A3545",
           "off-white-100": "#FEFFED",
           page: "#F5F5F5",
           status: {
