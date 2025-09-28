@@ -12,13 +12,15 @@ const LandingNav = () => {
   return (
     <>
       <div className="relative flex w-full items-start justify-between px-8 py-4 md:px-20 lg:hidden">
-        <Image
-          src="/landing/navbarIcon.webp"
-          alt="Sword and Shield Icon"
-          width={100}
-          height={100}
-          className="w-20"
-        />
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/landing/navbarIcon.webp"
+            alt="Sword and Shield Icon"
+            width={100}
+            height={100}
+            className="w-20"
+          />
+        </Link>
         {!hamburgerNav ? (
           <div
             onClick={toggleNav}
@@ -53,11 +55,18 @@ const LandingNav = () => {
       </div>
 
       <div className="relative hidden w-full items-center justify-center py-4 lg:flex">
-        <img
-          src="/landing/navbarIcon.webp"
-          alt="Sword and Shield Icon"
-          className="absolute left-1/2 hidden w-20 -translate-x-[500px] lg:-mt-9 lg:block"
-        />
+        <Link
+          href="/"
+          className="absolute left-1/2 hidden -translate-x-[500px] lg:block"
+        >
+          <Image
+            src="/landing/navbarIcon.webp"
+            width={100}
+            height={100}
+            alt="Sword and Shield Icon"
+            className="w-20 lg:-mt-9"
+          />
+        </Link>
         <div
           className="hidden items-center justify-center font-bold lg:flex"
           style={{

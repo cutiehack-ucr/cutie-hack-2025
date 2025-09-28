@@ -16,19 +16,19 @@ type config = {
 };
 
 const data: config = {
-  name: "HACKATHON",
-  short_name: "Hackathon Site",
-  email: "contact.acmucr@gmail.com",
-  description: "DESCRIPTION",
-  length: 24,
+  name: "Cutie Hack",
+  short_name: "Cutie Hack",
+  email: "citrushack@gmail.com",
+  description: "beginner-friendly",
+  length: 12,
   date: new Date("2025-11-15T07:00:00"),
   end: new Date("2025-11-15T19:00:00"),
   packet: "",
   devpost: "https://devpost.com/",
-  domain: "https://www.placeholder.com",
-  instagram: "https://www.instagram.com",
-  linkedin: "https://www.linkedin.com",
-  discord: "https://www.discord.com",
+  domain: "https://www.cutiehack.com",
+  instagram: "https://www.instagram.com/cutiehack_ucr",
+  linkedin: "https://www.linkedin.com/company/cutie-hack",
+  discord: "https://www.discord.com/f55zEWTYj6",
   heart: "🤎",
 };
 

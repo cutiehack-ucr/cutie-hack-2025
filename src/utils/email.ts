@@ -34,7 +34,7 @@ const send = async ({
   preview,
 }: params): Promise<CreateEmailResponse> => {
   const { data, error } = await resend.emails.send({
-    from: "Hackathon <info@hackathon.com>",
+    from: "Citrus Hack <info@citrushack.com>",
     to: [email],
     subject: subject,
     text: `Hello ${name},\n\nYour position: ${position}\nPreview: ${preview}`,
@@ -42,7 +42,11 @@ const send = async ({
     react: Email({ id, name, position, preview }),
   });
 
-  return { data, error };
+  if (data) {
+    return { data, error: null };
+  } else {
+    return { data: null, error };
+  }
 };
 
 export default send;

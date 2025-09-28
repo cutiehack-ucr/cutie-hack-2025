@@ -114,7 +114,7 @@ export const FIELDS: Fields = {
     name: "discord",
     type: "text",
     title: "Discord Username",
-    placeholder: "ie. john_doe#1234",
+    placeholder: "ie. john_doe",
     maxLength: 50,
     width: 12,
     required: true,
