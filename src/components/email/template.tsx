@@ -29,10 +29,10 @@ const Template = ({ children, name, preview }: props) => {
           <Container className="mx-auto my-[40px] max-w-[465px] rounded border border-solid border-[#eaeaea] p-[20px]">
             <Section className="mt-[32px]">
               <Img
-                src="https://www.bearhack.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.473367c8.webp&w=3840&q=75"
+                src="https://i.imgur.com/QX3g9Qm.png"
                 width="40"
-                height="37"
-                alt="Vercel"
+                height="40"
+                alt="Cutie Hack Logo"
                 className="mx-auto my-0"
               />
             </Section>
@@ -49,8 +49,15 @@ const Template = ({ children, name, preview }: props) => {
             <Hr className="mx-0 my-[26px] w-full border border-solid border-[#eaeaea]" />
             <Text>
               Visit {data.domain} for more information about {data.name} and
-              follow us on {data.instagram} and {data.linkedin} for up to date
-              information and announcements.
+              follow us on{" "}
+              <a href={data.instagram} className="text-blue-500 underline">
+                Instagram
+              </a>{" "}
+              and{" "}
+              <a href={data.linkedin} className="text-blue-500 underline">
+                LinkedIn
+              </a>{" "}
+              for up-to-date information and announcements.
             </Text>
             <Text className="text-xs leading-[24px] text-[#666666]">
               This invitation was intended for{" "}

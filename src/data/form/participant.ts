@@ -97,7 +97,7 @@ export const FIELDS: Fields = {
   email: {
     input: "input",
     name: "email",
-    placeholder: "John Doe",
+    placeholder: "ie. johndoe7@gmail.com",
     type: "email",
     title: "Email Address",
     maxLength: 50,
@@ -119,7 +119,7 @@ export const FIELDS: Fields = {
   discord: {
     input: "input",
     name: "discord",
-    placeholder: "John Doe",
+    placeholder: "ie. johndoe7",
     type: "text",
     title: "Discord Username",
     maxLength: 50,
