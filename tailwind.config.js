@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ["var(--font-poppins)"],
+        inknut: ["var(--font-inknut)"],
       },
       colors: {
         hackathon: {
@@ -24,6 +25,8 @@ module.exports = {
           "gray-100": "#E7E7E7",
           "gray-200": "#9ea4af",
           "gray-300": "#525252",
+          "teal-300": "#6ACFD1",
+          "off-white-100": "#FEFFED",
           page: "#F5F5F5",
           status: {
             pending: "#FFCF55",
