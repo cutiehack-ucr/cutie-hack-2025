@@ -6,7 +6,7 @@ import Link from "next/link";
 const Landing = () => {
   return (
     <div className="flex flex-col items-center justify-center overflow-x-hidden lg:overflow-x-visible">
-      <div className="relative flex min-h-screen w-full flex-col items-center"> 
+      <div className="relative flex min-h-screen w-full flex-col items-center">
         <Image
           className="absolute inset-0 z-0 h-full w-full bg-hackathon-teal-800 object-cover lg:h-auto"
           alt="Background glow for Cutie Hack landing page"
