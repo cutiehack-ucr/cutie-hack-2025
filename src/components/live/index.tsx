@@ -11,7 +11,7 @@ import Footer from "./footer";
 
 const Live = () => {
   return (
-    <>
+    <div className="bg-hackathon-teal-800">
       <Landing />
       <About />
       <Tracks />
@@ -22,7 +22,7 @@ const Live = () => {
       <Judges />
       <FAQ />
       <Footer />
-    </>
+    </div>
   );
 };
 
