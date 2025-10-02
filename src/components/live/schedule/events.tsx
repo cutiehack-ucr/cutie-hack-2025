@@ -70,7 +70,7 @@ const Events = ({ events, totalDays }: props) => {
                   </p>
                   <p className="flex w-full justify-center">{summary}</p>
                   <p className="flex justify-center">
-                    {description.split("\n")[0].slice(1)}
+                    {description ? description.split("\n")[0].slice(1) : ""}
                   </p>
                   <p className="flex justify-center">{location}</p>
                 </div>
