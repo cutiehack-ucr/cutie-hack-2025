@@ -22,21 +22,21 @@ const Register = () => {
         </div>
       </div>
 
-      <div className="mt-10 grid max-w-4xl grid-cols-1 gap-y-10 md:grid-cols-2 gap-x-10 md:gap-y-16">
+      <div className="mt-10 grid max-w-4xl grid-cols-1 gap-y-10 md:grid-cols-2 gap-x-12 md:gap-y-16">
         {[
-          { role: "Participant", image: "/landing/participantFrame.webp" },
-          { role: "Judge", image: "/landing/registerDecorLines.webp" },
-          { role: "Mentor", image: "/landing/registerDecorLines.webp" },
-          { role: "Volunteer", image: "/landing/registerDecorLines.webp" },
-        ].map(({ role, image }, index) => (
+          { role: "participant", image: "/landing/participantFrame.webp" },
+          { role: "judge", image: "/landing/registerDecorLines.webp" },
+          { role: "mentor", image: "/landing/registerDecorLines.webp" },
+          { role: "volunteer", image: "/landing/registerDecorLines.webp" },
+        ].map(({ role, image }) => (
           <Link
-        key={index}
-        href=""
+        key={role}
+        href={`apply/${role}`}
         className={`flex transition-all hover:animate-pulse ease-in-out ${
-          role === "Participant" ? "justify-center" : "flex-col items-center justify-center space-y-1"
+          role === "participant" ? "justify-center" : "flex-col items-center justify-center space-y-1"
         }`}
           >
-        {role === "Participant" && (
+        {role === "participant" && (
           <Image
             alt=""
             width={250}
@@ -45,12 +45,12 @@ const Register = () => {
             aria-hidden
           />
         )}
-        <div className={role === "Participant" ? "absolute mt-4" : "mt-4"}>
+        <div className={role === "participant" ? "absolute mt-4" : "mt-4"}>
           <p className="font-inknut text-2xl text-hackathon-off-white-100">
-            {role}
+            {role.charAt(0).toUpperCase() + role.slice(1)}
           </p>
         </div>
-        {role !== "Participant" && (
+        {role !== "participant" && (
           <Image
             alt=""
             width={175}
