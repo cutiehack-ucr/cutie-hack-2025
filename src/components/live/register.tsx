@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import TitleBanner from "../ui/title-banner";
 
 const Register = () => {
   return (
@@ -7,20 +8,7 @@ const Register = () => {
       className="relative mx-auto flex w-5/6 flex-col items-center justify-center"
       id="register"
     >
-      <div className="relative mt-20 flex items-center justify-center">
-        <Image
-          src="/landing/titleBanner.webp"
-          alt="Register Title Banner"
-          width={400}
-          height={100}
-          className="object-contain drop-shadow-md"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <p className="-mt-8 font-inknut text-4xl text-hackathon-off-white-100">
-            Register
-          </p>
-        </div>
-      </div>
+      <TitleBanner title="Register"/>
 
       <div className="mt-10 grid max-w-4xl grid-cols-1 gap-y-10 md:grid-cols-2 gap-x-12 md:gap-y-16">
         {[
@@ -45,11 +33,13 @@ const Register = () => {
             aria-hidden
           />
         )}
-        <div className={role === "participant" ? "absolute mt-4" : "mt-4"}>
-          <p className="font-inknut text-2xl text-hackathon-off-white-100">
-            {role.charAt(0).toUpperCase() + role.slice(1)}
-          </p>
-        </div>
+        <p
+          className={`mt-4 font-inknut text-2xl text-hackathon-off-white-100 ${
+            role === "participant" ? "absolute" : ""
+          }`}
+        >
+          {role.charAt(0).toUpperCase() + role.slice(1)}
+        </p>
         {role !== "participant" && (
           <Image
             alt=""
