@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const LandingNav = () => {
+const Navigation = () => {
   const [hamburgerNav, setHamburgerNav] = useState(false);
   const toggleNav = () => {
     setHamburgerNav(!hamburgerNav);
@@ -12,8 +12,8 @@ const LandingNav = () => {
   const navHoverAnimation = "ease-in-out relative hover:cursor-pointer hover:scale-105 hover:after:rotate-45 transition-all hover:after:content-[''] hover:after:absolute hover:after:block hover:after:h-2 hover:after:w-2 hover:after:border-black hover:after:border-[2px] hover:after:left-1/2 hover:after:-translate-x-1/2"
 
   return (
-    <>
-      <nav className="relative flex w-full items-start justify-between px-4 py-2 md:px-20 lg:hidden animate-">
+    <nav className="fixed left-0 top-0 z-20 w-full">
+      <div className="relative flex w-full items-start justify-between px-4 py-2 md:px-20 lg:hidden">
         <Link href="/" className="flex items-center hover:scale-105 transition-all">
           <Image
             src="/landing/navbarIcon.webp"
@@ -43,7 +43,7 @@ const LandingNav = () => {
             </ul>
           </div>
         )}
-      </nav>
+      </div>
 
       <div className="relative hidden w-full items-center justify-center py-4 lg:flex">
         <Link
@@ -69,7 +69,7 @@ const LandingNav = () => {
           }}
         >
           <ul className="-mt-9 flex space-x-8 font-inknut font-normal">
-            <Link 
+            <Link
               href=""
               className={navHoverAnimation}
             >
@@ -88,8 +88,8 @@ const LandingNav = () => {
           </ul>
         </div>
       </div>
-    </>
+    </nav>
   );
 };
 
-export default LandingNav;
+export default Navigation;
