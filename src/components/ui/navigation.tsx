@@ -46,7 +46,7 @@ const Navigation = () => {
               <Link href="">FAQ</Link>
               <Link href="">Archive</Link>
               <Link
-                href=""
+                href="/#register"
                 className="mx-auto w-fit rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1"
               >
                 Register
@@ -80,23 +80,23 @@ const Navigation = () => {
           }}
         >
           <ul className="-mt-9 flex space-x-8 font-inknut font-normal">
-            <Link href="" className={navHoverAnimation}>
+            <Link href="/#about" className={navHoverAnimation}>
               About
             </Link>
-            <Link href="" className={navHoverAnimation}>
+            <Link href="/#schedule" className={navHoverAnimation}>
               Schedule
             </Link>
-            <Link href="" className={navHoverAnimation}>
+            <Link href="/#partners" className={navHoverAnimation}>
               Partners
             </Link>
-            <Link href="" className={navHoverAnimation}>
+            <Link href="/#faq" className={navHoverAnimation}>
               FAQ
             </Link>
-            <Link href="" className={navHoverAnimation}>
+            <Link href="/" className={navHoverAnimation}>
               Archive
             </Link>
             <Link
-              href=""
+              href="/#register"
               className="-mt-2 rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1 transition-all hover:scale-105"
             >
               Register

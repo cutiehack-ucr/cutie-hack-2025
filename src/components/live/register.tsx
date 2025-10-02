@@ -3,14 +3,17 @@ import Link from "next/link";
 
 const Register = () => {
   return (
-    <div className="relative mx-auto flex w-5/6 flex-col items-center justify-center">
+    <div
+      className="relative mx-auto flex w-5/6 flex-col items-center justify-center"
+      id="register"
+    >
       <div className="relative mt-20 flex items-center justify-center">
         <Image
           src="/landing/titleBanner.webp"
           alt="Register Title Banner"
           width={400}
           height={100}
-          className="object-contain"
+          className="object-contain drop-shadow-md"
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <p className="-mt-8 font-inknut text-4xl text-hackathon-off-white-100">
@@ -19,85 +22,45 @@ const Register = () => {
         </div>
       </div>
 
-      <div className="mt-10 grid w-full max-w-4xl grid-cols-1 gap-y-10 md:grid-cols-3 md:gap-x-10 md:gap-y-16">
-        <div className="flex justify-center">
+      <div className="mt-10 grid max-w-4xl grid-cols-1 gap-y-10 md:grid-cols-2 gap-x-10 md:gap-y-16">
+        {[
+          { role: "Participant", image: "/landing/participantFrame.webp" },
+          { role: "Judge", image: "/landing/registerDecorLines.webp" },
+          { role: "Mentor", image: "/landing/registerDecorLines.webp" },
+          { role: "Volunteer", image: "/landing/registerDecorLines.webp" },
+        ].map(({ role, image }, index) => (
+          <Link
+        key={index}
+        href=""
+        className={`flex transition-all hover:animate-pulse ease-in-out ${
+          role === "Participant" ? "justify-center" : "flex-col items-center justify-center space-y-1"
+        }`}
+          >
+        {role === "Participant" && (
           <Image
-            alt="Participant Register Button Frame"
+            alt=""
             width={250}
             height={0}
-            src={"/landing/participantFrame.webp"}
+            src={image}
+            aria-hidden
           />
-          <div className="absolute mt-4">
-            <Link
-              href=""
-              className="font-inknut text-2xl text-hackathon-off-white-100"
-            >
-              Participant
-            </Link>
-          </div>
+        )}
+        <div className={role === "Participant" ? "absolute mt-4" : "mt-4"}>
+          <p className="font-inknut text-2xl text-hackathon-off-white-100">
+            {role}
+          </p>
         </div>
-
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <Link
-            href=""
-            className="mt-4 font-inknut text-2xl text-hackathon-off-white-100"
-          >
-            Partner
-          </Link>
+        {role !== "Participant" && (
           <Image
-            alt="Partner Register Button Decor Lines"
+            alt=""
             width={175}
             height={0}
-            src={"/landing/registerDecorLines.webp"}
+            src={image}
+            aria-hidden
           />
-        </div>
-
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <Link
-            href=""
-            className="mt-4 font-inknut text-2xl text-hackathon-off-white-100"
-          >
-            Judge
+        )}
           </Link>
-          <Image
-            alt="Judge Register Button Decor Line"
-            width={175}
-            height={0}
-            src={"/landing/registerDecorLines.webp"}
-          />
-        </div>
-      </div>
-      <div className="relative mx-auto flex w-5/6 flex-col items-center justify-center">
-        <div className="mt-10 grid w-full max-w-4xl grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-10 md:gap-y-16 lg:w-2/5">
-          <div className="flex flex-col items-center justify-center space-y-1 md:col-span-1">
-            <Link
-              href=""
-              className="mt-4 font-inknut text-2xl text-hackathon-off-white-100"
-            >
-              Mentor
-            </Link>
-            <Image
-              alt="Mentor Register Button Decor Line"
-              width={175}
-              height={0}
-              src={"/landing/registerDecorLines.webp"}
-            />
-          </div>
-          <div className="flex flex-col items-center justify-center space-y-1 md:col-span-1 md:col-start-2">
-            <Link
-              href=""
-              className="mt-4 font-inknut text-2xl text-hackathon-off-white-100"
-            >
-              Volunteer
-            </Link>
-            <Image
-              alt="Volunteer Register Button Decor Line"
-              width={175}
-              height={0}
-              src={"/landing/registerDecorLines.webp"}
-            />
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
