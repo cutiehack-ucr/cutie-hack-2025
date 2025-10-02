@@ -19,7 +19,16 @@ import {
 const getSize = (maxSize) => BYTES[maxSize[1]] * maxSize[0];
 const getType = (types) => "." + types.join(",.");
 
-const Upload = ({ field, user, setUser, text, maxSize, types, required }) => {
+const Upload = ({
+  field,
+  user,
+  setUser,
+  text,
+  maxSize,
+  types,
+  required,
+  description,
+}) => {
   const [file, setFile] = useState(
     user[field] && user[field].startsWith("data:image")
       ? { src: user[field], type: "image", title: `${user.firstName}.png` }
@@ -50,6 +59,9 @@ const Upload = ({ field, user, setUser, text, maxSize, types, required }) => {
       <p className="mb-1 font-semibold">
         {text}
         {required && <span className="text-red-500">*</span>}
+        {description && (
+          <p className="text-md mt-1 font-normal">{description}</p>
+        )}
       </p>
       <div className="flex w-full flex-col items-center">
         {!file && (

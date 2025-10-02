@@ -177,6 +177,7 @@ export const FIELDS: Fields = {
     maxSize: [1, "MB"],
     required: true,
     editable: true,
+    description: "Please provide a headshot with a clean background.",
   },
   diet: {
     input: "radio",
