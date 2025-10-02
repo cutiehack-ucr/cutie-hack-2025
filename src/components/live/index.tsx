@@ -14,7 +14,7 @@ import Register from "./register";
 const Live = () => {
   return (
     <div className="bg-hackathon-teal-800">
-      <Navigation/>
+      <Navigation />
       <Landing />
       <Register />
       <About />

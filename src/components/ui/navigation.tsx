@@ -9,37 +9,48 @@ const Navigation = () => {
     setHamburgerNav(!hamburgerNav);
   };
 
-  const navHoverAnimation = "ease-in-out relative hover:cursor-pointer hover:scale-105 hover:after:rotate-45 transition-all hover:after:content-[''] hover:after:absolute hover:after:block hover:after:h-2 hover:after:w-2 hover:after:border-black hover:after:border-[2px] hover:after:left-1/2 hover:after:-translate-x-1/2"
+  const navHoverAnimation =
+    "ease-in-out relative hover:cursor-pointer hover:scale-105 hover:after:rotate-45 transition-all hover:after:content-[''] hover:after:absolute hover:after:block hover:after:h-2 hover:after:w-2 hover:after:border-black hover:after:border-[2px] hover:after:left-1/2 hover:after:-translate-x-1/2";
 
   return (
     <nav className="fixed left-0 top-0 z-20 w-full">
       <div className="relative flex w-full items-start justify-between px-4 py-2 md:px-20 lg:hidden">
-        <Link href="/" className="flex items-center hover:scale-105 transition-all">
+        <Link
+          href="/"
+          className="flex items-center transition-all hover:scale-105"
+        >
           <Image
             src="/landing/navbarIcon.webp"
             alt="Sword and Shield Icon"
             width={100}
             height={100}
-            className="w-16 z-10"
+            className="z-10 w-16"
           />
         </Link>
         <button
           onClick={toggleNav}
-          className="mt-3 flex flex-col gap-[4px] hover:cursor-pointer hover:scale-105 transition-all z-10 pr-2"
+          className="z-10 mt-3 flex flex-col gap-[4px] pr-2 transition-all hover:scale-105 hover:cursor-pointer"
         >
-          <div className="h-1 w-8 rounded-xl bg-white border-[1px] border-black"></div>
-          <div className="h-1 w-8 rounded-xl bg-white border-[1px] border-black"></div>
-          <div className="h-1 w-8 rounded-xl bg-white border-[1px] border-black"></div>
+          <div className="h-1 w-8 rounded-xl border-[1px] border-black bg-white"></div>
+          <div className="h-1 w-8 rounded-xl border-[1px] border-black bg-white"></div>
+          <div className="h-1 w-8 rounded-xl border-[1px] border-black bg-white"></div>
         </button>
         {hamburgerNav && (
-          <div className="bg-hackathon-off-white-100 absolute w-screen z-0 left-0 top-0 shadow-lg py-4 max-h-screen overflow-y-auto">
-            <ul className="w-full text-center flex flex-col px-4 pt-12 font-inknut gap-2">
-              <Link href="" className="mt-1">About</Link>
+          <div className="absolute left-0 top-0 z-0 max-h-screen w-screen overflow-y-auto bg-hackathon-off-white-100 py-4 shadow-lg">
+            <ul className="flex w-full flex-col gap-2 px-4 pt-12 text-center font-inknut">
+              <Link href="" className="mt-1">
+                About
+              </Link>
               <Link href="">Schedule</Link>
               <Link href="">Partners</Link>
               <Link href="">FAQ</Link>
               <Link href="">Archive</Link>
-              <Link href="" className="mx-auto w-fit rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1">Register</Link>
+              <Link
+                href=""
+                className="mx-auto w-fit rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1"
+              >
+                Register
+              </Link>
             </ul>
           </div>
         )}
@@ -55,7 +66,7 @@ const Navigation = () => {
             width={100}
             height={100}
             alt="Sword and Shield Icon"
-            className="w-20 lg:-mt-9 hover:scale-105 transition-all"
+            className="w-20 transition-all hover:scale-105 lg:-mt-9"
           />
         </Link>
         <div
@@ -69,19 +80,24 @@ const Navigation = () => {
           }}
         >
           <ul className="-mt-9 flex space-x-8 font-inknut font-normal">
-            <Link
-              href=""
-              className={navHoverAnimation}
-            >
+            <Link href="" className={navHoverAnimation}>
               About
             </Link>
-            <Link href="" className={navHoverAnimation}>Schedule</Link>
-            <Link href="" className={navHoverAnimation}>Partners</Link>
-            <Link href="" className={navHoverAnimation}>FAQ</Link>
-            <Link href="" className={navHoverAnimation}>Archive</Link>
+            <Link href="" className={navHoverAnimation}>
+              Schedule
+            </Link>
+            <Link href="" className={navHoverAnimation}>
+              Partners
+            </Link>
+            <Link href="" className={navHoverAnimation}>
+              FAQ
+            </Link>
+            <Link href="" className={navHoverAnimation}>
+              Archive
+            </Link>
             <Link
               href=""
-              className="hover:scale-105 transition-all -mt-2 rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1"
+              className="-mt-2 rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1 transition-all hover:scale-105"
             >
               Register
             </Link>
