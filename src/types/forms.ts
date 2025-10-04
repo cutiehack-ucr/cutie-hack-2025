@@ -64,6 +64,7 @@ export type UploadInput = Input & {
   text: string;
   types: string[];
   maxSize: [number, string];
+  description?: string;
 };
 export type TermsAndConditions = Input & {
   input: "terms";

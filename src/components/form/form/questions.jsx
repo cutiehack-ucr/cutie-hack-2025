@@ -182,6 +182,7 @@ const Questions = ({
               user={object}
               setUser={setObject}
               required={field.required}
+              description={field.description}
             />
           )}
         </div>

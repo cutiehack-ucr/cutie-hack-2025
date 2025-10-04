@@ -212,12 +212,13 @@ export const FIELDS: Fields = {
   resume: {
     input: "upload",
     field: "resume",
-    text: "Upload  Resume",
+    text: "Upload Resume",
     width: 12,
     types: ["pdf"],
     maxSize: [200, "KB"],
     required: false,
     editable: true,
+    description: "Optional — max file size is 200KB",
   },
   requirements: {
     text: "Terms and Conditions",
