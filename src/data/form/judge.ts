@@ -1,12 +1,11 @@
 import {
   Description,
   RadioInput,
-  SelectInput,
   TermsAndConditions,
   TextInput,
   UploadInput,
 } from "@/types/forms";
-import { GENDERS, SHIRTS, AGES, DIETS } from "./information";
+import { GENDERS, SHIRTS, DIETS } from "./information";
 import data from "@/data/config";
 
 interface Attributes {
@@ -15,7 +14,6 @@ interface Attributes {
   email: string;
   phone: string;
   gender: string;
-  age: string;
   shirt: string;
   affiliation: "Professor" | "Student" | "Industry";
   title: string;
@@ -31,7 +29,6 @@ interface Fields {
   email: TextInput;
   phone: TextInput;
   gender: RadioInput;
-  age: SelectInput;
   shirt: RadioInput;
   affiliation: RadioInput;
   title: TextInput;
@@ -203,7 +200,6 @@ export const ATTRIBUTES: Attributes = {
   email: "",
   phone: "",
   gender: "",
-  age: "",
   shirt: "",
   affiliation: "Professor",
   title: "",

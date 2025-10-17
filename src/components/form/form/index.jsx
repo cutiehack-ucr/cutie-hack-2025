@@ -36,7 +36,8 @@ const Form = ({
         aria-hidden="true"
       />
       <div className="mt-8 z-10 lg:mt-32 flex w-10/12 flex-col items-center pb-12 pt-5 md:w-1/2 xl:w-1/3">
-        <Image src="/titleHorizontal.svg" width={0} height={0} className="m-4 w-full" alt="Logo" />
+        <Image src="/forms/titleHorizontal.svg" width={0} height={0} className="m-4 w-full" alt="Logo" />
+        <Image src="/forms/formDeco.svg" width={0} height={0} className="relative top-2 w-full scale-110" alt="" aria-hidden/>
         <h1 className="m-0 w-full rounded-t text-hackathon-off-white-100 bg-hackathon-gray-400 px-4 py-8 text-2xl text-center font-bold">
           {header}
         </h1>
@@ -58,6 +59,7 @@ const Form = ({
               <Confirmation />
             )}
         </div>
+        <Image src="/forms/formDeco.svg" width={0} height={0} className="relative -bottom-2 w-full scale-110 rotate-180" alt="" aria-hidden/>
       </div>
     </div>
   );
