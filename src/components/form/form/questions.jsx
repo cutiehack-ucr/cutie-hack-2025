@@ -227,7 +227,7 @@ const Questions = ({
       )}
       <div className="flex justify-center">
         <Button
-          className="bg-hackathon-teal-400 rounded-2xl text-2xl"
+          className="rounded-2xl bg-hackathon-teal-400 text-2xl"
           onClick={() => onSubmit(setLoading, setState)}
           disabled={loading}
         >

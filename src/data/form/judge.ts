@@ -163,7 +163,8 @@ export const FIELDS: Fields = {
     maxSize: [1, "MB"],
     required: true,
     editable: true,
-    description: "Please provide a headshot with a clean background. If selected, your photo will be featured on the hackathon website.",
+    description:
+      "Please provide a headshot with a clean background. If selected, your photo will be featured on the hackathon website.",
   },
   diet: {
     input: "radio",

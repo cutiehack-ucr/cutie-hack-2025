@@ -25,9 +25,9 @@ const Form = ({
 
   return (
     <div className="overflow-scroll-y flex h-full w-full flex-col items-center font-inknut">
-      <Navigation hasSignout/>
+      <Navigation hasSignout />
       <Image
-        className="absolute -top-32 inset-0 z-0 w-[125%] bg-hackathon-teal-800 object-cover h-auto"
+        className="absolute inset-0 -top-32 z-0 h-auto w-full scale-125 bg-hackathon-teal-800 object-cover"
         alt=""
         width={0}
         height={0}
@@ -35,31 +35,51 @@ const Form = ({
         priority
         aria-hidden="true"
       />
-      <div className="mt-8 z-10 lg:mt-32 flex w-10/12 flex-col items-center pb-12 pt-5 md:w-1/2 xl:w-1/3">
-        <Image src="/forms/titleHorizontal.svg" width={0} height={0} className="m-4 w-full" alt="Logo" />
-        <Image src="/forms/formDeco.svg" width={0} height={0} className="relative top-2 w-full scale-110" alt="" aria-hidden/>
-        <h1 className="m-0 w-full rounded-t text-hackathon-off-white-100 bg-hackathon-gray-400 px-4 py-8 text-2xl text-center font-bold">
+      <div className="z-10 mt-8 flex w-10/12 flex-col items-center pb-12 pt-5 md:w-1/2 lg:mt-32 xl:w-1/3">
+        <Image
+          src="/forms/titleHorizontal.svg"
+          width={0}
+          height={0}
+          className="m-4 w-full"
+          alt="Logo"
+        />
+        <Image
+          src="/forms/formDeco.svg"
+          width={0}
+          height={0}
+          className="relative top-2 w-full scale-110"
+          alt=""
+          aria-hidden
+        />
+        <h1 className="m-0 w-full rounded-t bg-hackathon-gray-400 px-4 py-8 text-center text-2xl font-bold text-hackathon-off-white-100">
           {header}
         </h1>
-        <div className="rounded-b bg-hackathon-off-white-100 p-8 grid grid-cols-1 gap-3">
-            {state === 0 ? (
-              <Status object={object} statuses={statuses} setState={setState} />
-            ) : state === 1 ? (
-              <Questions
-                loading={loading}
-                setLoading={setLoading}
-                object={object}
-                setObject={setObject}
-                fields={fields}
-                onSubmit={onSubmit}
-                setState={setState}
-                packet={packet}
-              />
-            ) : (
-              <Confirmation />
-            )}
+        <div className="grid grid-cols-1 gap-3 rounded-b bg-hackathon-off-white-100 p-8">
+          {state === 0 ? (
+            <Status object={object} statuses={statuses} setState={setState} />
+          ) : state === 1 ? (
+            <Questions
+              loading={loading}
+              setLoading={setLoading}
+              object={object}
+              setObject={setObject}
+              fields={fields}
+              onSubmit={onSubmit}
+              setState={setState}
+              packet={packet}
+            />
+          ) : (
+            <Confirmation />
+          )}
         </div>
-        <Image src="/forms/formDeco.svg" width={0} height={0} className="relative -bottom-2 w-full scale-110 rotate-180" alt="" aria-hidden/>
+        <Image
+          src="/forms/formDeco.svg"
+          width={0}
+          height={0}
+          className="relative -bottom-2 w-full rotate-180 scale-110"
+          alt=""
+          aria-hidden
+        />
       </div>
     </div>
   );
