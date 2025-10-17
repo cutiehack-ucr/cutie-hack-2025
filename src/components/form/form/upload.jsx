@@ -60,7 +60,10 @@ const Upload = ({
         {text}
         {required && <span className="text-red-500">*</span>}
         {description && (
-          <p className="text-md mt-1 font-normal">{description}</p>
+          <span className="mt-1 text-sm font-normal">
+            <br />
+            {description}
+          </span>
         )}
       </p>
       <div className="flex w-full flex-col items-center">
