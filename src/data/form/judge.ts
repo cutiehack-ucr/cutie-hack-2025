@@ -126,17 +126,6 @@ export const FIELDS: Fields = {
     required: true,
     editable: true,
   },
-  age: {
-    input: "select",
-    title: "Age",
-    options: AGES,
-    field: "age",
-    placeholder: "ie. 18",
-    width: 12,
-    required: true,
-    editable: true,
-    searchable: true,
-  },
   shirt: {
     input: "radio",
     text: "Shirt Size",
@@ -177,7 +166,7 @@ export const FIELDS: Fields = {
     maxSize: [1, "MB"],
     required: true,
     editable: true,
-    description: "Please provide a headshot with a clean background.",
+    description: "Please provide a headshot with a clean background. If selected, your photo will be featured on the hackathon website.",
   },
   diet: {
     input: "radio",

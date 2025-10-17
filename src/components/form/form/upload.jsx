@@ -67,11 +67,11 @@ const Upload = ({
         {!file && (
           <label
             htmlFor="dropzone-file"
-            className="flex h-fit w-full cursor-pointer flex-col items-center justify-center rounded border border-slate-200 bg-white hover:bg-slate-100"
+            className="flex h-fit w-full cursor-pointer flex-col items-center justify-center rounded border border-slate-200 bg-hackathon-teal-400 hover:opacity-80 transition-all"
           >
             <div className="flex flex-col items-center justify-center py-4">
-              <LucideUpload className="mb-2 text-3xl text-hackathon-gray-200" />
-              <p className="text-sm font-semibold text-hackathon-gray-200">
+              <LucideUpload className="mb-2 text-3xl text-hackathon-off-white-100" />
+              <p className="text-sm font-semibold text-hackathon-off-white-100">
                 Upload from my computer
               </p>
             </div>

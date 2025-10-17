@@ -2,8 +2,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { signOut } from "next-auth/react";
+interface NavigationProps {
+  hasSignout?: boolean;
+}
 
-const Navigation = () => {
+const Navigation = ({ hasSignout }: NavigationProps) => {
   const [hamburgerNav, setHamburgerNav] = useState(false);
   const toggleNav = () => {
     setHamburgerNav(!hamburgerNav);
@@ -13,7 +17,7 @@ const Navigation = () => {
     "ease-in-out relative hover:cursor-pointer hover:scale-105 hover:after:rotate-45 transition-all hover:after:content-[''] hover:after:absolute hover:after:block hover:after:h-2 hover:after:w-2 hover:after:border-black hover:after:border-[2px] hover:after:left-1/2 hover:after:-translate-x-1/2";
 
   return (
-    <nav className="fixed left-0 top-0 z-20 w-full">
+    <nav className={`${hasSignout ? "absolute" : "fixed"} left-0 top-0 z-20 w-full`}>
       <div className="relative flex w-full items-start justify-between px-4 py-2 md:px-20 lg:hidden">
         <Link
           href="/"
@@ -45,12 +49,15 @@ const Navigation = () => {
               <Link href="">Partners</Link>
               <Link href="">FAQ</Link>
               <Link href="">Archive</Link>
-              <Link
+              {!hasSignout ? <Link
                 href="/#register"
                 className="mx-auto w-fit rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1"
               >
                 Register
-              </Link>
+              </Link>:
+              <button className="mx-auto w-fit rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1" onClick={() => signOut({ callbackUrl: "/", redirect: true })}>
+                Sign Out
+              </button>}
             </ul>
           </div>
         )}
@@ -95,12 +102,14 @@ const Navigation = () => {
             <Link href="/" className={navHoverAnimation}>
               Archive
             </Link>
-            <Link
+            { !hasSignout ?            <Link
               href="/#register"
               className="-mt-2 rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1 transition-all hover:scale-105"
             >
               Register
-            </Link>
+            </Link> :       <button className="-mt-2 transition-all hover:scale-105 hover:cursor-pointer rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1" onClick={() => signOut({ callbackUrl: "/", redirect: true })}>
+                    Sign Out
+                  </button>}
           </ul>
         </div>
       </div>
