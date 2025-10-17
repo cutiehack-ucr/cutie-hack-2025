@@ -14,8 +14,7 @@ const Checkbox = ({ id, checked, onClick, children }: checkbox) => {
       <Check id={id} checked={checked} />
       <Label
         htmlFor={id}
-        onClick={(e) => e.stopPropagation()}
-        className="m-0 gap-2 font-normal"
+        className="m-0 gap-2 font-normal leading-tight"
       >
         {children}
       </Label>
