@@ -31,7 +31,7 @@ const CountdownSign = () => {
             backgroundImage="/landing/countdownDigitsBg.webp"
           />
 
-          <div className="mt-[16%] flex w-fit -rotate-12 flex-row gap-2 py-[10px] pr-8 font-inknut text-xl max-[455px]:mt-12">
+          <div className="mt-[16%] flex w-fit -rotate-12 flex-row gap-2 py-[10px] pr-8 font-inknut text-xl max-[455px]:mt-8 max-[455px]:gap-1 max-[455px]:pr-6">
             <a
               href="https://www.instagram.com/cutiehack_ucr/"
               target="_blank"
