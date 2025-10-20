@@ -7,9 +7,16 @@ const Register = () => {
 
   return (
     <div
-      className="relative mx-auto flex w-5/6 flex-col items-center justify-center"
+      className="relative mx-auto flex w-screen flex-col items-center justify-center"
       id="register"
     >
+      <Image
+        className="absolute left-1/2 z-0 -mt-[175px] hidden w-[4000px] -translate-x-1/2 lg:block"
+        alt="Foliage with rocks and misc. items"
+        width={2000}
+        height={100}
+        src={"/landing/landingBg.svg"}
+      />
       <TitleBanner title="Register" />
 
       <div className="mt-10 grid max-w-4xl grid-cols-1 gap-x-12 gap-y-10 md:grid-cols-2 md:gap-y-16">
