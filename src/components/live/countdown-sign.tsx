@@ -31,9 +31,47 @@ const CountdownSign = () => {
             backgroundImage="/landing/countdownDigitsBg.webp"
           />
 
-          <button className="mt-[20%] w-fit rounded-[20px] border-[3px] border-solid border-black bg-hackathon-off-white-100 px-6 py-[10px] font-inknut text-xl shadow-[-3px_3px_2px_0px_#47B7A0] max-[455px]:mt-12">
-            Register
-          </button>
+          <div className="mt-[16%] flex w-fit -rotate-12 flex-row gap-2 py-[10px] pr-8 font-inknut text-xl max-[455px]:mt-12">
+            <a
+              href="https://www.instagram.com/cutiehack_ucr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all hover:scale-95 hover:opacity-80"
+            >
+              <Image
+                src="/socials/instagram.svg"
+                alt="Instagram"
+                width={55}
+                height={55}
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/cutiehack_ucr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 p-1 transition-all hover:scale-95 hover:opacity-80"
+            >
+              <Image
+                src="/socials/linkedin.svg"
+                alt="Instagram"
+                width={55}
+                height={55}
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/cutiehack_ucr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all hover:scale-95 hover:opacity-80"
+            >
+              <Image
+                src="/socials/mail.svg"
+                alt="Instagram"
+                width={75}
+                height={75}
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -15,15 +15,6 @@ const Landing = () => {
           aria-hidden="true"
         />
 
-        <Image
-          className="hidden lg:absolute lg:z-0 lg:mt-10 min-[1400px]:block"
-          alt="Sword in Stone"
-          width={850}
-          height={100}
-          src="/landing/swordInStoneWithFlash.webp"
-          priority
-        />
-
         <div className="relative z-10 flex w-[90%] flex-col items-center gap-6 px-4 max-[1400px]:mt-[150px] lg:items-center lg:justify-between lg:px-20 min-[1400px]:flex-row">
           <div className="flex w-full flex-col items-center text-center font-inknut lg:w-auto">
             <h1 className="text-xl">ACM Presents:</h1>
