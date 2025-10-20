@@ -7,9 +7,17 @@ const Register = () => {
 
   return (
     <div
-      className="relative mx-auto flex w-screen flex-col items-center justify-center"
+      className="relative mx-auto flex w-full flex-col items-center justify-center pb-72"
       id="register"
     >
+      <Image
+        className="hidden w-1/2 -translate-y-[80%] lg:absolute lg:z-0 min-[1400px]:block"
+        alt="Sword in Stone"
+        width={850}
+        height={100}
+        src="/landing/swordInStoneWithFlash.webp"
+        priority
+      />
       <Image
         className="absolute left-1/2 z-0 -mt-[175px] hidden w-[4000px] -translate-x-1/2 lg:block"
         alt="Foliage with rocks and misc. items"

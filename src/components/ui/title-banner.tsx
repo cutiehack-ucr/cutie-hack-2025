@@ -6,7 +6,7 @@ interface TitleBannerProps {
 
 const TitleBanner = ({ title }: TitleBannerProps) => {
   return (
-    <div className="relative mt-20 flex items-center justify-center">
+    <div className="relative flex items-center justify-center">
       <Image
         src="/landing/titleBanner.webp"
         alt=""

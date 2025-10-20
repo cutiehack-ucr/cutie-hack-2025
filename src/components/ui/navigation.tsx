@@ -13,8 +13,8 @@ const Navigation = ({ hasSignout }: NavigationProps) => {
     setHamburgerNav(!hamburgerNav);
   };
 
-  const navHoverAnimation =
-    "ease-in-out relative hover:cursor-pointer hover:scale-105 hover:after:rotate-45 transition-all hover:after:content-[''] hover:after:absolute hover:after:block hover:after:h-2 hover:after:w-2 hover:after:border-black hover:after:border-[2px] hover:after:left-1/2 hover:after:-translate-x-1/2";
+  // const navHoverAnimation =
+  //   "ease-in-out relative hover:cursor-pointer hover:scale-105 hover:after:rotate-45 transition-all hover:after:content-[''] hover:after:absolute hover:after:block hover:after:h-2 hover:after:w-2 hover:after:border-black hover:after:border-[2px] hover:after:left-1/2 hover:after:-translate-x-1/2";
 
   return (
     <nav
@@ -44,13 +44,14 @@ const Navigation = ({ hasSignout }: NavigationProps) => {
         {hamburgerNav && (
           <div className="absolute left-0 top-0 z-0 max-h-screen w-screen overflow-y-auto bg-hackathon-off-white-100 py-4 shadow-lg">
             <ul className="flex w-full flex-col gap-2 px-4 pt-12 text-center font-inknut">
-              <Link href="" className="mt-1">
+              {/* <Link href="" className="mt-1">
                 About
               </Link>
               <Link href="">Schedule</Link>
               <Link href="">Partners</Link>
               <Link href="">FAQ</Link>
-              <Link href="">Archive</Link>
+              <Link href="">Archive</Link> */}
+              <p>More information coming soon!</p>
               {!hasSignout ? (
                 <Link
                   href="/#register"
@@ -95,7 +96,8 @@ const Navigation = ({ hasSignout }: NavigationProps) => {
           }}
         >
           <ul className="-mt-9 flex space-x-8 font-inknut font-normal">
-            <Link href="/#about" className={navHoverAnimation}>
+            <p className="mr-4">More information coming soon!</p>
+            {/* <Link href="/#about" className={navHoverAnimation}>
               About
             </Link>
             <Link href="/#schedule" className={navHoverAnimation}>
@@ -109,11 +111,11 @@ const Navigation = ({ hasSignout }: NavigationProps) => {
             </Link>
             <Link href="/" className={navHoverAnimation}>
               Archive
-            </Link>
+            </Link> */}
             {!hasSignout ? (
               <Link
                 href="/#register"
-                className="-mt-2 rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1 transition-all hover:scale-105"
+                className="-mt-2 rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1 transition-all hover:scale-105 hover:opacity-80"
               >
                 Register
               </Link>
