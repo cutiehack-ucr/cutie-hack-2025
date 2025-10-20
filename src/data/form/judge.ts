@@ -1,12 +1,11 @@
 import {
   Description,
   RadioInput,
-  SelectInput,
   TermsAndConditions,
   TextInput,
   UploadInput,
 } from "@/types/forms";
-import { GENDERS, SHIRTS, AGES, DIETS } from "./information";
+import { GENDERS, SHIRTS, DIETS } from "./information";
 import data from "@/data/config";
 
 interface Attributes {
@@ -15,7 +14,6 @@ interface Attributes {
   email: string;
   phone: string;
   gender: string;
-  age: string;
   shirt: string;
   affiliation: "Professor" | "Student" | "Industry";
   title: string;
@@ -31,7 +29,6 @@ interface Fields {
   email: TextInput;
   phone: TextInput;
   gender: RadioInput;
-  age: SelectInput;
   shirt: RadioInput;
   affiliation: RadioInput;
   title: TextInput;
@@ -126,17 +123,6 @@ export const FIELDS: Fields = {
     required: true,
     editable: true,
   },
-  age: {
-    input: "select",
-    title: "Age",
-    options: AGES,
-    field: "age",
-    placeholder: "ie. 18",
-    width: 12,
-    required: true,
-    editable: true,
-    searchable: true,
-  },
   shirt: {
     input: "radio",
     text: "Shirt Size",
@@ -177,7 +163,8 @@ export const FIELDS: Fields = {
     maxSize: [1, "MB"],
     required: true,
     editable: true,
-    description: "Please provide a headshot with a clean background.",
+    description:
+      "Please provide a headshot with a clean background. If selected, your photo will be featured on the hackathon website.",
   },
   diet: {
     input: "radio",
@@ -214,7 +201,6 @@ export const ATTRIBUTES: Attributes = {
   email: "",
   phone: "",
   gender: "",
-  age: "",
   shirt: "",
   affiliation: "Professor",
   title: "",

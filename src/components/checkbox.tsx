@@ -13,9 +13,9 @@ const Checkbox = ({ id, checked, onClick, children }: checkbox) => {
     <div className="flex items-start gap-2" onClick={onClick}>
       <Check id={id} checked={checked} />
       <Label
-        htmlFor={id}
         onClick={(e) => e.stopPropagation()}
-        className="m-0 gap-2 font-normal"
+        htmlFor={id}
+        className="m-0 gap-2 font-normal leading-tight"
       >
         {children}
       </Label>

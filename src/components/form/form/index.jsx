@@ -4,11 +4,8 @@ import { useState } from "react";
 import Status from "./status";
 import Questions from "./questions";
 import Confirmation from "./confirmation";
-import { signOut } from "next-auth/react";
 import Image from "next/image";
-import LOGO from "@/app/favicon.ico";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import Navigation from "@/components/ui/navigation";
 
 const Form = ({
   object,
@@ -27,40 +24,62 @@ const Form = ({
   );
 
   return (
-    <div className="overflow-scroll-y flex h-full w-full flex-col items-center font-poppins">
-      <div className="mt-4 flex w-full flex-row justify-end space-x-4">
-        <Button asChild>
-          <Link href="/">Back to Home</Link>
-        </Button>
-        <Button onClick={() => signOut({ callbackUrl: "/", redirect: true })}>
-          Sign Out
-        </Button>
-      </div>
-      <div className="flex w-10/12 flex-col items-center pb-12 pt-5 md:w-1/2 xl:w-1/3">
-        <Image src={LOGO} className="m-4 w-1/4" alt="Logo" />
-        <p className="m-0 w-full rounded-t bg-hackathon-green-300 px-4 py-4 text-xl font-semibold">
+    <div className="overflow-scroll-y flex h-full w-full flex-col items-center font-inknut">
+      <Navigation hasSignout />
+      <Image
+        className="absolute inset-0 -top-32 z-0 h-auto w-full scale-125 bg-hackathon-teal-800 object-cover"
+        alt=""
+        width={0}
+        height={0}
+        src="/landing/backgroundGlow.svg"
+        priority
+        aria-hidden="true"
+      />
+      <div className="z-10 mt-8 flex w-10/12 flex-col items-center pb-12 pt-5 md:w-1/2 lg:mt-32 xl:w-1/3">
+        <Image
+          src="/forms/titleHorizontal.svg"
+          width={0}
+          height={0}
+          className="m-4 w-full"
+          alt="Logo"
+        />
+        <Image
+          src="/forms/formDeco.svg"
+          width={0}
+          height={0}
+          className="relative top-2 w-full scale-110"
+          alt=""
+          aria-hidden
+        />
+        <h1 className="m-0 w-full rounded-t bg-hackathon-gray-400 px-4 py-8 text-center text-2xl font-bold text-hackathon-off-white-100">
           {header}
-        </p>
-        <div className="rounded-b bg-white p-8">
-          <div className="grid grid-cols-1 gap-3">
-            {state === 0 ? (
-              <Status object={object} statuses={statuses} setState={setState} />
-            ) : state === 1 ? (
-              <Questions
-                loading={loading}
-                setLoading={setLoading}
-                object={object}
-                setObject={setObject}
-                fields={fields}
-                onSubmit={onSubmit}
-                setState={setState}
-                packet={packet}
-              />
-            ) : (
-              <Confirmation />
-            )}
-          </div>
+        </h1>
+        <div className="grid grid-cols-1 gap-3 rounded-b bg-hackathon-off-white-100 p-8">
+          {state === 0 ? (
+            <Status object={object} statuses={statuses} setState={setState} />
+          ) : state === 1 ? (
+            <Questions
+              loading={loading}
+              setLoading={setLoading}
+              object={object}
+              setObject={setObject}
+              fields={fields}
+              onSubmit={onSubmit}
+              setState={setState}
+              packet={packet}
+            />
+          ) : (
+            <Confirmation />
+          )}
         </div>
+        <Image
+          src="/forms/formDeco.svg"
+          width={0}
+          height={0}
+          className="relative -bottom-2 w-full rotate-180 scale-110"
+          alt=""
+          aria-hidden
+        />
       </div>
     </div>
   );
