@@ -16,7 +16,7 @@ const Landing = () => {
         />
 
         <Image
-          className="hidden lg:absolute lg:z-10 lg:mt-10 min-[1400px]:block"
+          className="hidden lg:absolute lg:z-0 lg:mt-10 min-[1400px]:block"
           alt="Sword in Stone"
           width={850}
           height={100}
