@@ -10,12 +10,12 @@ const Register = () => {
       className="relative mx-auto flex w-screen flex-col items-center justify-center"
       id="register"
     >
-      <Image 
-        className="lg:block absolute z-0 hidden -mt-[175px] left-1/2 -translate-x-1/2 w-[4000px]"
+      <Image
+        className="absolute left-1/2 z-0 -mt-[175px] hidden w-[4000px] -translate-x-1/2 lg:block"
         alt="Foliage with rocks and misc. items"
         width={2000}
         height={100}
-        src={'/landing/landingBg.svg'}
+        src={"/landing/landingBg.svg"}
       />
       <TitleBanner title="Register" />
 
