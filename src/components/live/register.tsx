@@ -16,12 +16,11 @@ const Register = () => {
         width={850}
         height={100}
         src="/landing/swordInStoneWithFlash.webp"
-        priority
       />
       <Image
-        className="absolute left-1/2 z-0 -mt-[175px] hidden w-[4000px] -translate-x-1/2 lg:block"
+        className="absolute left-1/2 z-0 -mt-[175px] hidden -translate-x-1/2 lg:block"
         alt="Foliage with rocks and misc. items"
-        width={2000}
+        width={4000}
         height={100}
         src={"/landing/landingBg.svg"}
       />
@@ -32,15 +31,15 @@ const Register = () => {
           <Link
             key={role}
             href={role === "judge" ? "judge/register" : `apply/${role}`}
-            className="group relative flex h-[80px] w-[250px] flex-col items-center justify-center transition-all ease-in-out hover:-translate-y-0.5 group-hover:flex-row"
+            className="group relative flex h-[80px] w-[250px] flex-col items-center justify-center transition-all ease-in-out hover:-translate-y-0.5 hover:opacity-80 group-hover:flex-row"
           >
             <Image
               alt=""
               width={225}
-              height={0}
+              height={30}
               src="/landing/registerDecorFrame.webp"
               aria-hidden
-              className="hidden group-hover:block"
+              className="absolute opacity-0 group-hover:opacity-100"
             />
             <p className="font-inknut text-2xl text-hackathon-off-white-100 group-hover:absolute group-hover:mb-6">
               {role.charAt(0).toUpperCase() + role.slice(1)}
@@ -48,10 +47,10 @@ const Register = () => {
             <Image
               alt=""
               width={175}
-              height={0}
+              height={30}
               src="/landing/registerDecorLines.webp"
               aria-hidden
-              className="group-hover:hidden"
+              className="group-hover:opacity-0"
             />
           </Link>
         ))}
