@@ -46,27 +46,25 @@ const CountdownSign = () => {
               />
             </a>
             <a
-              href="https://www.instagram.com/cutiehack_ucr/"
+              href="https://www.linkedin.com/company/cutie-hack"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-2 p-1 transition-all hover:scale-95 hover:opacity-80"
             >
               <Image
                 src="/socials/linkedin.svg"
-                alt="Instagram"
+                alt="LinkedIn"
                 width={55}
                 height={55}
               />
             </a>
             <a
-              href="https://www.instagram.com/cutiehack_ucr/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:citrushack@gmail.com"
               className="transition-all hover:scale-95 hover:opacity-80"
             >
               <Image
                 src="/socials/mail.svg"
-                alt="Instagram"
+                alt="Email"
                 width={75}
                 height={75}
               />
