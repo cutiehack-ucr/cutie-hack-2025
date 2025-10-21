@@ -49,7 +49,7 @@ const Statistics = () => {
   }));
 
   return (
-    <div className="flex h-full flex-col py-4 font-poppins">
+    <div className="font-poppins flex h-full flex-col py-4">
       <Label className="pr-5 text-2xl font-bold">Statistics</Label>
       <div className="flex h-full items-start">
         <ToggleGroup
@@ -73,9 +73,17 @@ const Statistics = () => {
           <Heatmap
             key={key}
             label={value}
-            data={values[mappings[value]]}
+            data={
+              key !== "age"
+                ? values[mappings[value]]
+                : values[mappings[value]].filter(
+                    (unused, i) => roles[i] !== "judges",
+                  )
+            }
             xLabels={labels}
-            yLabels={roles}
+            yLabels={roles.filter(
+              (role) => !(key === "age" && role === "judges"),
+            )}
           />
         </>
       ))}

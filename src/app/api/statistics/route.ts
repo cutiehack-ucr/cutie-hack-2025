@@ -2,6 +2,8 @@ import { db } from "@/utils/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { AGES, DIETS, GENDERS, SHIRTS } from "@/data/form/information";
 
+export const dynamic = "force-dynamic";
+
 const labels: string[] = [
   "participants",
   "judges",
@@ -35,14 +37,21 @@ export const GET = async () => {
 
     labels.forEach((label: string) => {
       heatmaps[doc.id][label] = {};
-
       statuses.forEach((status: string) => {
-        heatmaps[doc.id][label][status] = [];
+        if (doc.id === "age" && label === "judges") {
+          heatmaps[doc.id][label][status] = new Array(
+            orders[doc.id].length,
+          ).fill(0);
+        } else {
+          heatmaps[doc.id][label][status] = [];
 
-        const results = data[label][status];
-        const values: number[] = orders[doc.id].map((key) => results[key]);
+          const results = data[label]?.[status] ?? {};
+          const values: number[] = orders[doc.id].map(
+            (key) => results[key] ?? 0,
+          );
 
-        heatmaps[doc.id][label][status] = values;
+          heatmaps[doc.id][label][status] = values;
+        }
       });
     });
   });
