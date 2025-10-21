@@ -17,6 +17,7 @@ interface Attributes {
   shirt: string;
   affiliation: "Professor" | "Student" | "Industry";
   title: string;
+  company: string;
   photo: string;
   diet: string;
   requirements: string[];
@@ -32,6 +33,7 @@ interface Fields {
   shirt: RadioInput;
   affiliation: RadioInput;
   title: TextInput;
+  company: TextInput;
   photo: UploadInput;
   diet: RadioInput;
   requirements: TermsAndConditions;
@@ -67,7 +69,7 @@ export const FIELDS: Fields = {
       })}.`,
       "Judges are not required to stay the full duration of the event, but are encouraged to checkout the various events, workshops, and opportunities that are available.",
       "Judge duties include but are not limited to visiting various teams to assess teams on their idea, technical complexities, and overall presentation after which they will decide the winners.",
-      "Note: Judges are not permitted to become participants for the hackathon.",
+      "Note: Judges are not permitted to become participants for the hackathon, and are not provided travel expenses or any overnight accommodations.",
     ],
   },
   firstName: {
@@ -154,6 +156,17 @@ export const FIELDS: Fields = {
     required: true,
     editable: true,
   },
+  company: {
+    input: "input",
+    name: "company",
+    type: "text",
+    title: "Company",
+    placeholder: "ie. Cutie Hack",
+    maxLength: 50,
+    width: 12,
+    required: false,
+    editable: true,
+  },
   photo: {
     input: "upload",
     field: "photo",
@@ -163,8 +176,6 @@ export const FIELDS: Fields = {
     maxSize: [1, "MB"],
     required: true,
     editable: true,
-    description:
-      "Please provide a headshot with a clean background. If selected, your photo will be featured on the hackathon website.",
   },
   diet: {
     input: "radio",
@@ -204,6 +215,7 @@ export const ATTRIBUTES: Attributes = {
   shirt: "",
   affiliation: "Professor",
   title: "",
+  company: "",
   photo: "",
   diet: "",
   requirements: [],
