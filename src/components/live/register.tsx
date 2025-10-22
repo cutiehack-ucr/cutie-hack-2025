@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import TitleBanner from "../ui/title-banner";
-import swordInStoneWithFlash from "@/public/landing/swordInStoneWithFlash.webp";
+import swordInStone from "@/public/landing/swordInStone.svg";
 import landingBg from "@/public/landing/landingBg.svg";
 import registerDecorFrame from "@/public/landing/registerDecorFrame.webp";
 import registerDecorLines from "@/public/landing/registerDecorLines.webp";
@@ -11,15 +11,15 @@ const Register = () => {
 
   return (
     <div
-      className="relative mx-auto flex w-full flex-col items-center justify-center pb-72"
+      className="relative mx-auto flex w-full flex-col items-center justify-center pb-56 max-[1400px]:mt-12 max-[1400px]:pb-32"
       id="register"
     >
       <Image
-        className="hidden w-1/2 -translate-y-[80%] lg:absolute lg:z-0 min-[1400px]:block"
+        className="lg:z-1 hidden w-1/2 -translate-y-[80%] lg:absolute min-[1400px]:block"
         alt="Sword in Stone"
         width={850}
         height={100}
-        src={swordInStoneWithFlash}
+        src={swordInStone}
       />
       <Image
         className="absolute left-1/2 z-0 -mt-[175px] hidden -translate-x-1/2 lg:block"
@@ -49,7 +49,7 @@ const Register = () => {
               aria-hidden
               className="absolute opacity-0 group-hover:opacity-100"
             />
-            <p className="font-inknut text-2xl text-hackathon-off-white-100 group-hover:absolute group-hover:mb-6">
+            <p className="font-inknut text-lg text-hackathon-off-white-100 group-hover:absolute group-hover:mb-6 md:text-2xl">
               {role.charAt(0).toUpperCase() + role.slice(1)}
             </p>
             <Image

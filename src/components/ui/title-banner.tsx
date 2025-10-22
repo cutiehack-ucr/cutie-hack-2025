@@ -1,4 +1,5 @@
 import Image from "next/image";
+import titleBanner from "@/public/landing/titleBanner.webp";
 
 interface TitleBannerProps {
   title: string;
@@ -8,14 +9,13 @@ const TitleBanner = ({ title }: TitleBannerProps) => {
   return (
     <div className="relative flex items-center justify-center">
       <Image
-        src="/landing/titleBanner.webp"
+        src={titleBanner}
         alt=""
         width={400}
-        height={100}
-        className="object-contain drop-shadow-md"
+        className="h-auto object-contain px-8 drop-shadow-md md:px-0"
         aria-hidden
       />
-      <h2 className="absolute inset-0 -mt-8 flex items-center justify-center font-inknut text-4xl text-hackathon-off-white-100">
+      <h2 className="absolute inset-0 -mt-8 flex items-center justify-center font-inknut text-2xl text-hackathon-off-white-100 md:text-4xl">
         {title}
       </h2>
     </div>

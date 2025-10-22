@@ -10,13 +10,12 @@ import mailIcon from "@/public/socials/mail.svg";
 const CountdownSign = () => {
   return (
     <div className="relative flex w-full flex-col items-center justify-center lg:w-auto min-[1400px]:mt-60">
-      <div className="relative w-fit max-[600px]:w-[500px] max-[460px]:w-[450px]">
+      <div className="relative h-auto w-fit max-[600px]:w-[500px] max-[460px]:w-[450px]">
         <Image
           src={countdownBg}
           alt="Countdown background"
           width={520}
-          height={0}
-          className="w-full object-contain"
+          className="h-auto w-full object-contain"
           priority
         />
 
@@ -47,7 +46,7 @@ const CountdownSign = () => {
                 src={instagramIcon}
                 alt="Instagram"
                 width={55}
-                height={55}
+                className="h-auto p-[1px] md:p-0"
               />
             </a>
             <a
@@ -56,13 +55,23 @@ const CountdownSign = () => {
               rel="noopener noreferrer"
               className="ml-2 p-1 transition-all hover:scale-95 hover:opacity-80"
             >
-              <Image src={linkedinIcon} alt="LinkedIn" width={55} height={55} />
+              <Image
+                src={linkedinIcon}
+                alt="LinkedIn"
+                width={55}
+                className="h-auto p-[1px] md:p-0"
+              />
             </a>
             <a
               href="mailto:citrushack@gmail.com"
               className="transition-all hover:scale-95 hover:opacity-80"
             >
-              <Image src={mailIcon} alt="Email" width={75} height={75} />
+              <Image
+                src={mailIcon}
+                alt="Email"
+                width={75}
+                className="h-auto p-[1px] md:p-0"
+              />
             </a>
           </div>
         </div>

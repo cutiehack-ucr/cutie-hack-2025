@@ -15,6 +15,7 @@ module.exports = {
       fontFamily: {
         poppins: ["var(--font-poppins)"],
         inknut: ["var(--font-inknut)"],
+        forum: ["var(--font-forum)"],
       },
       colors: {
         hackathon: {
