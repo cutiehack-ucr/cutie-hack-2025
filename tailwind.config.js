@@ -20,6 +20,7 @@ module.exports = {
         hackathon: {
           primary: "#22577A",
           "blue-100": "#38A3A5",
+          "blue-800": "#03556a",
           "green-100": "#E7F7E9",
           "green-300": "#57CC99",
           "gray-100": "#E7E7E7",
