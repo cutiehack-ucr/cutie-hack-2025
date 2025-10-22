@@ -6,6 +6,7 @@ import Questions from "./questions";
 import Confirmation from "./confirmation";
 import Image from "next/image";
 import Navigation from "@/components/ui/navigation";
+import bgGlow from "@/public/landing/backgroundGlow.svg";
 
 const Form = ({
   object,
@@ -27,11 +28,9 @@ const Form = ({
     <div className="overflow-scroll-y flex h-full w-full flex-col items-center font-inknut">
       <Navigation hasSignout />
       <Image
-        className="absolute inset-0 -top-32 z-0 h-auto w-full scale-125 bg-hackathon-teal-800 object-cover"
+        className="absolute inset-0 -top-32 z-0 h-auto w-full scale-125 overflow-y-clip bg-hackathon-teal-800 object-cover"
         alt=""
-        width={0}
-        height={0}
-        src="/landing/backgroundGlow.svg"
+        src={bgGlow}
         priority
         aria-hidden="true"
       />

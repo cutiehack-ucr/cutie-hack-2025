@@ -1,16 +1,18 @@
 import Image from "next/image";
 import CountdownSign from "./countdown-sign";
+import bgGlow from "@/public/landing/bgGlow.svg";
+import title from "@/public/landing/cutieHackTitle.svg";
 
 const Landing = () => {
   return (
     <div className="flex flex-col items-center justify-center overflow-x-hidden overflow-y-clip lg:overflow-x-clip">
       <div className="relative flex min-h-screen w-full flex-col items-center">
         <Image
-          className="absolute inset-0 z-0 min-h-full bg-gradient-to-t from-hackathon-teal-800 to-hackathon-blue-800 max-[1400px]:-translate-y-12 max-[1400px]:scale-150 lg:h-auto"
+          className="absolute inset-0 z-0 min-h-full bg-hackathon-teal-800 max-[1400px]:-translate-y-12 max-[1400px]:scale-150 lg:h-auto"
           alt=""
           width={4000}
           height={1800}
-          src="/landing/bgGlow.svg"
+          src={bgGlow}
           priority
           aria-hidden="true"
         />
@@ -19,7 +21,7 @@ const Landing = () => {
           <Image
             className="object-contain min-[1400px]:mb-12 min-[1400px]:ml-12"
             alt="Cutie Hack 2025 Title"
-            src="/landing/cutieHackTitle.svg"
+            src={title}
             width={400}
             height={400}
             sizes="(min-width: 1400px) 400px, 300px"

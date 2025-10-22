@@ -73,10 +73,7 @@ const Navigation = ({ hasSignout }: NavigationProps) => {
       </div>
 
       <div className="relative hidden w-full items-center justify-center py-4 lg:flex">
-        <Link
-          href="/"
-          className="absolute left-1/2 hidden -translate-x-[500px] lg:block"
-        >
+        <Link href="/" className="absolute left-24 hidden lg:block">
           <Image
             src="/landing/navbarIcon.webp"
             width={100}

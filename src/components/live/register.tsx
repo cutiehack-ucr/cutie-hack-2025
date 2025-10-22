@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import TitleBanner from "../ui/title-banner";
+import swordInStoneWithFlash from "@/public/landing/swordInStoneWithFlash.webp";
+import landingBg from "@/public/landing/landingBg.svg";
+import registerDecorFrame from "@/public/landing/registerDecorFrame.webp";
+import registerDecorLines from "@/public/landing/registerDecorLines.webp";
 
 const Register = () => {
-  const roles = ["participant", "judge", "mentor", "volunteer"];
+  const roles = ["participant", "mentor", "volunteer"];
 
   return (
     <div
@@ -15,29 +19,33 @@ const Register = () => {
         alt="Sword in Stone"
         width={850}
         height={100}
-        src="/landing/swordInStoneWithFlash.webp"
+        src={swordInStoneWithFlash}
       />
       <Image
         className="absolute left-1/2 z-0 -mt-[175px] hidden -translate-x-1/2 lg:block"
         alt="Foliage with rocks and misc. items"
         width={4000}
         height={100}
-        src={"/landing/landingBg.svg"}
+        src={landingBg}
       />
       <TitleBanner title="Register" />
 
       <div className="mt-10 grid max-w-4xl grid-cols-1 gap-x-12 gap-y-10 md:grid-cols-2 md:gap-y-16">
-        {roles.map((role) => (
+        {roles.map((role, index) => (
           <Link
             key={role}
-            href={role === "judge" ? "judge/register" : `apply/${role}`}
-            className="group relative flex h-[80px] w-[250px] flex-col items-center justify-center transition-all ease-in-out hover:-translate-y-0.5 hover:opacity-80 group-hover:flex-row"
+            href={`apply/${role}`}
+            className={`group relative flex h-[80px] w-[250px] flex-col items-center justify-center transition-all ease-in-out hover:-translate-y-0.5 hover:opacity-80 group-hover:flex-row ${
+              index === roles.length - 1
+                ? "md:col-span-2 md:justify-self-center"
+                : ""
+            }`}
           >
             <Image
               alt=""
               width={225}
               height={30}
-              src="/landing/registerDecorFrame.webp"
+              src={registerDecorFrame}
               aria-hidden
               className="absolute opacity-0 group-hover:opacity-100"
             />
@@ -48,7 +56,7 @@ const Register = () => {
               alt=""
               width={175}
               height={30}
-              src="/landing/registerDecorLines.webp"
+              src={registerDecorLines}
               aria-hidden
               className="group-hover:opacity-0"
             />
