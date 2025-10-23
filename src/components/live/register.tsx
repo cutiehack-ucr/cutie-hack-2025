@@ -11,7 +11,7 @@ const Register = () => {
 
   return (
     <div
-      className="relative mx-auto flex w-full flex-col items-center justify-center pb-56 max-[1400px]:mt-12 max-[1400px]:pb-32"
+      className="relative mx-auto flex w-full flex-col items-center justify-center pb-72 max-[1400px]:mt-12 max-[1400px]:pb-32"
       id="register"
     >
       <Image
