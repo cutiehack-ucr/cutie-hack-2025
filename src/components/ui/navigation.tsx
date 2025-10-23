@@ -30,12 +30,12 @@ const Navigation = ({ hasSignout }: NavigationProps) => {
             alt="Sword and Shield Icon"
             width={100}
             height={100}
-            className="z-10 w-16"
+            className="z-10 w-16 drop-shadow-md"
           />
         </Link>
         <button
           onClick={toggleNav}
-          className="z-10 mt-3 flex flex-col gap-[4px] pr-2 transition-all hover:scale-105 hover:cursor-pointer"
+          className="z-10 mt-3 flex flex-col gap-[4px] pr-2 drop-shadow-md transition-all hover:scale-105 hover:cursor-pointer"
         >
           <div className="h-1 w-8 rounded-xl border-[1px] border-black bg-white"></div>
           <div className="h-1 w-8 rounded-xl border-[1px] border-black bg-white"></div>
@@ -79,11 +79,11 @@ const Navigation = ({ hasSignout }: NavigationProps) => {
             width={100}
             height={100}
             alt="Sword and Shield Icon"
-            className="w-20 transition-all hover:scale-105 lg:-mt-9"
+            className="w-20 drop-shadow-md transition-all hover:scale-105 lg:-mt-9"
           />
         </Link>
         <div
-          className="hidden items-center justify-center font-bold lg:flex"
+          className="hidden items-center justify-center font-bold drop-shadow-md lg:flex"
           style={{
             backgroundImage: "url(/landing/navbarFrame.webp)",
             backgroundSize: "cover",
