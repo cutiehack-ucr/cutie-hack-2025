@@ -1,27 +1,38 @@
 import Image from "next/image";
 import CountdownSign from "./countdown-sign";
+import bgGlow from "@/public/landing/bgGlow.svg";
+import bgGlowSmall from "@/public/landing/backgroundGlow.svg";
+import title from "@/public/landing/cutieHackTitle.svg";
 
 const Landing = () => {
   return (
-    <div className="flex flex-col items-center justify-center overflow-x-hidden lg:overflow-x-visible">
+    <div className="flex flex-col items-center justify-center overflow-x-hidden overflow-y-clip lg:overflow-x-clip">
       <div className="relative flex min-h-screen w-full flex-col items-center">
         <Image
-          className="absolute inset-0 z-0 h-full w-full bg-hackathon-teal-800 lg:h-auto"
+          className="absolute inset-0 z-0 min-h-full bg-hackathon-teal-800 max-[1400px]:hidden lg:h-auto"
           alt=""
           width={4000}
           height={1800}
-          src="/landing/backgroundGlow.svg"
+          src={bgGlow}
+          priority
+          aria-hidden="true"
+        />
+        <Image
+          className="absolute z-0 min-h-full translate-y-12 scale-150 bg-hackathon-teal-800 min-[1400px]:hidden"
+          alt=""
+          width={4000}
+          height={1800}
+          src={bgGlowSmall}
           priority
           aria-hidden="true"
         />
 
-        <div className="relative z-10 flex w-[90%] flex-col items-center gap-6 px-4 max-[1400px]:mt-[150px] lg:items-center lg:justify-between lg:px-20 min-[1400px]:flex-row">
+        <div className="relative z-10 flex h-auto w-[90%] flex-col items-center gap-6 px-4 max-[1400px]:mt-48 max-[800px]:mt-24 lg:items-center lg:justify-between lg:px-20 min-[1400px]:flex-row">
           <Image
-            className="object-contain min-[1400px]:mb-8 min-[1400px]:ml-20"
+            className="object-contain min-[1400px]:mb-12 min-[1400px]:ml-12"
             alt="Cutie Hack 2025 Title"
-            src="/landing/cutieHackTitle.svg"
+            src={title}
             width={400}
-            height={400}
             sizes="(min-width: 1400px) 400px, 300px"
           />
           <CountdownSign />

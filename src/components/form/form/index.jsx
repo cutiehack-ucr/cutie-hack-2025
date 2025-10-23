@@ -6,6 +6,9 @@ import Questions from "./questions";
 import Confirmation from "./confirmation";
 import Image from "next/image";
 import Navigation from "@/components/ui/navigation";
+import bgGlow from "@/public/landing/backgroundGlow.svg";
+import titleHorizontal from "@/public/forms/titleHorizontal.svg";
+import formDeco from "@/public/forms/formDeco.svg";
 
 const Form = ({
   object,
@@ -24,34 +27,27 @@ const Form = ({
   );
 
   return (
-    <div className="overflow-scroll-y flex h-full w-full flex-col items-center font-inknut">
+    <div className="overflow-scroll-y flex h-full w-full flex-col items-center font-forum">
       <Navigation hasSignout />
       <Image
-        className="absolute inset-0 -top-32 z-0 h-auto w-full scale-125 bg-hackathon-teal-800 object-cover"
+        className="absolute inset-0 -top-32 z-0 w-full scale-125 overflow-y-clip bg-hackathon-teal-800 object-cover"
         alt=""
-        width={0}
-        height={0}
-        src="/landing/backgroundGlow.svg"
+        src={bgGlow}
+        fill={state !== 1}
         priority
         aria-hidden="true"
       />
       <div className="z-10 mt-8 flex w-10/12 flex-col items-center pb-12 pt-5 md:w-1/2 lg:mt-32 xl:w-1/3">
+        <Image src={titleHorizontal} className="m-4 w-full" alt="Logo" />
         <Image
-          src="/forms/titleHorizontal.svg"
-          width={0}
-          height={0}
-          className="m-4 w-full"
-          alt="Logo"
-        />
-        <Image
-          src="/forms/formDeco.svg"
+          src={formDeco}
           width={0}
           height={0}
           className="relative top-2 w-full scale-110"
           alt=""
           aria-hidden
         />
-        <h1 className="m-0 w-full rounded-t bg-hackathon-gray-400 px-4 py-8 text-center text-2xl font-bold text-hackathon-off-white-100">
+        <h1 className="m-0 w-full rounded-t bg-hackathon-gray-400 px-4 py-8 text-center font-inknut text-2xl font-bold text-hackathon-off-white-100">
           {header}
         </h1>
         <div className="grid grid-cols-1 gap-3 rounded-b bg-hackathon-off-white-100 p-8">
@@ -73,7 +69,7 @@ const Form = ({
           )}
         </div>
         <Image
-          src="/forms/formDeco.svg"
+          src={formDeco}
           width={0}
           height={0}
           className="relative -bottom-2 w-full rotate-180 scale-110"

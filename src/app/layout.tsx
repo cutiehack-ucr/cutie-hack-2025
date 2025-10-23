@@ -1,13 +1,23 @@
 /* eslint-disable new-cap */
 import "./globals.css";
-import { Poppins } from "next/font/google";
-import { Inknut_Antiqua as inknutAntiqua } from "next/font/google";
+import {
+  Poppins,
+  Forum,
+  Inknut_Antiqua as inknutAntiqua,
+} from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-poppins",
+});
+
+const forum = Forum({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400"],
+  variable: "--font-forum",
 });
 
 const inknut = inknutAntiqua({
@@ -25,7 +35,7 @@ const RootLayout = async ({ children }: Props) => {
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${poppins.variable} ${inknut.variable} flex h-full flex-col lg:flex-row`}
+        className={`${poppins.variable} ${forum.variable} ${inknut.variable} flex h-full flex-col lg:flex-row`}
       >
         <div className="flex h-full w-full">{children}</div>
       </body>
