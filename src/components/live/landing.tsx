@@ -67,12 +67,12 @@ const Landing = () => {
             priority
           />
 
-          <div className="font-inknut-antiqua absolute bottom-[16%] left-1/2 -translate-x-1/2 text-center text-white">
+          <div className="font-inknut-antiqua absolute bottom-[11%] left-1/2 -translate-x-1/2 text-center text-white md:bottom-[17%]">
             <Countdown
               classNames={{
-                unit: "text-white md:text-xl",
-                background: "bg-hackathon-blue-100 ",
-                digit: "text-black md:text-xl",
+                unit: "text-white md:text-xl sm:text-lg",
+                background: "bg-hackathon-blue-100",
+                digit: "text-black md:text-xl sm:text-lg",
               }}
               backgroundImage={countdownDigitsBg.src}
             />
