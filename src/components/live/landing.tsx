@@ -4,10 +4,16 @@ import bgGlow from "@/public/landing/bgGlow.svg";
 import bgGlowSmall from "@/public/landing/backgroundGlow.svg";
 import title from "@/public/landing/cutieHackTitle.svg";
 
+import mobileTitle from "@/public/landing/mobileTitle.webp";
+import mobileLanding from "@/public/landing/mobileLanding.webp";
+import mobileFrame from "@/public/landing/mobileFrame.webp";
+import Countdown from "../ui/countdown";
+import countdownDigitsBg from "@/public/landing/countdownDigitsBg.webp";
+
 const Landing = () => {
   return (
     <div className="flex flex-col items-center justify-center overflow-x-hidden overflow-y-clip lg:overflow-x-clip">
-      <div className="relative flex min-h-screen w-full flex-col items-center">
+      <div className="relative hidden min-h-screen w-full flex-col items-center lg:flex">
         <Image
           className="absolute inset-0 z-0 min-h-full bg-hackathon-teal-800 max-[1400px]:hidden lg:h-auto"
           alt=""
@@ -36,6 +42,46 @@ const Landing = () => {
             sizes="(min-width: 1400px) 400px, 300px"
           />
           <CountdownSign />
+        </div>
+      </div>
+
+      <div className="relative z-10 mt-40 flex w-full flex-col items-center justify-center">
+        <Image
+          src={mobileTitle}
+          alt="Mobile Title"
+          className="mb-10 h-auto w-full max-w-[900px] scale-125 lg:hidden"
+          priority
+        />
+
+        <Image
+          src={mobileFrame}
+          alt="Mobile Frame Under Title"
+          className="mb-20 mt-5 w-1/2 lg:hidden"
+        />
+
+        <div className="relative w-full">
+          <Image
+            src={mobileLanding}
+            alt="Mobile Landing"
+            className="w-full object-cover"
+            priority
+          />
+
+          <div className="font-inknut-antiqua absolute bottom-[16%] left-1/2 -translate-x-1/2 text-center text-white">
+            <Countdown
+              classNames={{
+                unit: "text-white md:text-xl",
+                background: "bg-hackathon-blue-100 ",
+                digit: "text-black md:text-xl",
+              }}
+              backgroundImage={countdownDigitsBg.src}
+            />
+
+            <div className="mt-4 sm:text-3xl md:text-4xl">
+              November 15, 2025
+            </div>
+            <div className="mt-2 sm:text-3xl md:text-4xl">UC Riverside</div>
+          </div>
         </div>
       </div>
     </div>
