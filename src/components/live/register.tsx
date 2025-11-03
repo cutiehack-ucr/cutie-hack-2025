@@ -4,7 +4,6 @@ import TitleBanner from "../ui/title-banner";
 import swordInStone from "@/public/landing/swordInStone.svg";
 import landingBg from "@/public/landing/landingBg.svg";
 import registerDecorFrame from "@/public/landing/registerDecorFrame.webp";
-import registerDecorLines from "@/public/landing/registerDecorLines.webp";
 
 const Register = () => {
   const roles = ["participant", "mentor", "volunteer"];
@@ -35,7 +34,7 @@ const Register = () => {
           <Link
             key={role}
             href={`apply/${role}`}
-            className={`group relative flex h-[80px] w-[250px] flex-col items-center justify-center transition-all ease-in-out hover:-translate-y-0.5 hover:opacity-80 group-hover:flex-row ${
+            className={`group relative flex h-[80px] w-[250px] flex-col items-center justify-center transition-all duration-200 ease-in-out hover:scale-105 ${
               index === roles.length - 1
                 ? "md:col-span-2 md:justify-self-center"
                 : ""
@@ -43,23 +42,15 @@ const Register = () => {
           >
             <Image
               alt=""
-              width={225}
-              height={30}
+              width={250}
+              height={80}
               src={registerDecorFrame}
               aria-hidden
-              className="absolute opacity-0 group-hover:opacity-100"
+              className="absolute"
             />
-            <p className="font-inknut text-lg text-hackathon-off-white-100 group-hover:absolute group-hover:mb-6 md:text-2xl">
+            <p className="font-inknut text-lg text-hackathon-off-white-100 md:text-2xl">
               {role.charAt(0).toUpperCase() + role.slice(1)}
             </p>
-            <Image
-              alt=""
-              width={175}
-              height={30}
-              src={registerDecorLines}
-              aria-hidden
-              className="group-hover:opacity-0"
-            />
           </Link>
         ))}
       </div>
