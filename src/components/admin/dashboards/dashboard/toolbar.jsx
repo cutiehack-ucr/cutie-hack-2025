@@ -164,7 +164,7 @@ const Toolbar = ({
     );
 
   return (
-    <div className="my-2 flex w-full flex-col items-center gap-3 lg:flex-row">
+    <div className="my-2 flex w-full flex-col gap-3 text-white sm:items-center lg:flex-row">
       <div className="flex gap-3">
         {tags.map((tag, index) => (
           <Button
@@ -182,8 +182,8 @@ const Toolbar = ({
         ))}
       </div>
 
-      <div className="flex w-full items-center gap-2 lg:flex-row">
-        <div className="z-10 w-2/12">
+      <div className="flex w-full flex-col gap-2 sm:flex-row sm:items-center lg:flex-row">
+        <div className="z-10 sm:w-2/12">
           <Select
             items={searchableItems}
             user={search}
@@ -201,19 +201,19 @@ const Toolbar = ({
           value={value}
         />
 
-        <div>
+        <div className="flex items-center">
           Rows:<span className="mx-2">{meta.total}</span>
+          <RotateCcw
+            size={20}
+            onClick={handleReload}
+            className="text-hackathon-gray-300 duration-150 hover:cursor-pointer hover:opacity-70"
+          />
+          <Trash2
+            onClick={confirmDelete}
+            size={20}
+            className="mx-2 text-hackathon-gray-300 duration-150 hover:cursor-pointer hover:opacity-70"
+          />
         </div>
-        <RotateCcw
-          size={30}
-          onClick={handleReload}
-          className="text-hackathon-gray-300 duration-150 hover:cursor-pointer hover:opacity-70"
-        />
-        <Trash2
-          onClick={confirmDelete}
-          size={30}
-          className="mx-2 text-hackathon-gray-300 duration-150 hover:cursor-pointer hover:opacity-70"
-        />
       </div>
 
       <AlertDialog open={popup.visible}>
