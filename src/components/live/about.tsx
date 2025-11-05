@@ -93,11 +93,11 @@ const About = () => {
           className="absolute left-[50%] top-[10%] h-auto w-[35%] -translate-x-1/2 object-contain"
         />
 
-        <h1 className="absolute left-[50%] top-[12%] z-10 -translate-x-1/2 font-inknut text-2xl font-bold text-white md:text-3xl lg:text-4xl">
+        <h2 className="absolute left-[50%] top-[12%] z-10 -translate-x-1/2 font-inknut text-2xl font-bold text-white md:text-3xl lg:text-4xl">
           About
-        </h1>
+        </h2>
 
-        <div className="absolute left-[20%] top-[29%] w-[62%] text-left font-serif text-sm text-[#3B332B] md:text-lg lg:text-xl">
+        <div className="absolute left-[20%] top-[29%] w-[62%] text-left font-serif text-sm text-hackathon-gray-400 md:text-lg lg:text-xl">
           Cutie Hack is a 12-hour, beginner-oriented hackathon hosted by
           students at University of California, Riverside where hackers are
           challenged to create a cool project within the time frame to demo in
@@ -178,11 +178,11 @@ const About = () => {
           className="z-19 absolute left-[8%] top-[7%] h-auto w-[85%] object-contain"
         />
 
-        <h1 className="absolute left-[50%] top-[7.5%] z-30 -translate-x-1/2 font-inknut text-[6vw] font-bold text-hackathon-off-white-100">
+        <h2 className="absolute left-[50%] top-[7.5%] z-30 -translate-x-1/2 font-inknut text-[6vw] font-bold text-hackathon-off-white-100">
           About
-        </h1>
+        </h2>
 
-        <div className="absolute left-[7.5%] top-[10.3%] z-30 w-[85%] text-center font-serif text-[5vw] text-[#3B332B]">
+        <div className="absolute left-[7.5%] top-[10.3%] z-30 w-[85%] text-center font-serif text-[5vw] text-hackathon-gray-400">
           Cutie Hack is a 12-hour, beginner-oriented hackathon hosted by
           students at University of California, Riverside where hackers are
           challenged to create a cool project within the time frame to demo in
