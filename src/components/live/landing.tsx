@@ -6,7 +6,7 @@ import title from "@/public/landing/cutieHackTitle.svg";
 
 import mobileTitle from "@/public/landing/mobileTitle.webp";
 import mobileLanding from "@/public/landing/mobileLanding.webp";
-import mobileFrame from "@/public/landing/mobileFrame.webp";
+import mobileFrame from "@/public/landing/mobileFancyFrame.svg";
 import Countdown from "../ui/countdown";
 import countdownDigitsBg from "@/public/landing/countdownDigitsBg.webp";
 
@@ -45,18 +45,18 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className="relative z-10 mt-40 flex w-full flex-col items-center justify-center">
+      <div className="relative z-10 mt-40 flex w-full flex-col items-center justify-center lg:hidden">
         <Image
           src={mobileTitle}
           alt="Mobile Title"
-          className="mb-10 h-auto w-full max-w-[900px] scale-125 lg:hidden"
+          className="mb-10 h-auto w-full max-w-[900px] scale-125"
           priority
         />
 
         <Image
           src={mobileFrame}
           alt="Mobile Frame Under Title"
-          className="mb-20 mt-5 w-1/2 lg:hidden"
+          className="mb-20 mt-5 w-1/2"
         />
 
         <div className="relative w-full">
