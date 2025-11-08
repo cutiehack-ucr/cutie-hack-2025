@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import Image from "next/image";
 
 const brickwallUrl = "landing/brickwallFooter.svg";
 const floorUrl = "landing/floor.svg";
@@ -8,9 +8,9 @@ const dragonUrl = "landing/dragon.svg";
 
 const blueBgColor = "#2A5262";
 
-const INSTAGRAM_URL = "https://www.instagram.com/acmhacksatucr/";
-const LINKEDIN_URL = "https://www.linkedin.com/company/acm-hacks-at-ucr/";
-const EMAIL_URL = "mailto:acmhacks.ucr@gmail.com";
+const INSTAGRAM_URL = "https://www.instagram.com/cutiehack_ucr/";
+const LINKEDIN_URL = "https://www.linkedin.com/company/cutie-hack/";
+const EMAIL_URL = "mailto:cutiehack@gmail.com";
 
 const Footer = () => {
   return (
@@ -21,39 +21,44 @@ const Footer = () => {
       {/* --- Scene Container --- */}
       <div className="relative w-full">
         {/* Layer 1: Brick Wall (z-10) */}
-        <img
+        <Image
           src={brickwallUrl}
           alt="Brick wall background"
           className="relative z-10 h-auto w-full"
           aria-hidden="true"
-          onError={(e) => (e.currentTarget.style.display = "none")}
+          width={1920}
+          height={1080}
+          priority
         />
 
         {/* Layer 2: Stone Floor (z-20) */}
-        <img
+        <Image
           src={floorUrl}
           alt="Stone floor"
           className="absolute bottom-0 left-0 z-20 h-auto w-full"
           aria-hidden="true"
-          onError={(e) => (e.currentTarget.style.display = "none")}
+          width={1920}
+          height={1080}
         />
 
         {/* Layer 3: Treasure Pile (z-30) */}
-        <img
+        <Image
           src={treasureUrl}
           alt="Treasure pile with social media icons"
           className="absolute bottom-0 left-1/2 z-30 w-full -translate-x-1/2"
           aria-hidden="true"
-          onError={(e) => (e.currentTarget.style.display = "none")}
+          width={1920}
+          height={1080}
         />
 
         {/* Layer 4: Dragon (z-40) */}
-        <img
+        <Image
           src={dragonUrl}
           alt="Sleeping Dragon"
           className="absolute bottom-[14%] left-1/2 z-40 w-[35%] -translate-x-[8%] sm:-translate-x-[8%]"
           aria-hidden="true"
-          onError={(e) => (e.currentTarget.style.display = "none")}
+          width={1920}
+          height={1080}
         />
 
         {/* Layer 5: Link Overlay (z-50) */}
