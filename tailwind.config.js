@@ -127,13 +127,13 @@ module.exports = {
           "20%,50%": {
             opacity: "0",
           },
-          "float": {
-            '0%, 100%': { transform: 'translateY(0)' },
-            '50%': { transform: 'translateY(-12px)' },
+          float: {
+            "0%, 100%": { transform: "translateY(0)" },
+            "50%": { transform: "translateY(-12px)" },
           },
-          "shadowPulse": {
-            '0%, 100%': { transform: 'scale(1)', opacity: '0.35' },
-            '50%': { transform: 'scale(1.15)', opacity: '0.15' },
+          shadowPulse: {
+            "0%, 100%": { transform: "scale(1)", opacity: "0.35" },
+            "50%": { transform: "scale(1.15)", opacity: "0.15" },
           },
         },
       },
@@ -143,8 +143,8 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "collapsible-up": "collapsible-up 0.2s ease-out",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
-        "float": 'float 3s ease-in-out infinite',
-        "shadowPulse": 'shadowPulse 3s ease-in-out infinite',
+        float: "float 3s ease-in-out infinite",
+        shadowPulse: "shadowPulse 3s ease-in-out infinite",
       },
     },
   },

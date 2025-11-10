@@ -38,7 +38,7 @@ const Navigation = () => {
       <SidebarHeader className={`${open ? "py-8" : "py-4"}`}>
         <Image
           src={LOGO}
-          className="mx-auto w-full w-full"
+          className="mx-auto w-full"
           alt={`${data.name} Logo`}
         />
       </SidebarHeader>
