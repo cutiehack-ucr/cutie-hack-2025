@@ -8,37 +8,31 @@ import BulletList from "./bulletlist";
 import { JUDGING } from "@/data/user/judging";
 import { RULES } from "@/data/user/rules";
 
-import CharacterStats from "@/public/dashboard/Character Stats.svg";
 import CountdownHeader from "@/public/dashboard/CountdownHeader.svg";
 import CountdownFooter from "@/public/dashboard/CountdownFooter.svg";
-import Book from "@/public/dashboard/Book.svg";
 import countdownDigitsBg from "@/public/landing/countdownDigitsBg.webp";
 
 import Image from "next/image";
-import { useSession } from "next-auth/react";
-import CountdownSign from "@/components/live/countdown-sign";
+import UserDataBook from "../userData";
 
 const DashboardWrapper = async () => {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-start gap-y-48 font-poppins">
-      <div className="relative flex w-full translate-y-16 items-start justify-around">
-        <div className="relative flex w-fit items-center justify-center">
-          <Image
-            src={CharacterStats}
-            alt="Character Stats"
-            className="z-10 scale-125"
+    <div className="flex h-full w-full flex-col items-center justify-start gap-y-48 font-inknut">
+      <div className="flex flex-col sm:flex-row w-full translate-y-16 gap-y-12 items-center sm:items-start justify-around">
+        <Header />
+        <Image
+            src={CountdownFooter}
+            alt="Countdown Footer"
+            className="z-10 scale-x-105 sm:hidden block"
           />
-          <Header />
-        </div>
-
-        <div className="flex scale-125 flex-col items-center justify-center">
+        <div className="flex sm:scale-105 flex-col items-center justify-center">
           <div className="relative flex w-full items-center justify-center">
             <Image
               src={CountdownHeader}
               alt="Countdown Header"
-              className="-z-10 scale-x-125"
+              className="-z-10 scale-x-105"
             />
-            <span className="text-md absolute -translate-y-2 text-center font-inknut text-white">
+            <span className="text-xs absolute -translate-y-2 text-center font-bold text-white">
               Time until Submission
             </span>
           </div>
@@ -59,15 +53,7 @@ const DashboardWrapper = async () => {
           />
         </div>
       </div>
-      <div className="flex w-full justify-center">
-        <div className="relative flex flex-col items-center">
-          <div className="absolute bottom-[-10px] h-[20px] w-[60%] animate-shadowPulse rounded-full bg-black/30 blur-xl" />
-
-          <Image src={Book} alt="User Book" className="z-10 animate-float" />
-
-          <div className="z-20"></div>
-        </div>
-      </div>
+      <UserDataBook />
 
       {/* <Header />
       <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
