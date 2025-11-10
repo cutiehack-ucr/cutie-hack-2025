@@ -4,9 +4,8 @@ import bgGlow from "@/public/landing/bgGlow.svg";
 import bgGlowSmall from "@/public/landing/backgroundGlow.svg";
 import title from "@/public/landing/cutieHackTitle.svg";
 
-import mobileTitle from "@/public/landing/mobileTitle.webp";
-import mobileLanding from "@/public/landing/mobileLanding.webp";
-import mobileFrame from "@/public/landing/mobileFancyFrame.svg";
+import mobileTitle from "@/public/landing/mobileTitle.svg";
+import mobileLanding from "@/public/landing/mobileLanding.svg";
 import Countdown from "../ui/countdown";
 import countdownDigitsBg from "@/public/landing/countdownDigitsBg.webp";
 
@@ -49,14 +48,8 @@ const Landing = () => {
         <Image
           src={mobileTitle}
           alt="Mobile Title"
-          className="mb-10 h-auto w-full max-w-[900px] scale-125"
+          className="mb-10 h-auto w-full max-w-[900px]"
           priority
-        />
-
-        <Image
-          src={mobileFrame}
-          alt="Mobile Frame Under Title"
-          className="mb-20 mt-5 w-1/2"
         />
 
         <div className="relative w-full">
@@ -70,9 +63,9 @@ const Landing = () => {
           <div className="font-inknut-antiqua absolute bottom-[11%] left-1/2 -translate-x-1/2 text-center text-white md:bottom-[17%]">
             <Countdown
               classNames={{
-                unit: "text-white md:text-xl sm:text-lg",
+                unit: "text-white md:text-xl sm:text-md",
                 background: "bg-hackathon-blue-100",
-                digit: "text-black md:text-xl sm:text-lg",
+                digit: "text-black md:text-xl sm:text-md",
               }}
               backgroundImage={countdownDigitsBg.src}
             />
