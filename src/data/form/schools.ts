@@ -2,6 +2,7 @@ type schools = string[];
 
 export const SCHOOLS: schools = [
   "University of California, Riverside",
+  "Other",
   "Aalto University",
   "Aarhus University",
   "Abbey Park Middle School",
@@ -393,7 +394,6 @@ export const SCHOOLS: schools = [
   "Earl of March Secondary School",
   "Earlham College",
   "East Central University",
-  "East Chapel Hill High Schoo",
   "East Los Angeles College",
   "East Point College of Engineering and Technology",
   "East West Institute of Technology",
@@ -939,6 +939,7 @@ export const SCHOOLS: schools = [
   "Milwaukee School of Engineering",
   "Minerva University",
   "Minnesota State University, Mankato",
+  "MiraCosta Community College",
   "Misrimal Navajee Munoth Jain Engineering College",
   "Mission College Boulevard",
   "Mississippi State University",
