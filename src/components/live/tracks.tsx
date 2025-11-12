@@ -1,6 +1,6 @@
 import TitleBanner from "@/components/ui/title-banner";
 import Image from "next/image";
-import line from "@/public/tracks/Lines.svg";
+import line from "@/public/tracks/lines.svg";
 import innervines from "@/public/tracks/Inner vines.svg";
 
 import ScrollItem from "../ui/scroll";
@@ -11,19 +11,19 @@ const Tracks = () => {
   return (
     <div className="w-full">
       {/* Regular */}
-      <div className="relative mx-auto hidden aspect-[9/16] w-full max-w-5xl pt-96 md:block">
+      <div className="relative mx-auto hidden aspect-[9/16] w-full max-w-5xl pt-48 md:block">
         <TitleBanner title="Tracks" />
 
         <div className="pointer-events-none absolute inset-0">
           <Image
             src={line}
             alt="Decorative white line"
-            className="absolute -left-[10%] top-[23%] z-30 h-[2%] w-[30%] object-contain"
+            className="absolute -left-[10%] top-[18%] z-30 h-[2%] w-[30%] object-contain"
           />
           <Image
             src={line}
             alt="Decorative white line"
-            className="absolute -right-[10%] top-[23%] z-10 h-[2%] w-[30%] object-contain"
+            className="absolute -right-[10%] top-[18%] z-10 h-[2%] w-[30%] object-contain"
           />
         </div>
         {tracksData.map((track) => (
