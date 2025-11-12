@@ -20,38 +20,13 @@ export interface ProcessedEvent {
   startDateTime: Date;
 }
 
-// Mock events for development/fallback
-const MOCK_EVENTS: ProcessedEvent[] = [
-  {
-    id: "1",
-    title: "Opening Ceremony",
-    location: "Main Hall",
-    time: "7:30 AM",
-    startDateTime: new Date("2025-11-15T07:30:00-08:00"),
-  },
-  {
-    id: "2",
-    title: "Hacking Begins",
-    location: "Various Rooms",
-    time: "9:00 AM",
-    startDateTime: new Date("2025-11-15T09:00:00-08:00"),
-  },
-  {
-    id: "3",
-    title: "Workshop: Intro to Web Dev",
-    location: "Room 101",
-    time: "11:00 AM",
-    startDateTime: new Date("2025-11-15T11:00:00-08:00"),
-  },
-];
-
 export async function fetchCalendarEvents(): Promise<ProcessedEvent[]> {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY;
   const calendarId = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR;
 
   if (!apiKey || !calendarId) {
     console.error("Missing Google Calendar API credentials");
-    return MOCK_EVENTS;
+    return [];
   }
 
   try {
@@ -68,26 +43,24 @@ export async function fetchCalendarEvents(): Promise<ProcessedEvent[]> {
     });
 
     if (!response.ok) {
-      console.warn(`Calendar API error: ${response.status}. Using mock data.`);
-      return MOCK_EVENTS;
+      console.warn(`Calendar API error: ${response.status}`);
+      return [];
     }
 
     const data = await response.json();
 
     // Check if there's an error in the response
     if (data.error) {
-      console.warn(
-        `Calendar API error: ${data.error.message}. Using mock data.`,
-      );
-      return MOCK_EVENTS;
+      console.warn(`Calendar API error: ${data.error.message}`);
+      return [];
     }
 
     const events: CalendarEvent[] = data.items || [];
 
-    // If no events found, return mock events
+    // If no events found, return empty array
     if (events.length === 0) {
-      console.warn("No events found in calendar. Using mock data.");
-      return MOCK_EVENTS;
+      console.warn("No events found in calendar.");
+      return [];
     }
 
     return events.map((event) => {
@@ -112,6 +85,6 @@ export async function fetchCalendarEvents(): Promise<ProcessedEvent[]> {
     });
   } catch (error) {
     console.error("Error fetching calendar events:", error);
-    return MOCK_EVENTS;
+    return [];
   }
 }
