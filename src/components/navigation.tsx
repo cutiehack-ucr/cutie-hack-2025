@@ -31,7 +31,7 @@ const Navigation = () => {
   const pathname = usePathname();
 
   const tabs = TABS[pathname.split("/")[1]];
-  const { open, toggleSidebar } = useSidebar();
+  const { open, toggleSidebar, isMobile, setOpenMobile } = useSidebar();
 
   return (
     <Sidebar collapsible="icon" className="text-white">
@@ -64,7 +64,14 @@ const Navigation = () => {
                     {subTabs.tabs &&
                       subTabs.tabs.map(
                         ({ name, icon, link, target }, index) => (
-                          <Link key={index} href={link} target={target}>
+                          <Link
+                            key={index}
+                            href={link}
+                            target={target}
+                            onClick={() =>
+                              isMobile ? setOpenMobile(false) : {}
+                            }
+                          >
                             <SidebarMenuItem
                               key={index}
                               className={`flex h-6 items-center pl-3 text-lg ${link === pathname && "bg-hackathon-blue-100"} rounded`}
