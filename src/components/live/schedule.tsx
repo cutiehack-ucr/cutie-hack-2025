@@ -2,6 +2,7 @@ import Image from "next/image";
 import TitleBanner from "../ui/title-banner";
 import registerDecorFrame from "@/public/landing/registerDecorFrame.webp";
 import bulletin from "@/public/schedule/bulletin.svg";
+import bulletinMobile from "@/public/schedule/bulletin-mobile.svg";
 import EventCard from "./schedule/event-card";
 import { fetchCalendarEvents } from "@/utils/calendar";
 
@@ -21,7 +22,7 @@ const Schedule = async () => {
     >
       <TitleBanner title="Schedule" subtitle="November 15, 2025 (PST)" />
 
-      <div className="mt-10 grid max-w-4xl grid-cols-1 gap-x-12 gap-y-10 md:grid-cols-3 md:gap-y-16">
+      <div className="mt-10 hidden max-w-4xl grid-cols-1 gap-x-12 gap-y-10 sm:grid md:grid-cols-3 md:gap-y-16">
         {categories.map((category) => (
           <div
             key={category.name}
@@ -42,8 +43,8 @@ const Schedule = async () => {
         ))}
       </div>
 
-      {/* Bulletin Board with Events */}
-      <div className="relative mt-8 w-full max-w-5xl">
+      {/* Bulletin Board with Events - Desktop */}
+      <div className="relative mt-8 hidden w-full max-w-5xl md:block">
         <Image
           src={bulletin}
           alt="Bulletin Board"
@@ -53,8 +54,41 @@ const Schedule = async () => {
         />
 
         {/* Events Container */}
-        <div className="absolute inset-0 flex items-start justify-center px-8 pt-16 md:px-16 md:pt-24">
+        <div className="absolute inset-0 flex items-start justify-center px-16 pt-8">
           <div className="flex w-full max-w-3xl flex-col gap-4">
+            {events.length > 0 ? (
+              events.map((event) => (
+                <EventCard
+                  key={event.id}
+                  time={event.time}
+                  title={event.title}
+                  location={event.location}
+                />
+              ))
+            ) : (
+              <div className="flex items-center justify-center py-12">
+                <p className="font-inknut text-lg text-hackathon-off-white-100">
+                  No events scheduled yet
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Bulletin Board with Events - Mobile */}
+      <div className="relative mt-8 block w-full px-4 md:hidden">
+        <Image
+          src={bulletinMobile}
+          alt="Bulletin Board"
+          width={330}
+          height={2013}
+          className="h-auto w-full"
+        />
+
+        {/* Events Container */}
+        <div className="absolute inset-0 flex items-start justify-center px-8 pt-8">
+          <div className="flex w-full flex-col gap-4">
             {events.length > 0 ? (
               events.map((event) => (
                 <EventCard
