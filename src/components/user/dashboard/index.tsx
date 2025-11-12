@@ -24,6 +24,7 @@ const DashboardWrapper = async () => {
             <Tile
               icon={<ParkingCircle size={40} />}
               text="Parking Info"
+              newTab
               link="https://transportation.ucr.edu/visitor-parking"
             />
           </div>
