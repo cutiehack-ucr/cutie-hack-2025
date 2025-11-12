@@ -31,7 +31,9 @@ const EventCard = ({ time, title, location }: EventCardProps) => {
       {/* Mobile Layout */}
       <div className="relative z-10 flex w-full flex-col justify-between py-2 md:hidden">
         <div className="flex w-full items-center justify-center">
-          <h3 className="text-md px-10 text-center font-inknut font-bold text-black">
+          <h3
+            className={`${title.length > 18 ? "text-[14px]" : "text-md"} px-10 text-center font-inknut font-bold text-black`}
+          >
             {title}
           </h3>
         </div>
@@ -40,7 +42,17 @@ const EventCard = ({ time, title, location }: EventCardProps) => {
             <p className="font-inknut text-sm text-black">{time}</p>
           </div>
           <div className="flex w-1/2 items-center justify-center">
-            <p className="font-inknut text-sm text-black">{location}</p>
+            <p
+              className={`font-inknut text-black ${
+                location.length < 12
+                  ? "text-sm"
+                  : location.length < 20
+                    ? "text-xs"
+                    : "text-[10px]"
+              }`}
+            >
+              {location}
+            </p>
           </div>
         </div>
       </div>

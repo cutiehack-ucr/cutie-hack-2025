@@ -54,7 +54,7 @@ const Schedule = async () => {
         />
 
         {/* Events Container */}
-        <div className="absolute inset-0 flex items-start justify-center px-16 pt-8">
+        <div className="absolute inset-x-0 bottom-8 top-8 flex items-start justify-center overflow-y-scroll px-16">
           <div className="flex w-full max-w-3xl flex-col gap-4">
             {events.length > 0 ? (
               events.map((event) => (
