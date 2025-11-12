@@ -10,16 +10,17 @@ import About from "./about";
 import Footer from "./footer";
 import Navigation from "../ui/navigation";
 import Register from "./register";
+import Tracks from "./tracks";
 
 const Live = () => {
   return (
-    <div className="flex flex-col bg-hackathon-teal-800">
+    <div className="flex flex-col bg-hackathon-teal-800 md:gap-y-56">
       <Navigation />
       <Landing />
       <Register />
       <About />
-      {/* <Tracks />
-      <Schedule />
+      <Tracks />
+      {/* <Schedule />
       <Sponsors />
       <Team />
       <Committees />

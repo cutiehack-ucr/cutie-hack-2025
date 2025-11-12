@@ -7,7 +7,7 @@ interface TitleBannerProps {
 
 const TitleBanner = ({ title }: TitleBannerProps) => {
   return (
-    <div className="relative flex items-center justify-center">
+    <div className="relative flex w-full items-start justify-center">
       <Image
         src={titleBanner}
         alt=""
@@ -15,7 +15,7 @@ const TitleBanner = ({ title }: TitleBannerProps) => {
         className="h-auto object-contain px-8 drop-shadow-md md:px-0"
         aria-hidden
       />
-      <h2 className="absolute inset-0 -mt-8 flex items-center justify-center font-inknut text-2xl text-hackathon-off-white-100 md:text-4xl">
+      <h2 className="absolute inset-0 mt-5 flex items-start justify-center font-inknut text-2xl text-hackathon-off-white-100 md:text-4xl">
         {title}
       </h2>
     </div>

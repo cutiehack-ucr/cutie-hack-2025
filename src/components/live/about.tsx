@@ -24,7 +24,7 @@ const About = () => {
   return (
     <>
       {/* Regular */}
-      <div className="relative mx-auto hidden aspect-[16/9] w-full max-w-5xl md:block lg:block">
+      <div className="relative mx-auto mt-32 hidden aspect-[16/9] w-full max-w-5xl md:flex lg:flex">
         <Image
           src={circle}
           alt="Base beige circle with a light green outline."
