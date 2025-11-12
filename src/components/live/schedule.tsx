@@ -1,17 +1,22 @@
 import Image from "next/image";
 import TitleBanner from "../ui/title-banner";
 import registerDecorFrame from "@/public/landing/registerDecorFrame.webp";
+import bulletin from "@/public/schedule/bulletin.svg";
+import EventCard from "./schedule/event-card";
+import { fetchCalendarEvents } from "@/utils/calendar";
 
-const Schedule = () => {
+const Schedule = async () => {
   const categories = [
     { name: "Setup", color: "text-hackathon-off-white-100" },
     { name: "Workshops", color: "text-hackathon-off-white-100" },
     { name: "Activities", color: "text-hackathon-off-white-100" },
   ];
 
+  const events = await fetchCalendarEvents();
+
   return (
     <div
-      className="relative z-10 mx-auto -mt-[1400px] flex w-full flex-col items-center justify-center pb-[1400px] sm:mt-40 md:pb-32"
+      className="relative z-10 mx-auto -mt-[1400px] flex w-full flex-col items-center justify-center pb-[1400px] sm:mt-40 md:-mb-44 md:pb-0"
       id="schedule"
     >
       <TitleBanner title="Schedule" subtitle="November 15, 2025 (PST)" />
@@ -35,6 +40,39 @@ const Schedule = () => {
             </p>
           </div>
         ))}
+      </div>
+
+      {/* Bulletin Board with Events */}
+      <div className="relative mt-8 w-full max-w-5xl">
+        <Image
+          src={bulletin}
+          alt="Bulletin Board"
+          width={1038}
+          height={748}
+          className="h-auto w-full"
+        />
+
+        {/* Events Container */}
+        <div className="absolute inset-0 flex items-start justify-center px-8 pt-16 md:px-16 md:pt-24">
+          <div className="flex w-full max-w-3xl flex-col gap-4">
+            {events.length > 0 ? (
+              events.map((event) => (
+                <EventCard
+                  key={event.id}
+                  time={event.time}
+                  title={event.title}
+                  location={event.location}
+                />
+              ))
+            ) : (
+              <div className="flex items-center justify-center py-12">
+                <p className="font-inknut text-lg text-hackathon-off-white-100">
+                  No events scheduled yet
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
