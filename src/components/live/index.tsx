@@ -6,7 +6,7 @@ import About from "./about";
 // import Team from "./team";
 // import Committees from "./committees";
 // import Judges from "./judges";
-// import FAQ from "./faq";
+import FAQ from "./faq";
 import Footer from "./footer";
 import Navigation from "../ui/navigation";
 import Register from "./register";
@@ -20,12 +20,12 @@ const Live = () => {
       <Register />
       <About />
       <Tracks />
+      <FAQ />
       {/* <Schedule />
       <Sponsors />
       <Team />
       <Committees />
-      <Judges />
-      <FAQ /> */}
+      <Judges /> */}
       <Footer />
     </div>
   );
