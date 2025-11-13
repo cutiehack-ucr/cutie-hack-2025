@@ -14,73 +14,16 @@ import countdownDigitsBg from "@/public/landing/countdownDigitsBg.webp";
 
 import Image from "next/image";
 import UserDataBook from "../userData";
+import PageHeader from "../pageHeader";
 
 const DashboardWrapper = async () => {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-start gap-y-48 font-inknut">
-      <div className="flex flex-col sm:flex-row w-full translate-y-16 gap-y-12 items-center sm:items-start justify-around">
-        <Header />
-        <Image
-            src={CountdownFooter}
-            alt="Countdown Footer"
-            className="z-10 scale-x-105 sm:hidden block"
-          />
-        <div className="flex sm:scale-105 flex-col items-center justify-center">
-          <div className="relative flex w-full items-center justify-center">
-            <Image
-              src={CountdownHeader}
-              alt="Countdown Header"
-              className="-z-10 scale-x-105"
-            />
-            <span className="text-xs absolute -translate-y-2 text-center font-bold text-white">
-              Time until Submission
-            </span>
-          </div>
-
-          <Countdown
-            classNames={{
-              unit: "text-white",
-              background: "bg-hackathon-blue-100",
-              digit: "text-black",
-            }}
-            backgroundImage={countdownDigitsBg.src}
-          />
-
-          <Image
-            src={CountdownFooter}
-            alt="Countdown Footer"
-            className="z-10 scale-x-125"
-          />
-        </div>
+    <div className="flex h-[calc(100vh-48px)] w-full flex-col p-4 md:gap-y-20">
+      <PageHeader pageTitle="Home" />
+      <Header />
+      <div className="flex translate-y-48 justify-center md:translate-y-0">
+        <UserDataBook />
       </div>
-      <UserDataBook />
-
-      {/* <Header />
-      <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
-        <div className="col-span-1 flex flex-col gap-3 md:col-span-2">
-          <Countdown />
-          <div className="flex flex-col gap-4 md:flex-row">
-            <Tile
-              icon={<QrCode size={40} />}
-              text="Check In"
-              link="/user/checkin"
-            />
-            <Tile
-              icon={<ParkingCircle size={40} />}
-              text="Parking Info"
-              newTab
-              link="https://transportation.ucr.edu/visitor-parking"
-            />
-          </div>
-          <Rooms />
-          <Packing />
-        </div>
-
-        <div className="flex flex-col gap-4">
-          <BulletList text="Rules" list={RULES} />
-          <BulletList text="Judging" list={JUDGING} />
-        </div>
-      </div> */}
     </div>
   );
 };
