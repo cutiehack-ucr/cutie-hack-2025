@@ -16,29 +16,28 @@ const FAQ = () => {
   return (
     <section
       id="faq"
-      className="flex w-full flex-col items-center justify-center py-16 text-[#EDEAE0] bg-hackathon-teal-800"
+      className="flex w-full flex-col items-center justify-center bg-hackathon-teal-800 py-16 text-[#EDEAE0]"
     >
-{/* === Title row: ornament | banner | ornament === */}
-<div className="w-11/12 max-w-6xl mb-8 grid grid-cols-[1fr_auto_1fr] items-center gap-4">
-  {/* Left ornament */}
-  <div className="hidden sm:block">
-    <OrnamentSide />
-  </div>
+      {/* === Title row: ornament | banner | ornament === */}
+      <div className="mb-8 w-11/12 max-w-6xl items-center gap-4 md:grid md:grid-cols-[1fr_auto_1fr]">
+        {/* Left ornament */}
+        <div className="hidden sm:block">
+          <OrnamentSide />
+        </div>
 
-  {/* Banner */}
-  <div className="justify-self-center translate-x-[10px]">
-    <TitleBanner title="FAQ" />
-  </div>
+        {/* Banner */}
+        <div className="w-full font-bold">
+          <TitleBanner title="FAQ" />
+        </div>
 
-  {/* Right ornament */}
-  <div className="hidden sm:block">
-    <OrnamentSide />
-  </div>
-</div>
-
+        {/* Right ornament */}
+        <div className="hidden sm:block">
+          <OrnamentSide />
+        </div>
+      </div>
 
       {/* === Decorative ornament before first question === */}
-      <div className="w-10/12 max-w-3xl mb-1">
+      <div className="mb-1 w-10/12 max-w-3xl">
         <Ornament />
       </div>
       {/* === Accordion content === */}
@@ -51,14 +50,7 @@ const FAQ = () => {
                 className="border-0 bg-transparent"
               >
                 {/* Question */}
-                <AccordionTrigger
-                  className="
-                    group flex w-full items-center justify-between px-4 py-1
-                    text-left text-[17px] font-inknut tracking-wide
-                    text-[#EDEAE0] hover:no-underline
-                    [&>svg]:hidden
-                  "
-                >
+                <AccordionTrigger className="[&>svg]:hidden: group flex w-full items-center justify-between px-4 py-1 text-left font-inknut text-[17px] tracking-wide text-[#EDEAE0] hover:no-underline">
                   <span>{question}</span>
 
                   {/* dropdown chevrons */}
@@ -74,15 +66,8 @@ const FAQ = () => {
                   </span>
                 </AccordionTrigger>
 
-
-
                 {/* Answer */}
-                <AccordionContent
-                  className="
-                    px-4 pb-4 text-[#EDEAE0]/90 text-[15px]
-                    leading-relaxed font-forum
-                  "
-                >
+                <AccordionContent className="px-4 pb-4 font-forum text-[15px] leading-relaxed text-[#EDEAE0]/90">
                   {answer}
                 </AccordionContent>
               </AccordionItem>
@@ -99,7 +84,7 @@ const FAQ = () => {
       </div>
 
       {/* === Bottom divider === */}
-      <div className="w-11/12 max-w-5xl mt-20">
+      <div className="mt-20 w-11/12 max-w-5xl">
         <Ornament />
       </div>
     </section>
