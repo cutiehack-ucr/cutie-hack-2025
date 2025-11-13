@@ -1,41 +1,14 @@
-import Countdown from "./countdown";
 import Header from "../header";
-import Tile from "./tile";
-import { QrCode, ParkingCircle } from "lucide-react";
-import Rooms from "./rooms";
-import Packing from "./packing";
-import BulletList from "./bulletlist";
-import { JUDGING } from "@/data/user/judging";
-import { RULES } from "@/data/user/rules";
+import UserDataBook from "../userData";
+import PageHeader from "../pageHeader";
 
 const DashboardWrapper = async () => {
   return (
-    <div className="flex h-full flex-col gap-3 py-4 font-poppins">
+    <div className="flex h-[calc(100vh-48px)] w-full flex-col p-4 md:gap-y-20">
+      <PageHeader pageTitle="Home" />
       <Header />
-      <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
-        <div className="col-span-1 flex flex-col gap-3 md:col-span-2">
-          <Countdown />
-          <div className="flex flex-col gap-4 md:flex-row">
-            <Tile
-              icon={<QrCode size={40} />}
-              text="Check In"
-              link="/user/checkin"
-            />
-            <Tile
-              icon={<ParkingCircle size={40} />}
-              text="Parking Info"
-              newTab
-              link="https://transportation.ucr.edu/visitor-parking"
-            />
-          </div>
-          <Rooms />
-          <Packing />
-        </div>
-
-        <div className="flex flex-col gap-4">
-          <BulletList text="Rules" list={RULES} />
-          <BulletList text="Judging" list={JUDGING} />
-        </div>
+      <div className="flex translate-y-48 justify-center md:translate-y-0">
+        <UserDataBook />
       </div>
     </div>
   );
