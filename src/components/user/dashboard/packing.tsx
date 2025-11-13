@@ -1,5 +1,5 @@
-import PackingBgMobile from "@/public/dashboard/packingBgMobile.png";
-import PackingBg from "@/public/dashboard/packingBg.png";
+import PackingBgMobile from "@/public/dashboard/packingBgMobile.webp";
+import PackingBg from "@/public/dashboard/packingBg.webp";
 import Image from "next/image";
 const list: string[] = [
   "Computer and accessories (mouse, keyboard, etc.)",

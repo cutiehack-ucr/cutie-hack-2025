@@ -1,5 +1,5 @@
 import Image from "next/image";
-import BulletListBg from "@/public/dashboard/bulletListBg.png";
+import BulletListBg from "@/public/dashboard/bulletListBg.webp";
 
 interface props {
   text: string;

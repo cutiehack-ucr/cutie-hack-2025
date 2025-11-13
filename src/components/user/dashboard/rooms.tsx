@@ -1,6 +1,6 @@
-import BackgroundMobile from "@/public/dashboard/hackRoomsBgMobile.png";
-import Background from "@/public/dashboard/hackRoomsBg.png";
-import Room from "@/public/dashboard/hackRoom.png";
+import BackgroundMobile from "@/public/dashboard/hackRoomsBgMobile.webp";
+import Background from "@/public/dashboard/hackRoomsBg.webp";
+import Room from "@/public/dashboard/hackRoom.webp";
 import Image from "next/image";
 
 const rooms: string[] = ["WCH127", "WCH110", "WCH130", "Bytes", "WCH129"];
