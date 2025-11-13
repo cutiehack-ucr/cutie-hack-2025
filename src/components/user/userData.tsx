@@ -3,7 +3,7 @@ import Image from "next/image";
 import Book from "@/public/dashboard/Book.svg";
 import Paper from "@/public/dashboard/paper.webp";
 import { useSession } from "next-auth/react";
-import { Participant, User } from "@/types/users";
+import { Participant } from "@/types/users";
 
 const UserDataBook = () => {
   const { data: session } = useSession();
