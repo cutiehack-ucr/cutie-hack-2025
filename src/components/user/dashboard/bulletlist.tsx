@@ -1,3 +1,6 @@
+import Image from "next/image";
+import BulletListBg from "@/public/dashboard/bulletListBg.png";
+
 interface props {
   text: string;
   list: string[];
@@ -5,17 +8,15 @@ interface props {
 
 const BulletList = ({ text, list }: props) => {
   return (
-    <div className="w-full rounded-xl bg-white p-4 drop-shadow-md">
-      <div className="flex items-center justify-between text-xl font-bold">
-        {text}
-      </div>
-      <ul className="mt-2 flex flex-col items-center justify-center">
-        {list.map((item, index) => (
-          <li key={index} className="w-10/12 list-disc">
-            {item}
-          </li>
+    <div className="relative flex h-[60vh] -translate-y-20 items-start justify-center font-inknut md:-translate-y-0">
+      <Image src={BulletListBg} alt="Bullet List Background" />
+      <div className="absolute mt-4 font-bold">{text}</div>
+
+      <div className="absolute flex w-[70%] translate-x-3 translate-y-12 flex-col justify-start gap-x-10 gap-y-2 text-sm leading-6 tracking-wider">
+        {list.map((list, index) => (
+          <li key={index}>{list}</li>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
