@@ -11,7 +11,7 @@ import { JUDGING } from "@/data/user/judging";
 import { RULES } from "@/data/user/rules";
 
 const InfoPage = () => {
-  const [date, setDate] = useState(new Date());
+  const [_, setDate] = useState(new Date());
   const { data: session } = useSession();
   useEffect(() => {
     const timer = setInterval(() => {
