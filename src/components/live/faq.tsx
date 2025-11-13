@@ -10,7 +10,6 @@ import { QUESTIONS } from "@/data/faq";
 import TitleBanner from "@/components/ui/title-banner";
 import Ornament from "@/components/ui/ornament";
 import OrnamentSide from "@/components/ui/ornament-side";
-import { ChevronRight, ChevronDown } from "lucide-react";
 
 const FAQ = () => {
   return (
