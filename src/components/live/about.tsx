@@ -19,91 +19,83 @@ import mpotion from "@/public/about/Potion mobile.svg";
 import mlantern from "@/public/about/Lantern mobile.svg";
 import mgem from "@/public/about/GEM2 mobile.svg";
 import maxe from "@/public/about/axe mobile.svg";
+import TitleBanner from "../ui/title-banner";
 
 const About = () => {
   return (
     <>
       {/* Regular */}
-      <div className="relative mx-auto mt-32 hidden aspect-[16/9] w-full max-w-5xl md:flex lg:flex">
+      <div className="relative mx-auto mt-32 hidden h-[100vh] w-full max-w-5xl md:flex">
         <Image
           src={circle}
           alt="Base beige circle with a light green outline."
           width={1000}
           height={500}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/3"
+          className="absolute left-1/2 top-[31%] -translate-x-1/2 -translate-y-1/3"
         />
 
         <Image
           src={vines}
           alt="Decorative green vines that wrap above and below base circle."
-          className="absolute -top-[14%] h-auto w-auto"
+          className="absolute -top-[7%] h-auto w-auto"
         />
 
-        <Image
-          src={wisps}
-          alt="Light green wisps that come from the pouch."
-          className="absolute left-[29%] top-[59%] h-auto w-[40%] object-contain"
-        />
-
-        <Image
-          src={pouch}
-          alt="Brown pouch that has a light brown ribbon in it."
-          className="absolute left-[4%] top-[46%] h-auto w-[35%] object-contain"
-        />
-
-        <Image
-          src={cutie}
-          alt="Cutie mandarin orange that says '300+ Hackers'."
-          className="absolute left-[30%] top-[86%] h-auto w-[14%] object-contain"
-        />
-
-        <Image
-          src={plank}
-          alt="Brown plank that says '10+ Workshops'."
-          className="absolute left-[23%] top-[105%] h-auto w-[30%] object-contain"
-        />
-
-        <Image
-          src={potion}
-          alt="Potion bottle that has light green liquid that says '12 Hours'."
-          className="absolute left-[39%] top-[55%] h-auto w-[20%] object-contain"
-        />
-
-        <Image
-          src={lantern}
-          alt="Light green lantern that says '75+ Projects' on it."
-          className="absolute left-[48%] top-[81%] h-auto w-[29%] object-contain"
-        />
-
-        <Image
-          src={gem}
-          alt="Light orange gem that says '30+ Organizers' on it."
-          className="absolute left-[59%] top-[62%] h-auto w-[18%] object-contain"
-        />
-
-        <Image
-          src={axe}
-          alt="Silver axe that says '$2K+ Prizes' on it."
-          className="absolute left-[72%] top-[58%] h-auto w-[26%] object-contain"
-        />
-
-        <Image
-          src={banner}
-          alt="Brown banner."
-          className="absolute left-[50%] top-[10%] h-auto w-[35%] -translate-x-1/2 object-contain"
-        />
-
-        <h2 className="absolute left-[50%] top-[12%] z-10 -translate-x-1/2 font-inknut text-2xl font-bold text-white md:text-3xl lg:text-4xl">
-          About
-        </h2>
-
-        <div className="absolute left-[20%] top-[29%] w-[62%] text-left font-serif text-sm text-hackathon-gray-400 md:text-lg lg:text-xl">
+        <TitleBanner title="About" className="top-[7%]" />
+        <div className="absolute left-[20%] top-[19%] w-[62%] text-left font-serif text-sm text-hackathon-gray-400 md:text-lg lg:text-xl">
           Cutie Hack is a 12-hour, beginner-oriented hackathon hosted by
           students at University of California, Riverside where hackers are
           challenged to create a cool project within the time frame to demo in
           order to win awesome prizes and participate in workshops, fun games,
           and networking.
         </div>
+
+        <Image
+          src={wisps}
+          alt="Light green wisps that come from the pouch."
+          className="absolute left-[29%] top-[37%] h-auto w-[40%] object-contain"
+        />
+
+        <Image
+          src={pouch}
+          alt="Brown pouch that has a light brown ribbon in it."
+          className="absolute left-[4%] top-[29%] h-auto w-[35%] object-contain"
+        />
+
+        <Image
+          src={cutie}
+          alt="Cutie mandarin orange that says '300+ Hackers'."
+          className="absolute left-[30%] top-[53%] h-auto w-[14%] object-contain"
+        />
+
+        <Image
+          src={plank}
+          alt="Brown plank that says '10+ Workshops'."
+          className="absolute left-[23%] top-[64%] h-auto w-[30%] object-contain"
+        />
+
+        <Image
+          src={potion}
+          alt="Potion bottle that has light green liquid that says '12 Hours'."
+          className="absolute left-[39%] top-[34%] h-auto w-[20%] object-contain"
+        />
+
+        <Image
+          src={lantern}
+          alt="Light green lantern that says '75+ Projects' on it."
+          className="absolute left-[48%] top-[50%] h-auto w-[29%] object-contain"
+        />
+
+        <Image
+          src={gem}
+          alt="Light orange gem that says '30+ Organizers' on it."
+          className="absolute left-[59%] top-[39%] h-auto w-[18%] object-contain"
+        />
+
+        <Image
+          src={axe}
+          alt="Silver axe that says '$2K+ Prizes' on it."
+          className="absolute left-[72%] top-[36%] h-auto w-[26%] object-contain"
+        />
       </div>
 
       {/* Mobile */}

@@ -16,7 +16,7 @@ const FAQ = () => {
   return (
     <section
       id="faq"
-      className="flex w-full flex-col items-center justify-center bg-hackathon-teal-800 py-16 text-[#EDEAE0]"
+      className="flex w-full flex-col items-center justify-center bg-hackathon-teal-800 py-16 text-[#EDEAE0] sm:mt-40"
     >
       {/* === Title row: ornament | banner | ornament === */}
       <div className="mb-8 w-11/12 max-w-6xl items-center gap-4 md:grid md:grid-cols-[1fr_auto_1fr]">
@@ -52,18 +52,6 @@ const FAQ = () => {
                 {/* Question */}
                 <AccordionTrigger className="[&>svg]:hidden: group flex w-full items-center justify-between px-4 py-1 text-left font-inknut text-[17px] tracking-wide text-[#EDEAE0] hover:no-underline">
                   <span>{question}</span>
-
-                  {/* dropdown chevrons */}
-                  <span className="shrink-0">
-                    <ChevronRight
-                      className="h-6 w-6 stroke-[2] text-[#EDEAE0] transition-transform duration-200 group-data-[state=open]:hidden"
-                      aria-hidden
-                    />
-                    <ChevronDown
-                      className="hidden h-6 w-6 stroke-[2] text-[#EDEAE0] transition-transform duration-200 group-data-[state=open]:block"
-                      aria-hidden
-                    />
-                  </span>
                 </AccordionTrigger>
 
                 {/* Answer */}

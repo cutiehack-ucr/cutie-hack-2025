@@ -13,7 +13,7 @@ import Tracks from "./tracks";
 
 const Live = () => {
   return (
-    <div className="flex flex-col bg-hackathon-teal-800 md:gap-y-56">
+    <div className="flex flex-col bg-hackathon-teal-800">
       <Navigation />
       <Landing />
       <Register />

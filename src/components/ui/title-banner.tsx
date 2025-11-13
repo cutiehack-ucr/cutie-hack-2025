@@ -4,11 +4,14 @@ import titleBanner from "@/public/landing/titleBanner.webp";
 interface TitleBannerProps {
   title: string;
   subtitle?: string;
+  className?: string;
 }
 
-const TitleBanner = ({ title, subtitle }: TitleBannerProps) => {
+const TitleBanner = ({ title, subtitle, className }: TitleBannerProps) => {
   return (
-    <div className="relative flex w-full items-start justify-center">
+    <div
+      className={`relative flex w-full items-start justify-center ${className ?? ""}`}
+    >
       <Image
         src={titleBanner}
         alt=""
