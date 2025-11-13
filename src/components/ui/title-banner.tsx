@@ -16,10 +16,12 @@ const TitleBanner = ({ title, subtitle }: TitleBannerProps) => {
         className="h-auto object-contain px-8 drop-shadow-md md:px-0"
         aria-hidden
       />
-      <div className="absolute inset-0 mt-5 flex flex-col items-center justify-start font-inknut text-hackathon-off-white-100">
+      <div className="absolute inset-0 mt-4 flex flex-col items-center justify-start font-inknut text-hackathon-off-white-100">
         <h2
           className={
-            subtitle ? "-mt-2 text-xl md:text-2xl" : "text-2xl md:text-4xl"
+            subtitle
+              ? "-mt-2 text-xl font-bold md:text-2xl"
+              : "text-2xl font-bold md:text-4xl"
           }
         >
           {title}
