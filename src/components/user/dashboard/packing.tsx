@@ -18,7 +18,7 @@ const Packing = (): React.ReactNode => {
     <div>
       <div className="relative flex h-[95vh] -translate-y-20 items-start justify-center font-inknut md:hidden">
         <Image src={PackingBgMobile} alt="Hack Rooms background image" />
-        <div className="absolute mt-4">Hack Rooms</div>
+        <div className="absolute mt-4 font-bold">Packing List</div>
 
         <div className="absolute flex w-[70%] translate-x-3 translate-y-16 flex-col justify-start gap-x-10 gap-y-2 text-sm leading-6 tracking-wider">
           {list.map((list, index) => (
@@ -28,7 +28,7 @@ const Packing = (): React.ReactNode => {
       </div>
       <div className="hidden items-start font-inknut md:flex">
         <Image src={PackingBg} alt="Hack Rooms background image" />
-        <div className="absolute mt-4 translate-x-10 translate-y-4 font-bold">
+        <div className="absolute font-bold mt-4 mx-auto justify-self-center translate-x-32">
           Packing List
         </div>
         <div className="absolute flex w-[23%] flex-1 translate-x-6 translate-y-16 flex-col flex-wrap justify-start gap-x-10 gap-y-2 text-xs leading-6 tracking-wider">

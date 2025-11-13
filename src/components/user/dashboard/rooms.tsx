@@ -11,7 +11,7 @@ const Rooms = (): React.ReactNode => {
     <div>
       <div className="relative flex h-[30vh] items-start justify-center font-inknut md:hidden">
         <Image src={BackgroundMobile} alt="Hack Rooms background image" />
-        <div className="absolute mt-4">Hack Rooms</div>
+        <div className="absolute mt-4 font-bold">Hacking Rooms</div>
         <div className="absolute flex w-full flex-1 translate-y-16 list-none flex-wrap justify-center gap-x-10 gap-y-4">
           {rooms.map((room: string, index: number) => (
             <li key={index} className="flex items-center justify-center">
