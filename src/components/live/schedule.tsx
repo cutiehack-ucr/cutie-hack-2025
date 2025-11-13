@@ -17,7 +17,7 @@ const Schedule = async () => {
 
   return (
     <div
-      className="relative z-10 mx-auto -mt-[1500px] flex w-full flex-col items-center justify-center pb-12 md:mb-10 md:mt-64"
+      className="relative z-10 mx-auto -mt-[370%] flex w-full flex-col items-center justify-center pb-12 md:mt-64 md:pb-0"
       id="schedule"
     >
       <TitleBanner title="Schedule" subtitle="November 15, 2025 (PST)" />
