@@ -4,12 +4,15 @@ interface props {
   icon: React.ReactNode;
   text: string;
   link: string;
+  newTab?: boolean;
 }
 
-const Tile = ({ icon, text, link }: props) => {
+const Tile = ({ icon, text, link, newTab }: props) => {
   return (
     <Link
       href={link}
+      target={newTab ? "_blank" : "_self"}
+      rel={newTab ? "noopener noreferrer" : undefined}
       className="mb-3 flex w-full items-center gap-5 rounded bg-white p-7 shadow-xl hover:opacity-70 md:my-0 md:w-1/2"
     >
       <div className="text-black">{icon}</div>
