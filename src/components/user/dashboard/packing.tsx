@@ -1,3 +1,6 @@
+import PackingBgMobile from "@/public/dashboard/packingBgMobile.png";
+import PackingBg from "@/public/dashboard/packingBg.png";
+import Image from "next/image";
 const list: string[] = [
   "Computer and accessories (mouse, keyboard, etc.)",
   "Chargers (phone, laptop, etc.)",
@@ -12,14 +15,28 @@ const list: string[] = [
 
 const Packing = (): React.ReactNode => {
   return (
-    <div className="rounded-lg bg-white p-3 shadow-xl">
-      <div className="p-2 font-bold">🎒Packing List</div>
+    <div>
+      <div className="relative flex h-[95vh] -translate-y-20 items-start justify-center font-inknut md:hidden">
+        <Image src={PackingBgMobile} alt="Hack Rooms background image" />
+        <div className="absolute mt-4 font-bold">Packing List</div>
 
-      <ul className="mb-2 list-disc pl-9 font-light">
-        {list.map((list, index) => (
-          <li key={index}>{list}</li>
-        ))}
-      </ul>
+        <div className="absolute flex w-[70%] translate-x-3 translate-y-16 flex-col justify-start gap-x-10 gap-y-2 text-sm leading-6 tracking-wider">
+          {list.map((list, index) => (
+            <li key={index}>{list}</li>
+          ))}
+        </div>
+      </div>
+      <div className="hidden items-start font-inknut md:flex">
+        <Image src={PackingBg} alt="Hack Rooms background image" />
+        <div className="absolute mx-auto mt-4 translate-x-32 justify-self-center font-bold">
+          Packing List
+        </div>
+        <div className="absolute flex w-[23%] flex-1 translate-x-6 translate-y-16 flex-col flex-wrap justify-start gap-x-10 gap-y-2 text-xs leading-6 tracking-wider">
+          {list.map((list, index) => (
+            <li key={index}>{list}</li>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
