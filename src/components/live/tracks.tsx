@@ -11,7 +11,7 @@ const Tracks = () => {
   return (
     <div className="w-full">
       {/* Regular */}
-      <div className="relative mx-auto hidden aspect-[9/16] w-full max-w-5xl pt-48 md:flex">
+      <div className="relative mx-auto hidden aspect-[9/16] w-full max-w-5xl pt-48 md:mt-40 md:flex">
         <TitleBanner title="Tracks" />
 
         <div className="pointer-events-none absolute inset-0">
