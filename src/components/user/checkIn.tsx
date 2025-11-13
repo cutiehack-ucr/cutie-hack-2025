@@ -1,15 +1,23 @@
 "use client";
 
 import Image from "next/image";
+import QRBG from "@/public/dashboard/QRBG.svg";
 import { QRCodeSVG } from "qrcode.react";
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { Label } from "@/components/ui/label";
+import { useSidebar } from "../ui/sidebar";
+import Header from "./header";
+import Countdown from "../ui/countdown";
+
+import CountdownHeader from "@/public/dashboard/CountdownHeader.svg";
+import CountdownFooter from "@/public/dashboard/CountdownFooter.svg";
+import countdownDigitsBg from "@/public/landing/countdownDigitsBg.webp";
+import PageHeader from "./pageHeader";
 
 const CheckinPage = () => {
   const [date, setDate] = useState(new Date());
   const { data: session } = useSession();
-
   useEffect(() => {
     const timer = setInterval(() => {
       setDate(new Date());
@@ -21,30 +29,19 @@ const CheckinPage = () => {
   if (!session?.user) return <></>;
 
   return (
-    <div className="flex h-[calc(100vh-48px)] w-full flex-col">
-      <div className="pb-3 pt-4">
-        <Label className="pr-5 text-2xl font-bold">Checkin</Label>
-      </div>
-      <div className="flex h-full flex-col lg:flex-row">
-        <div className="m-auto flex flex-col items-center">
-          <Image
-            width={125}
-            height={125}
-            src={session.user.image}
-            className="overflow-hidden rounded-full"
-            alt="Picture of user's profile"
-          />
-          <p className="text-2xl font-bold">
-            {session.user.firstName} {session.user.lastName}
-          </p>
-          <p className="text-base">{session.user.email}</p>
-        </div>
-        <div className="m-auto flex h-1/3 w-2/3 flex-col items-center justify-center rounded-lg bg-white lg:h-5/6">
-          <QRCodeSVG
-            value={`${session.user.id}&${date.toISOString()}&${session.user.firstName}${session.user.lastName}`}
-            className="h-2/3 w-2/3"
-          />
-        </div>
+    <div className="flex h-[calc(100vh-48px)] w-full flex-col p-4">
+      <PageHeader pageTitle="Check In" />
+      <Header />
+      <div className="m-auto flex h-1/2 w-full translate-y-48 flex-col items-center justify-center rounded-lg sm:w-1/2 md:translate-y-0">
+        <Image
+          src={QRBG}
+          alt="QR Background"
+          className="absolute -z-10 w-11/12 sm:w-fit"
+        />
+        <QRCodeSVG
+          value={`${session.user.id}&${date.toISOString()}&${session.user.firstName}${session.user.lastName}`}
+          className="h-full w-10/12 sm:w-full"
+        />
       </div>
     </div>
   );

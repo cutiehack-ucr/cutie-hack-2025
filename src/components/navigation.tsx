@@ -1,6 +1,6 @@
 "use client";
 
-import LOGO from "@/app/favicon.ico";
+import LOGO from "@/public/landing/cutieHackTitleWhite.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { TABS } from "@/data/navigation";
@@ -38,7 +38,7 @@ const Navigation = () => {
       <SidebarHeader className={`${open ? "py-8" : "py-4"}`}>
         <Image
           src={LOGO}
-          className="mx-auto h-12 w-12"
+          className="mx-auto w-full"
           alt={`${data.name} Logo`}
         />
       </SidebarHeader>
