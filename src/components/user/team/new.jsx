@@ -99,7 +99,7 @@ const NewTeam = () => {
             Join a Team
           </TabsTrigger>
           <TabsTrigger
-            className="rounded bg-gray-200 py-2 text-xl font-bold text-gray-500 data-[state=active]:text-hackathon-primary md:text-2xl"
+            className="rounded bg-gray-200 p-2 text-xl font-bold text-gray-500 data-[state=active]:text-hackathon-primary md:text-2xl"
             value="create"
           >
             Create a Team

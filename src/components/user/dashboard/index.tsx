@@ -1,18 +1,4 @@
-import Countdown from "@/components/ui/countdown";
 import Header from "../header";
-import Tile from "./tile";
-import { QrCode, ParkingCircle } from "lucide-react";
-import Rooms from "./rooms";
-import Packing from "./packing";
-import BulletList from "./bulletlist";
-import { JUDGING } from "@/data/user/judging";
-import { RULES } from "@/data/user/rules";
-
-import CountdownHeader from "@/public/dashboard/CountdownHeader.svg";
-import CountdownFooter from "@/public/dashboard/CountdownFooter.svg";
-import countdownDigitsBg from "@/public/landing/countdownDigitsBg.webp";
-
-import Image from "next/image";
 import UserDataBook from "../userData";
 import PageHeader from "../pageHeader";
 

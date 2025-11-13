@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import BackgroundMobile from "@/public/dashboard/hackRoomsBgMobile.png";
 import Background from "@/public/dashboard/hackRoomsBg.png";
 import Room from "@/public/dashboard/hackRoom.png";

@@ -1,12 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import QRBG from "@/public/dashboard/QRBG.svg";
-import { QRCodeSVG } from "qrcode.react";
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
-import { Label } from "@/components/ui/label";
-import { useSidebar } from "../ui/sidebar";
 import Header from "./header";
 import PageHeader from "./pageHeader";
 import Rooms from "./dashboard/rooms";
