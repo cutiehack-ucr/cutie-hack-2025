@@ -28,7 +28,7 @@ const Packing = (): React.ReactNode => {
       </div>
       <div className="hidden items-start font-inknut md:flex">
         <Image src={PackingBg} alt="Hack Rooms background image" />
-        <div className="absolute font-bold mt-4 mx-auto justify-self-center translate-x-32">
+        <div className="absolute mx-auto mt-4 translate-x-32 justify-self-center font-bold">
           Packing List
         </div>
         <div className="absolute flex w-[23%] flex-1 translate-x-6 translate-y-16 flex-col flex-wrap justify-start gap-x-10 gap-y-2 text-xs leading-6 tracking-wider">
