@@ -23,7 +23,7 @@ import TitleBanner from "../ui/title-banner";
 
 const About = () => {
   return (
-    <>
+    <div className="md:mt-28">
       {/* Regular */}
       <div className="relative mx-auto hidden h-[100vh] w-full max-w-5xl md:flex">
         <Image
@@ -182,7 +182,7 @@ const About = () => {
           and networking.
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

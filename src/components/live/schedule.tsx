@@ -17,7 +17,7 @@ const Schedule = async () => {
 
   return (
     <div
-      className="relative z-20 mx-auto mt-8 flex w-full flex-col items-center justify-center pb-32 md:mt-40 md:pb-0"
+      className="relative z-10 mx-auto -mt-[1500px] flex w-full flex-col items-center justify-center pb-12 md:mb-10 md:mt-64"
       id="schedule"
     >
       <TitleBanner title="Schedule" subtitle="November 15, 2025 (PST)" />
@@ -87,7 +87,7 @@ const Schedule = async () => {
         />
 
         {/* Events Container */}
-        <div className="absolute inset-0 flex items-start justify-center px-8 pt-8">
+        <div className="absolute inset-x-0 bottom-8 top-8 flex items-start justify-center overflow-y-scroll px-8">
           <div className="flex w-full flex-col gap-4">
             {events.length > 0 ? (
               events.map((event) => (
