@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Book from "@/public/dashboard/Book.svg";
-import Paper from "@/public/dashboard/paper.png";
+import Paper from "@/public/dashboard/paper.webp";
 import { useSession } from "next-auth/react";
 import { Participant, User } from "@/types/users";
 
