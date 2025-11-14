@@ -9,23 +9,30 @@ import { tracksMobileData } from "@/data/tracks";
 
 const Tracks = () => {
   return (
-    <div className="w-full">
-      {/* Regular */}
-      <div className="relative mx-auto hidden aspect-[9/16] w-full max-w-5xl pt-48 md:mt-40 md:flex">
-        <TitleBanner title="Tracks" />
+    <div className="mt-[5vh] md:mt-[30vh] 2xl:mt-[25vh]">
+      <TitleBanner title="Tracks" />
 
-        <div className="pointer-events-none absolute inset-0">
+      <div className="hidden w-full grid-cols-2 px-8 pt-8 md:grid">
+        <div className="flex justify-start">
           <Image
             src={line}
             alt="Decorative white line"
-            className="absolute -left-[10%] top-[18%] z-30 h-[2%] w-[30%] object-contain"
-          />
-          <Image
-            src={line}
-            alt="Decorative white line"
-            className="absolute -right-[10%] top-[18%] z-10 h-[2%] w-[30%] object-contain"
+            className="h-auto w-[60%] object-contain"
           />
         </div>
+
+        <div className="flex justify-end">
+          <Image
+            src={line}
+            alt="Decorative white line"
+            className="h-auto w-[60%] object-contain"
+          />
+        </div>
+      </div>
+
+      {/* Regular */}
+
+      <div className="relative mx-auto hidden aspect-[9/16] w-full max-w-5xl md:flex">
         {tracksData.map((track) => (
           <ScrollItem
             key={track.label}
@@ -41,11 +48,7 @@ const Tracks = () => {
       </div>
 
       {/* Mobile */}
-      <div className="relative mx-auto -mt-[1300px] min-h-[2700px] max-w-full md:hidden">
-        <div className="relative mb-8 mt-8 flex flex-col items-center justify-center md:mb-12 md:mt-12">
-          <TitleBanner title="Tracks" />
-        </div>
-
+      <div className="relative mx-auto md:hidden">
         <div className="absolute top-[36%] z-0 w-[100%]">
           <Image
             src={innervines}
