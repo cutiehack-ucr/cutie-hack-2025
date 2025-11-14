@@ -26,7 +26,10 @@ export const TeamCard = ({ photo, name, role }: TeamCardProps) => {
 };
 const Team = () => {
   return (
-    <div className="mt-[5vh] flex flex-col items-center justify-center md:mt-[10vh] 2xl:mt-[5vh]">
+    <div
+      id="team"
+      className="mt-[5vh] flex flex-col items-center justify-center md:mt-[10vh] 2xl:mt-[5vh]"
+    >
       <TitleBanner title="Leads" />
       <div className="grid grid-cols-1 gap-x-8 md:grid-cols-2">
         {directors.map(({ photo, name, role }, key) => (
