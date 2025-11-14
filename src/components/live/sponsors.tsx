@@ -23,7 +23,7 @@ const Sponsors = () => {
   return (
     <section className="z-50 flex flex-col items-center justify-center text-center">
       <TitleBanner title="Sponsors" />
-      <div className="mt-8 grid grid-cols-2 gap-4 px-4 md:mt-0 md:grid-cols-4 md:gap-8">
+      <div className="mt-8 grid grid-cols-2 gap-4 px-4 md:mt-12 md:grid-cols-4 md:gap-8">
         {sponsors.map(({ logo }, index) => (
           <div key={index}>
             <Banner logo={logo} />
