@@ -51,7 +51,6 @@ const Navigation = ({ hasSignout }: NavigationProps) => {
               <Link href="">Partners</Link>
               <Link href="">FAQ</Link>
               <Link href="">Archive</Link> */}
-              <p>More information coming soon!</p>
               {!hasSignout ? (
                 <Link
                   href="/#register"
@@ -93,7 +92,6 @@ const Navigation = ({ hasSignout }: NavigationProps) => {
           }}
         >
           <ul className="-mt-9 flex space-x-8 font-inknut font-normal">
-            <p className="mr-4">More information coming soon!</p>
             {/* <Link href="/#about" className={navHoverAnimation}>
               About
             </Link>
