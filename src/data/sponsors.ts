@@ -9,7 +9,7 @@ import nordpass from "@/public/sponsors/nordpass.webp";
 import incogni from "@/public/sponsors/incogni.webp";
 import saily from "@/public/sponsors/saily.webp";
 import nordprotect from "@/public/sponsors/nordprotect.webp";
-import circle from "@/public/sponsors/circle.png";
+import blank from "@/public/sponsors/blank.webp";
 
 const sponsors = [
   {
@@ -46,7 +46,7 @@ const sponsors = [
     logo: nordprotect,
   },
   {
-    logo: circle,
+    logo: blank,
   },
 ];
 export default sponsors;
