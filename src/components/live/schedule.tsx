@@ -17,7 +17,7 @@ const Schedule = async () => {
 
   return (
     <div
-      className="relative z-10 mx-auto -mt-[1400px] flex h-[100vh] w-full flex-col items-center justify-center pb-[1400px] sm:mt-20 md:-mb-44 md:pb-0"
+      className="relative z-10 mx-auto mt-[5vh] flex w-full flex-col items-center justify-center md:mt-[10vh] 2xl:mt-[5vh]"
       id="schedule"
     >
       <TitleBanner title="Schedule" subtitle="November 15, 2025 (PST)" />
@@ -44,7 +44,7 @@ const Schedule = async () => {
       </div>
 
       {/* Bulletin Board with Events - Desktop */}
-      <div className="relative mt-8 hidden w-full max-w-5xl md:block">
+      <div className="relative mx-auto mt-8 hidden w-4/5 md:block">
         <Image
           src={bulletin}
           alt="Bulletin Board"
