@@ -10,7 +10,7 @@ interface TitleBannerProps {
 const TitleBanner = ({ title, subtitle, className }: TitleBannerProps) => {
   return (
     <div
-      className={`relative flex w-full items-start justify-center ${className ?? ""}`}
+      className={`relative flex items-start justify-center ${className ?? ""}`}
     >
       <Image
         src={titleBanner}
