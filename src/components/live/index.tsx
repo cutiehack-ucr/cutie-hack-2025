@@ -18,7 +18,7 @@ const Live = () => {
       <Landing />
       <Register />
       <About />
-      <Schedule />
+      {/* <Schedule /> */}
       <Tracks />
       <Sponsors />
       <FAQ />

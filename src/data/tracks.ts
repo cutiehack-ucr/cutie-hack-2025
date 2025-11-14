@@ -7,7 +7,7 @@ export const tracksData = [
     label: "1st",
     desc: "Awarded to the most impressive runner-up hack, beginners and veterans alike.",
     image: midscroll,
-    imageClass: "w-[38%] top-[22%] left-[31.5%]",
+    imageClass: "w-[38%] top-[3%] left-[31.5%]",
     labelClass: "top-[25%] text-6xl md:text-7xl lg:text-8xl",
     descClass: "top-[65%] w-[58%]",
   },
@@ -15,7 +15,7 @@ export const tracksData = [
     label: "2nd",
     desc: "Awarded to the most impressive runner-up hack, beginners and veterans alike.",
     image: leftscroll,
-    imageClass: "w-[40%] top-[25%] -left-[10%]",
+    imageClass: "w-[40%] top-[6%] -left-[10%]",
     labelClass:
       "left-[24%] top-[13%] text-5xl md:text-6xl lg:text-8xl [transform:rotate(-10deg)]",
     descClass: "left-[24.5%] w-[58%] top-[52%] [transform:rotate(-10deg)]",
@@ -24,7 +24,7 @@ export const tracksData = [
     label: "3rd",
     desc: "Awarded to the most impressive runner-up hack, beginners and veterans alike.",
     image: rightscroll,
-    imageClass: "w-[40%] top-[25%] left-[71%]",
+    imageClass: "w-[40%] top-[6%] left-[71%]",
     labelClass:
       "left-[32%] top-[13%] text-6xl md:text-7xl lg:text-8xl [transform:rotate(10deg)]",
     descClass: "top-[52%] left-[16%] w-[60%] [transform:rotate(10deg)]",
@@ -33,7 +33,7 @@ export const tracksData = [
     label: "Best Hardware",
     desc: "Awarded to the most impressive runner-up hack, beginners and veterans alike.",
     image: leftscroll,
-    imageClass: "font-bold w-[40%] top-[55%] -left-[10%]",
+    imageClass: "font-bold w-[40%] top-[36%] -left-[10%]",
     labelClass:
       "top-[28%] left-[48%] text-2xl md:text-3xl lg:text-4xl rotate-[-10deg]",
     descClass: "left-[24.5%] w-[58%] top-[52%] [transform:rotate(-10deg)]",
@@ -42,7 +42,7 @@ export const tracksData = [
     label: "Best UI/UX",
     desc: "Awarded to the most impressive runner-up hack, beginners and veterans alike.",
     image: midscroll,
-    imageClass: "font-bold w-[38%] top-[55%] left-[31.5%]",
+    imageClass: "font-bold w-[38%] top-[33%] left-[31.5%]",
     labelClass: "top-[26%] text-2xl md:text-3xl lg:text-4xl",
     descClass: "top-[65%] w-[58%]",
   },
@@ -50,7 +50,7 @@ export const tracksData = [
     label: "Best Beginner",
     desc: "Awarded to the most impressive runner-up hack, beginners and veterans alike.",
     image: rightscroll,
-    imageClass: "font-bold w-[40%] top-[55%] left-[71%]",
+    imageClass: "font-bold w-[40%] top-[36%] left-[71%]",
     labelClass:
       "left-[22%] top-[18%] w-[60%] text-2xl md:text-3xl lg:text-4xl [transform:rotate(10deg)]",
     descClass: "top-[52%] left-[16%] w-[60%] [transform:rotate(10deg)]",
@@ -59,16 +59,16 @@ export const tracksData = [
     label: "Most Sustainable",
     desc: "Awarded to the most impressive runner-up hack, beginners and veterans alike.",
     image: leftscroll,
-    imageClass: "font-bold w-[40%] top-[85%] -left-[10%]",
+    imageClass: "font-bold w-[40%] top-[66%] -left-[10%]",
     labelClass:
-      "top-[25%] left-[47.5%] text-1xl md:text-2xl lg:text-3xl rotate-[-10deg]",
+      "top-[25%] left-[47.5%] text-xl md:text-2xl lg:text-3xl rotate-[-10deg]",
     descClass: "left-[24.5%] w-[58%] top-[52%] [transform:rotate(-10deg)]",
   },
   {
     label: "Most on Theme",
     desc: "Awarded to the most impressive runner-up hack, beginners and veterans alike.",
     image: midscroll,
-    imageClass: "font-bold w-[38%] top-[85%] left-[31.5%]",
+    imageClass: "font-bold w-[38%] top-[63%] left-[31.5%]",
     labelClass: "top-[23%] text-2xl md:text-3xl lg:text-4xl",
     descClass: "top-[65%] w-[58%]",
   },
@@ -76,7 +76,7 @@ export const tracksData = [
     label: "Best Social Impact",
     desc: "Awarded to the most impressive runner-up hack, beginners and veterans alike.",
     image: rightscroll,
-    imageClass: "font-bold w-[40%] top-[85%] left-[71%]",
+    imageClass: "font-bold w-[40%] top-[66%] left-[71%]",
     labelClass:
       "left-[20%] top-[16%] w-[64%] text-1xl md:text-2xl lg:text-4xl [transform:rotate(10deg)]",
     descClass: "top-[52%] left-[14%] w-[62%] [transform:rotate(10deg)]",
@@ -159,7 +159,7 @@ export const tracksMobileData = [
     image: rightscroll,
     imageClass: "w-[70%] top-[265%]",
     labelClass:
-      "top-[15%] left-[23%] text-[6vw] w-[60%] font-bold [transform:rotate(10deg)]",
-    descClass: "top-[52%] left-[14%] w-[62%] [transform:rotate(10deg)]",
+      "top-[15%] left-[23%] text-xl w-[60%] font-bold [transform:rotate(10deg)]",
+    descClass: "top-[52%] left-[16%] w-[62%] [transform:rotate(10deg)]",
   },
 ];
