@@ -22,7 +22,10 @@ const About = () => {
   return (
     <>
       {/* Regular */}
-      <div className="relative mx-auto mt-32 hidden h-[100vh] w-full max-w-5xl md:flex">
+      <div
+        id="about"
+        className="relative mx-auto mt-32 hidden h-[100vh] w-full max-w-5xl md:flex"
+      >
         <Image
           src={circle}
           alt="Base beige circle with a light green outline."
@@ -39,12 +42,11 @@ const About = () => {
         <div className="absolute left-1/2 top-[7%] -translate-x-1/2 md:top-[4%] 2xl:top-[9%]">
           <TitleBanner title="About" />
         </div>
-        <div className="absolute left-[20%] top-[19%] w-[62%] text-left font-serif text-sm text-hackathon-gray-400 md:text-lg lg:text-xl 2xl:top-[21%]">
-          Cutie Hack is a 12-hour, beginner-oriented hackathon hosted by
-          students at University of California, Riverside where hackers are
-          challenged to create a cool project within the time frame to demo in
-          order to win awesome prizes and participate in workshops, fun games,
-          and networking.
+        <div className="absolute left-[20%] top-[19%] w-[62%] text-center font-serif text-sm text-hackathon-gray-400 md:text-lg lg:text-xl 2xl:top-[21%]">
+          Cutie Hack is ACM&apos;s 12 hour, beginner-friendly hackathon hosted
+          at UC Riverside. Hackers can build projects to present to a panel of
+          judges to compete for tracks and prizes! Throughout November 15, there
+          will be free food, free swag, workshops, activities, and more.
         </div>
 
         <Image
