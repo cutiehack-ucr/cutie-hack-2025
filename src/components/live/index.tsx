@@ -1,7 +1,7 @@
 import Landing from "./landing";
 import About from "./about";
 import Schedule from "./schedule";
-// import Sponsors from "./sponsors";
+import Sponsors from "./sponsors";
 // import Team from "./team";
 // import Committees from "./committees";
 // import Judges from "./judges";
@@ -20,9 +20,9 @@ const Live = () => {
       <About />
       <Schedule />
       <Tracks />
+      <Sponsors />
       <FAQ />
-      {/* <Sponsors />
-      <Team />
+      {/* <Team />
       <Committees />
       <Judges /> */}
       <Footer />
