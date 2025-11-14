@@ -1,17 +1,17 @@
-import allison from "@/public/board/allison.jpg";
-import cris from "@/public/board/cris.jpg";
-import carla from "@/public/board/carla.jpg";
-import taaha from "@/public/board/taaha.jpg";
-import ting from "@/public/board/ting.jpg";
-import karina from "@/public/board/karina.jpg";
-import charlette from "@/public/board/charlette.jpg";
-import grace from "@/public/board/grace.png";
-import ahad from "@/public/board/ahad.jpg";
-import christopher from "@/public/board/christopher.png";
-import vishra from "@/public/board/vishra.png";
-import cindy from "@/public/board/cindy.jpg";
-import ray from "@/public/board/ray.jpg";
-import paper from "@/public/board/paper.png";
+import allison from "@/public/board/allison.webp";
+import cris from "@/public/board/cris.webp";
+import carla from "@/public/board/carla.webp";
+import taaha from "@/public/board/taaha.webp";
+import ting from "@/public/board/ting.webp";
+import karina from "@/public/board/karina.webp";
+import charlette from "@/public/board/charlette.webp";
+import grace from "@/public/board/grace.webp";
+import ahad from "@/public/board/ahad.webp";
+import christopher from "@/public/board/christopher.webp";
+import vishra from "@/public/board/vishra.webp";
+import cindy from "@/public/board/cindy.webp";
+import ray from "@/public/board/ray.webp";
+import paper from "@/public/board/paper.webp";
 export const directors = [
   {
     photo: allison,
