@@ -57,7 +57,7 @@ const Footer = () => {
         alt="MageCutie"
         className="absolute bottom-8 left-8 z-50 w-1/4"
       />
-      <p className="md:text-md absolute bottom-1 z-30 text-xs md:bottom-2 md:right-2">{`© 2025 Cutie Hack • Made with 💗 and 🪄 by ACM Hacks`}</p>
+      <p className="md:text-md absolute bottom-1 z-30 text-xs md:bottom-2 md:right-2 2xl:text-xl">{`© 2025 Cutie Hack • Made with 💗 and 🪄 by ACM Hacks`}</p>
     </div>
   );
 };
