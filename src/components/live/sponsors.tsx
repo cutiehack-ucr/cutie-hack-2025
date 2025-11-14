@@ -13,7 +13,7 @@ export const Banner = ({ logo }: SponsorProps) => {
       <Image
         src={logo}
         alt="SponsorBanner"
-        className="absolute left-[25%] top-[28%] z-10 w-6/12"
+        className="z-2 absolute left-[25%] top-[28%] w-6/12"
       />
     </div>
   );
@@ -21,7 +21,10 @@ export const Banner = ({ logo }: SponsorProps) => {
 
 const Sponsors = () => {
   return (
-    <section className="z-50 flex flex-col items-center justify-center text-center">
+    <section
+      className="z-10 flex flex-col items-center justify-center text-center"
+      id="sponsors"
+    >
       <TitleBanner title="Sponsors" />
       <div className="mt-8 grid grid-cols-2 gap-4 px-4 md:mt-12 md:grid-cols-4 md:gap-8">
         {sponsors.map(({ logo }, index) => (
