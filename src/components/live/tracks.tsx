@@ -48,7 +48,7 @@ const Tracks = () => {
       </div>
 
       {/* Mobile */}
-      <div className="relative mx-auto md:hidden">
+      <div className="relative mx-auto pt-8 md:hidden">
         <div className="absolute top-[36%] z-0 w-[100%]">
           <Image
             src={innervines}
