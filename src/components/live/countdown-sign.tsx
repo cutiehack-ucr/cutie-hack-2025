@@ -6,7 +6,7 @@ import countdownDigitsBg from "@/public/landing/countdownDigitsBg.webp";
 import instagramIcon from "@/public/socials/instagram.svg";
 import linkedinIcon from "@/public/socials/linkedin.svg";
 import mailIcon from "@/public/socials/mail.svg";
-
+import Link from "next/link";
 const CountdownSign = () => {
   return (
     <div className="relative flex w-full flex-col items-center justify-center lg:w-auto min-[1400px]:mt-60">
@@ -35,8 +35,8 @@ const CountdownSign = () => {
             backgroundImage={countdownDigitsBg.src}
           />
 
-          <div className="mt-[24%] flex w-fit -rotate-12 flex-row gap-2 py-[10px] pr-8 font-inknut text-xl max-[455px]:mt-8 max-[455px]:gap-1 max-[455px]:pr-6">
-            <a
+          <div className="mt-[20%] flex w-fit -rotate-12 flex-row">
+            <Link
               href="https://www.instagram.com/cutiehack_ucr/"
               target="_blank"
               rel="noopener noreferrer"
@@ -48,8 +48,8 @@ const CountdownSign = () => {
                 width={55}
                 className="h-auto p-[1px] md:p-0"
               />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.linkedin.com/company/cutie-hack"
               target="_blank"
               rel="noopener noreferrer"
@@ -61,8 +61,8 @@ const CountdownSign = () => {
                 width={55}
                 className="h-auto p-[1px] md:p-0"
               />
-            </a>
-            <a
+            </Link>
+            <Link
               href="mailto:citrushack@gmail.com"
               className="transition-all hover:scale-95 hover:opacity-80"
             >
@@ -72,7 +72,7 @@ const CountdownSign = () => {
                 width={75}
                 className="h-auto p-[1px] md:p-0"
               />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
