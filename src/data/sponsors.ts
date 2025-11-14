@@ -9,11 +9,11 @@ import nordpass from "@/public/sponsors/nordpass.webp";
 import incogni from "@/public/sponsors/incogni.webp";
 import saily from "@/public/sponsors/saily.webp";
 import nordprotect from "@/public/sponsors/nordprotect.webp";
-import creatrlab from "@/public/sponsors/creatrlab.png";
-import monster from "@/public/sponsors/monster.png";
-import soundethics from "@/public/sponsors/soundethics.png";
-import mlh from "@/public/sponsors/mlh.png";
-import ucrcse from "@/public/sponsors/ucrcse.png";
+import creatrlab from "@/public/sponsors/creatrlab.webp";
+import monster from "@/public/sponsors/monster.webp";
+import soundethics from "@/public/sponsors/soundethics.webp";
+import mlh from "@/public/sponsors/mlh.webp";
+import ucrcse from "@/public/sponsors/ucrcse.webp";
 
 const sponsors = [
   {
