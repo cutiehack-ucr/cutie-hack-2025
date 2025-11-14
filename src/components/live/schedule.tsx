@@ -1,17 +1,17 @@
 import Image from "next/image";
 import TitleBanner from "../ui/title-banner";
-import registerDecorFrame from "@/public/landing/registerDecorFrame.webp";
+// import registerDecorFrame from "@/public/landing/registerDecorFrame.webp";
 import bulletin from "@/public/schedule/bulletin.svg";
-import bulletinMobile from "@/public/schedule/bulletin-mobile.svg";
+/* import bulletinMobile from "@/public/schedule/bulletin-mobile.svg"; */
 import EventCard from "./schedule/card";
 import { fetchCalendarEvents } from "@/utils/calendar";
 
 const Schedule = async () => {
-  const categories = [
+  /* const categories = [
     { name: "Setup", color: "text-hackathon-off-white-100" },
     { name: "Workshops", color: "text-hackathon-off-white-100" },
     { name: "Activities", color: "text-hackathon-off-white-100" },
-  ];
+  ]; */
 
   const events = await fetchCalendarEvents();
 
