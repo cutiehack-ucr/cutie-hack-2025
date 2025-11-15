@@ -268,13 +268,13 @@ export const TABS: Tabs = {
       tabs: [
         {
           name: "Post Team Idea",
-          link: "/form/idea",
+          link: "/apply/idea",
           icon: <FolderSearch2 className={iconStyle} />,
           target: "_self",
         },
         {
           name: "Feedback",
-          link: "/form/feedback",
+          link: "/apply/feedback",
           icon: <FileSearch className={iconStyle} />,
           target: "_self",
         },
