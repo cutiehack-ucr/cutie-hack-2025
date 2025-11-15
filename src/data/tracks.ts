@@ -155,7 +155,7 @@ export const tracksMobileData = [
   },
   {
     label: "Best Use of Gemini API",
-    desc: "These projects must focus on promoting environmental sustainability and addressing ecological challenges.",
+    desc: "Redefine what's possible with AI through building a project that uses this API and access Google's AI models.",
     image: rightscroll,
     imageClass: "w-[70%] top-[265%]",
     labelClass:
