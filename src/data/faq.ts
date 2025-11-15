@@ -8,7 +8,8 @@ export const QUESTIONS: QuestionAnswer[] = [
   },
   {
     question: "When does Cutie Hack start?",
-    answer: "Cutie Hack kicks off on Saturday morning, November 15. Hacking begins at 8 am PST.",
+    answer:
+      "Cutie Hack kicks off on Saturday morning, November 15. Hacking begins at 8 am PST.",
   },
   {
     question: "Where is the hackathon?",
@@ -27,7 +28,8 @@ export const QUESTIONS: QuestionAnswer[] = [
   },
   {
     question: "How long do I have to hack?",
-    answer: "You'll have 12 hours to hack at Cutie Hack!",
+    answer:
+      "You'll have 12 hours to hack at Cutie Hack! Project submissions must be finalized by 8 PM PST on November 15th.",
   },
   {
     question: "Do I have to hack or make a project?",
