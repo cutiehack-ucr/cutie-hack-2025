@@ -19,8 +19,10 @@ export const TeamCard = ({ photo, name, role }: TeamCardProps) => {
           className="absolute left-1/2 top-[30%] w-6/12 -translate-x-1/2"
         />
       </div>
-      <p className="absolute bottom-10 mt-4 font-semibold">{name}</p>
-      <p className="absolute bottom-5 text-sm">{role}</p>
+      <p className="md:text-md absolute bottom-8 mt-4 text-sm font-semibold md:bottom-10">
+        {name}
+      </p>
+      <p className="absolute bottom-3 text-xs md:bottom-5 md:text-sm">{role}</p>
     </div>
   );
 };
@@ -31,14 +33,14 @@ const Team = () => {
       className="mt-[5vh] flex flex-col items-center justify-center md:mt-[10vh] 2xl:mt-[5vh]"
     >
       <TitleBanner title="Leads" />
-      <div className="grid grid-cols-1 gap-x-8 md:grid-cols-2">
+      <div className="grid grid-cols-2 gap-x-8 px-4 md:grid-cols-2">
         {directors.map(({ photo, name, role }, key) => (
           <div key={key}>
             <TeamCard photo={photo} name={name} role={role} />
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-1 gap-x-8 md:grid-cols-4">
+      <div className="grid grid-cols-2 gap-x-8 px-4 md:grid-cols-4">
         {leads.map(({ photo, name, role }, key) => (
           <div key={key}>
             <TeamCard photo={photo} name={name} role={role} />

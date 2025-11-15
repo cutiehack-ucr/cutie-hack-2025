@@ -14,6 +14,7 @@ import monster from "@/public/sponsors/monster.webp";
 import soundethics from "@/public/sponsors/soundethics.webp";
 import mlh from "@/public/sponsors/mlh.webp";
 import ucrcse from "@/public/sponsors/ucrcse.webp";
+import interviewcake from "@/public/sponsors/interviewcake.png";
 
 const sponsors = [
   {
@@ -60,6 +61,9 @@ const sponsors = [
   },
   {
     logo: nordprotect,
+  },
+  {
+    logo: interviewcake,
   },
 ];
 export default sponsors;
