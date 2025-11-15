@@ -56,8 +56,8 @@ export const tracksData = [
     descClass: "top-[52%] left-[17%] w-[60%] [transform:rotate(10deg)]",
   },
   {
-    label: "Most Sustainable",
-    desc: "These projects must focus on promoting environmental sustainability and addressing ecological challenges.",
+    label: "Best use of Gemini API",
+    desc: "Redefine what's possible with AI through building a project that uses this API and access Google's AI models.",
     image: leftscroll,
     imageClass: "font-bold w-[40%] top-[66%] -left-[10%]",
     labelClass:
@@ -154,7 +154,7 @@ export const tracksMobileData = [
     descClass: "left-[25%] w-[58%] top-[50%] [transform:rotate(-10deg)]",
   },
   {
-    label: "Most Sustainable",
+    label: "Best Use of Gemini API",
     desc: "These projects must focus on promoting environmental sustainability and addressing ecological challenges.",
     image: rightscroll,
     imageClass: "w-[70%] top-[265%]",
