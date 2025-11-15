@@ -3,7 +3,7 @@ import Background from "@/public/dashboard/hackRoomsBg.webp";
 import Room from "@/public/dashboard/hackRoom.webp";
 import Image from "next/image";
 
-const rooms: string[] = ["WCH127", "WCH110", "WCH130", "Bytes", "WCH129"];
+const rooms: string[] = ["WCH127", "WCH129", "WCH203", "Bytes", "Bourns A171"];
 
 const Rooms = (): React.ReactNode => {
   return (
