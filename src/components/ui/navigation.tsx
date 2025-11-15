@@ -53,11 +53,17 @@ const Navigation = ({ hasSignout }: NavigationProps) => {
               <Link href="/#team">Team</Link>
               <Link href="/#faq">FAQ</Link>
               {!hasSignout ? (
+                // <Link
+                //   href="/#register"
+                //   className="mx-auto w-fit rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1"
+                // >
+                //   Register
+                // </Link>
                 <Link
-                  href="/#register"
+                  href="/user"
                   className="mx-auto w-fit rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1"
                 >
-                  Register
+                  Dashboard
                 </Link>
               ) : (
                 <button
@@ -112,11 +118,17 @@ const Navigation = ({ hasSignout }: NavigationProps) => {
               FAQ
             </Link>
             {!hasSignout ? (
+              // <Link
+              //   href="/#register"
+              //   className="-mt-2 rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1 transition-all hover:scale-105 hover:opacity-80"
+              // >
+              //   Register
+              // </Link>
               <Link
-                href="/#register"
+                href="/user"
                 className="-mt-2 rounded-3xl border-2 border-solid border-black bg-hackathon-teal-300 px-4 py-1 transition-all hover:scale-105 hover:opacity-80"
               >
-                Register
+                Dashboard
               </Link>
             ) : (
               <button
