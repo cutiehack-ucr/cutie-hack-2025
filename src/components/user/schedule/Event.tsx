@@ -16,7 +16,7 @@ const Event = ({ event }: props) => {
   return (
     <Dialog>
       <DialogTrigger>
-        <div className="rounded bg-white p-3 text-black shadow-sm">
+        <div className="rounded bg-hackathon-off-white-100 p-3 text-black shadow-sm">
           <div className="text-left text-sm font-extrabold">
             {event.summary}
           </div>
@@ -61,7 +61,7 @@ const Event = ({ event }: props) => {
             </p>
           </DialogTitle>
           <DialogDescription>
-            {event.description.split("\n")[1]}
+            {event && event.description && event.description.split("\n")[1]}
           </DialogDescription>
         </DialogHeader>
       </DialogContent>
