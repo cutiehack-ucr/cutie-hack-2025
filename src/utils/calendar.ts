@@ -31,7 +31,7 @@ export async function fetchCalendarEvents(): Promise<ProcessedEvent[]> {
 
   try {
     // Set time range for November 15, 2025 (PST)
-    const timeMin = new Date("2025-11-15T12:00:00-08:00").toISOString();
+    const timeMin = new Date("2025-11-15T00:00:00-08:00").toISOString();
     const timeMax = new Date("2025-11-16T23:59:59-08:00").toISOString();
 
     const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(
