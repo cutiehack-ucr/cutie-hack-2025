@@ -4,16 +4,16 @@ export const QUESTIONS: QuestionAnswer[] = [
   {
     question: "What is a hackathon?",
     answer:
-      "A hackathon is an event where people come together to collaborate on technology projects, typically over a short period of time. Participants work in teams to create software, hardware, or other tech solutions, often addressing specific challenges or themes.",
+      "A hackathon is an event where people collaborate on tech projects over a short period. Teams work together to create software, hardware, or other innovative solutions, often centered around specific challenges or themes.",
   },
   {
     question: "When does Cutie Hack start?",
-    answer: "Cutie Hack will start Saturday Morning on November 15.",
+    answer: "Cutie Hack kicks off on Saturday morning, November 15. Hacking begins at 8 am PST.",
   },
   {
     question: "Where is the hackathon?",
     answer:
-      "It will take place in your favorite engineering buildings! It will be held throughout Winston Chung Hall and certain BCOE buildings and classrooms. There will be a comprehensive list of activities and their locations in the final itinerary!",
+      "The event will be held in your favorite engineering buildings, including Winston Chung Hall and select BCOE buildings and classrooms! A detailed itinerary with activity locations will be provided!",
   },
   {
     question: "Who can come to Cutie Hack?",
@@ -23,30 +23,30 @@ export const QUESTIONS: QuestionAnswer[] = [
   {
     question: "Is Cutie Hack free?",
     answer:
-      "Cutie Hack is a completely free event! You will be allowed to attend workshops, listen to some wonderful speakers, and best of all, win great prizes with no entrance fee. 🤠",
+      "Yes, Cutie Hack is completely free! Enjoy workshops, wonderful speakers, and best of all, the chance to win amazing prizes with no entry fee. 🤠",
   },
   {
     question: "How long do I have to hack?",
-    answer: "For Cutie Hack you will have 12 hours!",
+    answer: "You'll have 12 hours to hack at Cutie Hack!",
   },
   {
     question: "Do I have to hack or make a project?",
     answer:
-      "Absolutely not!! While we encourage everyone to make a project anyone is welcome to come for the free food and shirt! ",
+      "Absolutely not! While we encourage creating a project, you're welcome to join just for the free food and shirt!",
   },
   {
     question: "What if I've never been to a hackathon?",
     answer:
-      "All the more reason to come and experience a hackathon! You can learn from the various workshops, speakers, and mentors, and they can help guide a personal project of your choice if you want!",
+      "All the more reason to come and experience a hackathon! You can learn from workshops, speakers, and mentors who can help guide you on a project if you choose to create one.",
   },
   {
     question: "What if I don't have a team?",
     answer:
-      "We will have opportunites to meet new people as well as our team page will allow you to find people to work with!",
+      "No worries! There will be opportunities to meet new people, and our team page will help you find collaborators.",
   },
   {
     question: "Where will I submit?",
     answer:
-      "Devpost. We will provide guidence on how to submit during the hackathon!",
+      "Submissions will be through Devpost. We'll provide instructions on how to submit during the event!",
   },
 ];
