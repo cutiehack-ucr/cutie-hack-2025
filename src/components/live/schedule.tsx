@@ -1,17 +1,17 @@
 import Image from "next/image";
 import TitleBanner from "../ui/title-banner";
-import registerDecorFrame from "@/public/landing/registerDecorFrame.webp";
+// import registerDecorFrame from "@/public/landing/registerDecorFrame.webp";
 import bulletin from "@/public/schedule/bulletin.svg";
-import bulletinMobile from "@/public/schedule/bulletin-mobile.svg";
-import EventCard from "./schedule/event-card";
+/* import bulletinMobile from "@/public/schedule/bulletin-mobile.svg"; */
+import EventCard from "./schedule/card";
 import { fetchCalendarEvents } from "@/utils/calendar";
 
 const Schedule = async () => {
-  const categories = [
+  /* const categories = [
     { name: "Setup", color: "text-hackathon-off-white-100" },
     { name: "Workshops", color: "text-hackathon-off-white-100" },
     { name: "Activities", color: "text-hackathon-off-white-100" },
-  ];
+  ]; */
 
   const events = await fetchCalendarEvents();
 
@@ -22,7 +22,7 @@ const Schedule = async () => {
     >
       <TitleBanner title="Schedule" subtitle="November 15, 2025 (PST)" />
 
-      <div className="mt-10 hidden max-w-4xl grid-cols-1 gap-x-12 gap-y-10 sm:grid md:grid-cols-3 md:gap-y-16">
+      {/* <div className="mt-10 hidden max-w-4xl grid-cols-1 gap-x-12 gap-y-10 sm:grid md:grid-cols-3 md:gap-y-16">
         {categories.map((category) => (
           <div
             key={category.name}
@@ -41,7 +41,7 @@ const Schedule = async () => {
             </p>
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* Bulletin Board with Events - Desktop */}
       <div className="relative mx-auto mt-8 hidden w-4/5 md:block">
@@ -77,17 +77,17 @@ const Schedule = async () => {
       </div>
 
       {/* Bulletin Board with Events - Mobile */}
-      <div className="relative mt-8 block w-full px-4 md:hidden">
-        <Image
+      <div className="mt-8 flex w-full justify-center md:hidden">
+        {/*  <Image
           src={bulletinMobile}
           alt="Bulletin Board"
           width={330}
           height={2013}
-          className="h-auto w-full"
-        />
+          className=""
+        /> */}
 
         {/* Events Container */}
-        <div className="absolute inset-0 flex items-start justify-center px-8 pt-8">
+        <div className="px-8">
           <div className="flex w-full flex-col gap-4">
             {events.length > 0 ? (
               events.map((event) => (

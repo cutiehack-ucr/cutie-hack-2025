@@ -2,13 +2,13 @@ import Image from "next/image";
 import paperBg from "@/public/schedule/paper.svg";
 import paperBgMobile from "@/public/schedule/paper-mobile.svg";
 
-interface EventCardProps {
+interface CardProps {
   time: string;
   title: string;
   location: string;
 }
 
-const EventCard = ({ time, title, location }: EventCardProps) => {
+const Card = ({ time, title, location }: CardProps) => {
   return (
     <div className="relative flex h-[86px] w-full items-center justify-between px-6 md:h-[80px] md:px-8">
       {/* Desktop Paper */}
@@ -67,4 +67,4 @@ const EventCard = ({ time, title, location }: EventCardProps) => {
   );
 };
 
-export default EventCard;
+export default Card;
