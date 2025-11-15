@@ -58,7 +58,7 @@ const Countdown = ({ classNames, backgroundImage }: countdownProps) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const timeLeft = data.end.getTime() - new Date().getTime();
+      const timeLeft = data.date.getTime() - new Date().getTime();
       if (timeLeft <= 0) {
         setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       } else {
