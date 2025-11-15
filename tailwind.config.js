@@ -28,6 +28,7 @@ module.exports = {
           "gray-200": "#9ea4af",
           "gray-300": "#525252",
           "gray-400": "#3B332B",
+          "teal-100": "#105C78",
           "teal-300": "#6ACFD1",
           "teal-400": "#01686C",
           "teal-800": "#0A3545",
@@ -126,6 +127,14 @@ module.exports = {
           "20%,50%": {
             opacity: "0",
           },
+          float: {
+            "0%, 100%": { transform: "translateY(0)" },
+            "50%": { transform: "translateY(-12px)" },
+          },
+          shadowPulse: {
+            "0%, 100%": { transform: "scale(1)", opacity: "0.35" },
+            "50%": { transform: "scale(1.15)", opacity: "0.15" },
+          },
         },
       },
       animation: {
@@ -134,6 +143,8 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "collapsible-up": "collapsible-up 0.2s ease-out",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
+        float: "float 3s ease-in-out infinite",
+        shadowPulse: "shadowPulse 3s ease-in-out infinite",
       },
     },
   },

@@ -26,6 +26,7 @@ import {
   HandCoins,
   Cat,
   Notebook,
+  Info,
 } from "lucide-react";
 import data from "./config";
 import { SiInstagram } from "@icons-pack/react-simple-icons";
@@ -222,6 +223,12 @@ export const TABS: Tabs = {
           name: "Dashboard",
           link: "/user/dashboard",
           icon: <User className={iconStyle} />,
+          target: "_self",
+        },
+        {
+          name: "Information",
+          link: "/user/information",
+          icon: <Info className={iconStyle} />,
           target: "_self",
         },
         {
