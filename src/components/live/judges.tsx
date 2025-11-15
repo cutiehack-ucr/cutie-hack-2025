@@ -19,8 +19,10 @@ export const JudgeCard = ({ photo, name, title }: JudgeCardProps) => {
           className="absolute left-1/2 top-[30%] w-6/12 -translate-x-1/2"
         />
       </div>
-      <p className="absolute bottom-10 mt-4 px-1 font-semibold">{name}</p>
-      <p className="absolute bottom-4 text-sm">{title}</p>
+      <p className="md:text-md absolute bottom-10 mt-4 px-1 text-xs font-semibold 2xl:bottom-12">
+        {name}
+      </p>
+      <p className="absolute bottom-4 text-sm 2xl:bottom-6">{title}</p>
     </div>
   );
 };
@@ -29,7 +31,7 @@ const Judges = () => {
   return (
     <div className="mt-[5vh] flex flex-col items-center justify-center md:mt-[10vh] 2xl:mt-[5vh]">
       <TitleBanner title="Judges" />
-      <div className="grid grid-cols-1 gap-x-8 md:grid-cols-4">
+      <div className="grid grid-cols-2 gap-x-8 px-4 md:grid-cols-4">
         {judges.map(({ photo, name, title }, key) => (
           <div key={key}>
             <JudgeCard photo={photo} name={name} title={title} />
