@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { generateSelect, generateStatus } from "./columns";
 import { ICONS } from "./icons";
 import { STATUSES } from "@/data/statuses";
@@ -98,9 +97,15 @@ export const COLUMNS: (ColumnDef<Team> & Column)[] = [
         {Object.entries(
           row.getValue("links") as Record<string, string | undefined>,
         ).map(([key, value], index) => (
-          <Link key={index} href={value ?? ""} className="mx-2 inline-flex">
+          <a
+            key={index}
+            href={value ?? ""}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-2 inline-flex"
+          >
             {ICONS[key]}
-          </Link>
+          </a>
         ))}
       </div>
     ),
