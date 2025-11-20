@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Countdown from "../ui/countdown";
+// import Countdown from "../ui/countdown";
 import countdownBg from "@/public/landing/countdownBg.webp";
-import countdownDigitsBg from "@/public/landing/countdownDigitsBg.webp";
+// import countdownDigitsBg from "@/public/landing/countdownDigitsBg.webp";
 import instagramIcon from "@/public/socials/instagram.svg";
 import linkedinIcon from "@/public/socials/linkedin.svg";
 import mailIcon from "@/public/socials/mail.svg";
@@ -20,22 +20,38 @@ const CountdownSign = () => {
         />
 
         <div className="absolute inset-0 mt-8 flex flex-col items-center justify-start px-6 pt-6 max-[640px]:mt-0 lg:mt-8">
-          <div className="flex flex-col items-center gap-1 text-base text-white sm:flex-row sm:gap-2 min-[660px]:text-xl">
-            <p className="font-inknut">November 15, 2025</p>
-            <span className="hidden sm:inline">•</span>
-            <p className="font-inknut">UC Riverside</p>
+          <div className="flex flex-col items-center gap-2 text-base text-white sm:gap-4 min-[660px]:text-xl">
+            <div className="flex flex-row gap-1 sm:gap-2">
+              <p className="font-inknut">November 15, 2025</p>
+              <span className="hidden sm:inline">•</span>
+              <p className="font-inknut">UC Riverside</p>
+            </div>
+            <div className="flex flex-col text-center sm:gap-4">
+              <p className="font-inknut text-3xl">Hacking has concluded!</p>
+              <p className="font-inknut text-xl">
+                Check out our winners:{" "}
+                <Link
+                  href="https://cutie-hack-2025.devpost.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline transition-all hover:opacity-75"
+                >
+                  Devpost
+                </Link>
+              </p>
+            </div>
           </div>
 
-          <Countdown
+          {/* <Countdown
             classNames={{
               unit: "text-white",
               background: "bg-hackathon-blue-100",
               digit: "text-black",
             }}
             backgroundImage={countdownDigitsBg.src}
-          />
+          /> */}
 
-          <div className="mt-[20%] flex w-fit -rotate-12 flex-row">
+          <div className="mt-[25%] flex w-fit -rotate-12 flex-row">
             <Link
               href="https://www.instagram.com/cutiehack_ucr/"
               target="_blank"
