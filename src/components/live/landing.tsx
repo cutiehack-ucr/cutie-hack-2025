@@ -6,8 +6,9 @@ import title from "@/public/landing/cutieHackTitle.svg";
 
 import mobileTitle from "@/public/landing/mobileTitle.svg";
 import mobileLanding from "@/public/landing/mobileLanding.svg";
-import Countdown from "../ui/countdown";
-import countdownDigitsBg from "@/public/landing/countdownDigitsBg.webp";
+// import Countdown from "../ui/countdown";
+// import countdownDigitsBg from "@/public/landing/countdownDigitsBg.webp";
+import Link from "next/link";
 
 const Landing = () => {
   return (
@@ -60,20 +61,30 @@ const Landing = () => {
             priority
           />
 
-          <div className="font-inknut-antiqua absolute bottom-[11%] left-1/2 -translate-x-1/2 text-center text-white md:bottom-[17%]">
-            <Countdown
+          <div className="absolute bottom-[11%] left-1/2 -translate-x-1/2 text-center font-inknut text-white md:bottom-[17%]">
+            {/* <Countdown
               classNames={{
                 unit: "text-white md:text-xl sm:text-md",
                 background: "bg-hackathon-blue-100",
                 digit: "text-black md:text-xl sm:text-md",
               }}
               backgroundImage={countdownDigitsBg.src}
-            />
+            /> */}
+            <p className="text-sm opacity-70">November 15, 2025</p>
+            <p className="mb-4 mt-2 text-sm opacity-70">UC Riverside</p>
 
-            <div className="mt-4 sm:text-3xl md:text-4xl">
-              November 15, 2025
-            </div>
-            <div className="mt-2 sm:text-3xl md:text-4xl">UC Riverside</div>
+            <p className="text-xl font-bold">Hacking has concluded!</p>
+            <p className="mb-12 mt-2 font-inknut text-sm">
+              Check out our winners:{" "}
+              <Link
+                href="https://cutie-hack-2025.devpost.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline transition-all hover:opacity-75"
+              >
+                Devpost
+              </Link>
+            </p>
           </div>
         </div>
       </div>

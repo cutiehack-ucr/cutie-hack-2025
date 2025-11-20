@@ -29,7 +29,7 @@ const CountdownSign = () => {
             <div className="flex flex-col text-center sm:gap-4">
               <p className="font-inknut text-3xl">Hacking has concluded!</p>
               <p className="font-inknut text-xl">
-                Check the{" "}
+                Check out our winners:{" "}
                 <Link
                   href="https://cutie-hack-2025.devpost.com/"
                   target="_blank"
@@ -37,8 +37,7 @@ const CountdownSign = () => {
                   className="underline transition-all hover:opacity-75"
                 >
                   Devpost
-                </Link>{" "}
-                for details.
+                </Link>
               </p>
             </div>
           </div>
