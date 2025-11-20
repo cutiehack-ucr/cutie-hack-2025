@@ -12,11 +12,11 @@
 
 ## Figma
 
-[Hackathon Website Template Figma Design File](https://www.figma.com/file/YsmdMaZuYrkiaiWcB9XY1P/Hackathon-2024-Backend?type=design&node-id=0%3A1&mode=design&t=OkgKqUOkpAYqfjXU-1)
+[Cutie Hack 2025 Figma Design File](https://www.figma.com/design/jLGFn8J4537rM5Aszstum9/Cutie-Hack--Website--2025-26-?node-id=1678-9553&t=iTw6SnkEvjqia8Zk-0)
 
 ## Node.js
 
-Hackathon Website Template runs on Node.js Version 16.17.0 and higher. Please ensure you have Node.js installed via the [official website](https://nodejs.org/en).
+Cutie Hack 2025 runs on Node.js Version 16.17.0 and higher. Please ensure you have Node.js installed via the [official website](https://nodejs.org/en).
 
 ## Next.js
 
