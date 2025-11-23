@@ -19,12 +19,12 @@ const CountdownSign = () => {
           priority
         />
 
-        <div className="absolute inset-0 mt-8 flex flex-col items-center justify-start px-6 pt-6 max-[640px]:mt-0 lg:mt-8">
+        <div className="absolute inset-0 mt-8 flex flex-col items-center justify-start px-6 pt-6 max-[640px]:mt-0 lg:mt-2">
           <div className="flex flex-col items-center gap-2 text-base text-white sm:gap-4 min-[660px]:text-xl">
             <div className="flex flex-row gap-1 sm:gap-2">
-              <p className="font-inknut">November 15, 2025</p>
-              <span className="hidden sm:inline">•</span>
-              <p className="font-inknut">UC Riverside</p>
+              <p className="font-inknut text-sm">November 15, 2025</p>
+              <span className="hidden text-sm sm:inline">•</span>
+              <p className="font-inknut text-sm">UC Riverside</p>
             </div>
             <div className="flex flex-col text-center sm:gap-4">
               <p className="font-inknut text-3xl">Hacking has concluded!</p>
@@ -40,6 +40,15 @@ const CountdownSign = () => {
                 </Link>
               </p>
             </div>
+            <div className="flex flex-col text-center sm:gap-4">
+              <p className="font-inknut text-xl">Want to see more?</p>
+              <p className="font-inknut text-xl">
+                Check out{" "}
+                <Link href="https://www.citrushack.com" className="underline">
+                  Citrus Hack (April 2026)!
+                </Link>
+              </p>
+            </div>
           </div>
 
           {/* <Countdown
@@ -51,7 +60,7 @@ const CountdownSign = () => {
             backgroundImage={countdownDigitsBg.src}
           /> */}
 
-          <div className="mt-[25%] flex w-fit -rotate-12 flex-row">
+          <div className="mt-[13%] flex w-fit -rotate-12 flex-row">
             <Link
               href="https://www.instagram.com/cutiehack_ucr/"
               target="_blank"
