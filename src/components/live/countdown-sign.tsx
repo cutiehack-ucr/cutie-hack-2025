@@ -23,7 +23,7 @@ const CountdownSign = () => {
           <div className="flex flex-col items-center gap-2 text-base text-white sm:gap-4 min-[660px]:text-xl">
             <div className="flex flex-row gap-1 sm:gap-2">
               <p className="font-inknut text-sm">November 15, 2025</p>
-              <span className="hidden sm:inline text-sm">•</span>
+              <span className="hidden text-sm sm:inline">•</span>
               <p className="font-inknut text-sm">UC Riverside</p>
             </div>
             <div className="flex flex-col text-center sm:gap-4">
@@ -42,8 +42,11 @@ const CountdownSign = () => {
             </div>
             <div className="flex flex-col text-center sm:gap-4">
               <p className="font-inknut text-xl">Want to see more?</p>
-              <p className="font-inknut text-xl">Check out {" "}
-                <Link href="https://www.citrushack.com" className="underline">Citrus Hack (April 2026)!</Link>
+              <p className="font-inknut text-xl">
+                Check out{" "}
+                <Link href="https://www.citrushack.com" className="underline">
+                  Citrus Hack (April 2026)!
+                </Link>
               </p>
             </div>
           </div>
