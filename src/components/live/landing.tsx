@@ -74,7 +74,7 @@ const Landing = () => {
             <p className="mb-4 mt-2 text-sm opacity-70">UC Riverside</p>
 
             <p className="text-xl font-bold">Hacking has concluded!</p>
-            <p className="mb-12 mt-2 font-inknut text-sm">
+            <p className="mt-2 font-inknut text-sm">
               Check out our winners:{" "}
               <Link
                 href="https://cutie-hack-2025.devpost.com/"
@@ -83,6 +83,13 @@ const Landing = () => {
                 className="underline transition-all hover:opacity-75"
               >
                 Devpost
+              </Link>
+            </p>
+            <p className="mt-2 font-inknut text-sm">Want to see more?</p>
+            <p className="mb-12 mt-2 font-inknut text-sm">
+              Check out{" "}
+              <Link href="https://www.citrushack.com" className="underline">
+                Citrus Hack (April 2026)!
               </Link>
             </p>
           </div>
